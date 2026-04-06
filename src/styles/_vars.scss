@@ -1,0 +1,64 @@
+// base
+$color-bg: #0b0b0b;
+$color-surface: #121212;
+
+// text
+$color-text: #f5f5f5;
+$color-text-muted: #a3a3a3;
+
+// brand
+$color-primary: #c19a6b; // np. drewno / premium vibe
+$color-secondary: #8b5e3c;
+
+// states
+$color-hover: #d4af7a;
+$color-border: #2a2a2a;
+
+
+// SECTION COLORS 
+$bg-main: $color-bg;
+$bg-header: rgba(0, 0, 0, 0.85);
+$bg-section-light: #111;
+$bg-section-dark: #080808;
+$bg-accent: linear-gradient(135deg, #8b5e3c, #c19a6b);
+
+// TYPOGRAPHY, FONTS
+$font-main: 'Inter', sans-serif;
+$font-heading: 'Playfair Display', serif;
+
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 20px;
+$font-size-xl: 32px;
+$font-size-xxl: 48px;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// SPACING
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$spacing-xl: 64px;
+$spacing-xxl: 96px;
+
+// BORDERS, SHADOWS
+$border-radius: 8px;
+$border-radius-lg: 16px;
+
+$shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+$shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+
+// TRANSITIONS
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+
+// Z-INDEXES
+$z-header: 100;
+$z-modal: 1000;
+$z-overlay: 900;
+
+// BUTTONS
+$btn-padding-y: 12px;
+$btn-padding-x: 24px;
