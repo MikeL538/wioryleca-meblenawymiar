@@ -2,15 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wioryleca-meblenawymiar</title>
   </head>
   <body>
-    <header class="header">HEADER</header>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <!-- <svg width="50" height="50">
+            <use href=""></use>
+          </svg> -->
+          <img
+            class="header__image"
+            src="/public/images/logo.png"
+            alt="logo image"
+          />
+          <div class="header__logo--wrapper">
+            <h2 class="header__title">Wióry Lecą</h2>
+            <p class="header__title-under">Meble na wymiar</p>
+          </div>
+        </div>
+
+        <div class="header__menu--mobile">
+          <button class="header__menu--mobile-button">
+            <svg>
+              <use href="./icons.svg#mobileMenu"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
 
     <main class="main">
-      <section class="hero">HERO</section>
+      <section class="hero">
+        <h1>Wióry lecą</h1>
+        <p>Funkcjonalne i stylowe</p>
+        <p>meble na wymiar</p>
+        <button>Zamów teraz</button>
+      </section>
       <section class="offer">OFFER</section>
       <section class="projects">PROJECTS</section>
       <section class="contact">CONTACT</section>

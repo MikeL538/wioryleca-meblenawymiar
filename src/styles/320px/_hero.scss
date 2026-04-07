@@ -1,0 +1,18 @@
+@use "../vars" as *;
+
+.hero {
+  min-height: 60vh;
+  background-image: url("/images/hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $spacing-sm;
+  color: $color-text;
+}

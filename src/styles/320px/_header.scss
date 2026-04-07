@@ -1,0 +1,62 @@
+@use "../vars" as *;
+
+.header {
+  font-family: $font-heading;
+
+  &__container {
+    align-items: center;
+    background-color: $header-bg;
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    padding: 15px 10px;
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    gap: $spacing-xs;
+    justify-content: center;
+    color: $color-text;
+
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 50px;
+
+    border-radius: 50%;
+    border: none;
+
+    object-fit: cover; // 🔥 KLUCZ
+    transform: scale(1.2); // zoom
+  }
+
+  &__title {
+    border-bottom: 1px solid $header-title-underline;
+    font-size: $font-size-xl;
+
+    &-under {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__menu--mobile {
+    &-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      > svg {
+        height: 35px;
+        width: 35px;
+        border: none;
+        color: $color-text;
+      }
+    }
+  }
+}
