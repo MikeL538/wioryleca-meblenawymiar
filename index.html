@@ -36,17 +36,85 @@
 
     <main class="main">
       <section class="hero">
-        <h1>Wióry lecą</h1>
-        <p>Funkcjonalne i stylowe</p>
-        <p>meble na wymiar</p>
-        <button>Zamów teraz</button>
+        <div class="hero__wrapper">
+          <h1 class="hero__title">Wióry lecą</h1>
+          <p>Funkcjonalne i stylowe</p>
+          <p>meble na wymiar</p>
+          <button class="hero__button">Zamów teraz</button>
+        </div>
+
+        <div class="hero__wave">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,20 C360,50 1080,50 1440,20 L1440,120 L0,120 Z" />
+          </svg>
+        </div>
       </section>
-      <section class="offer">OFFER</section>
-      <section class="projects">PROJECTS</section>
-      <section class="contact">CONTACT</section>
+      <section class="offer">
+        <h2 class="offer__title">Nasza Oferta</h2>
+        <ul class="offer__list">
+          <li class="offer__list-item">
+            <svg class="offer__list-svg">
+              <use href="./icons.svg#kitchen"></use>
+            </svg>
+            <p>Kuchnie</p>
+          </li>
+          <li class="offer__list-item">
+            <svg class="offer__list-svg">
+              <use href="./icons.svg#wardrobe2"></use>
+            </svg>
+            <p>Szafy i garderoby</p>
+          </li>
+          <li class="offer__list-item">
+            <svg class="offer__list-svg">
+              <use href="./icons.svg#desk"></use>
+            </svg>
+            <p>Biura i gabinety</p>
+          </li>
+        </ul>
+      </section>
+      <section class="why-we">
+        <h2 class="why-we__title">Dlaczego my?</h2>
+        <ul class="why-we__list">
+          <li class="why-we__list-item">
+            <svg class="why-we__list-svg">
+              <use href=""></use>
+            </svg>
+            <p class="why-we__list-para">Doświadczenie</p>
+            <p class="why-we__list-para2">
+              X lat<br />
+              na rynku
+            </p>
+          </li>
+          <li class="why-we__list-item">
+            <svg class="why-we__list-svg">
+              <use href=""></use>
+            </svg>
+            <p class="why-we__list-para">Indywidualne podejście</p>
+            <p class="why-we__list-para2">
+              Projekt<br />
+              na miarę
+            </p>
+          </li>
+          <li class="why-we__list-item">
+            <svg class="why-we__list-svg">
+              <use href=""></use>
+            </svg>
+            <p class="why-we__list-para">Gwarancja jakości</p>
+            <p class="why-we__list-para2">
+              Solidne<br />
+              wykonanie
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="contact">
+        <h2 class="contact__title">Skontaktuj się z nami!</h2>
+
+        <button class="contact__button">Zamów teraz</button>
+      </section>
     </main>
 
-    <footer>FOOTER</footer>
+    <!-- <footer>FOOTER</footer> -->
 
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -6,10 +6,8 @@
   &__container {
     align-items: center;
     background-color: $header-bg;
-
     display: flex;
     justify-content: space-between;
-    max-width: 600px;
     padding: 15px 10px;
   }
 
@@ -32,16 +30,18 @@
     border-radius: 50%;
     border: none;
 
-    object-fit: cover; // 🔥 KLUCZ
-    transform: scale(1.2); // zoom
+    object-fit: cover;
+    transform: scale(1.1);
   }
 
   &__title {
     border-bottom: 1px solid $header-title-underline;
     font-size: $font-size-xl;
+    padding: 0 5px 0 0;
 
     &-under {
       font-size: $font-size-sm;
+      text-indent: 5px;
     }
   }
 
@@ -50,6 +50,11 @@
       border: none;
       background: none;
       cursor: pointer;
+      transition: $transition-fast;
+
+      &:hover {
+        transform: scale(1.2);
+      }
 
       > svg {
         height: 35px;

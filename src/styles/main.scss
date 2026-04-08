@@ -1,6 +1,9 @@
 @use "./vars" as *;
 @use "./320px/header";
 @use "./320px/hero";
+@use "./320px/offer";
+@use "./320px/why-we";
+@use "./320px/contact";
 
 *,
 *::before,
@@ -17,9 +20,4 @@ body {
   color: $color-text;
   font-family: $font-main;
   font-size: $font-size-base;
-}
-
-svg,
-img {
-  border: 1px solid black;
 }

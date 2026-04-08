@@ -1,0 +1,60 @@
+@use "../vars" as *;
+
+.why-we {
+  align-items: center;
+  color: $color-headers;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+  }
+
+  &__list {
+    display: flex;
+    gap: $spacing-sm;
+    margin: 0 auto;
+    padding: 0 4px;
+
+    &-item {
+      align-items: center;
+      background-color: $color-bg-card;
+      border-radius: $border-radius;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      gap: $spacing-xs;
+      text-align: center;
+      padding: 3px 2px;
+      transition: $transition-fast;
+
+      &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-2px) scale(1.05);
+      }
+    }
+
+    &-svg {
+      background-color: brown;
+      height: 25px;
+      width: 25px;
+    }
+
+    &-para {
+      border-bottom: 1px solid $color-underline;
+      padding-bottom: 3px;
+      font-weight: 700;
+      font-size: $font-size-s;
+    }
+
+    &-para2 {
+      font-size: $font-size-s;
+    }
+  }
+}

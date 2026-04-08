@@ -1,0 +1,48 @@
+@use "../vars" as *;
+
+.contact {
+  align-items: center;
+  color: $color-headers;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.1em;
+
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+
+    &::before,
+    &::after {
+      background-color: #cbbba0;
+      content: "";
+      height: 1px;
+      margin: 0 12px;
+      width: 40px;
+    }
+  }
+
+  &__button {
+    background-color: $color-interactive;
+    border-radius: 6px;
+    border: none;
+    box-shadow: $shadow-md;
+    color: $color-text;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    padding: 7px 7px;
+    text-transform: uppercase;
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: $color-btn-hover;
+      box-shadow: $shadow-md;
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+}

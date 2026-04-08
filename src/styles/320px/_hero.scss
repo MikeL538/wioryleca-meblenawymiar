@@ -1,18 +1,81 @@
 @use "../vars" as *;
 
 .hero {
-  min-height: 60vh;
+  align-items: center;
   background-image: url("/images/hero.png");
-
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  // border-top: 1px solid $color-darkwood;
+  border-top: 1px solid $color-darkwood;
+  color: $color-text;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 60vh;
+  overflow: hidden;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: $spacing-sm;
-  color: $color-text;
+
+  &::before {
+    background: rgba(0, 0, 0, 0.35);
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    height: max-content;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__title {
+    border-bottom: 1px solid $color-text;
+    padding: 0 15px;
+  }
+
+  &__button {
+    background-color: $color-interactive;
+    border-radius: 6px;
+    border: none;
+    box-shadow: $shadow-md;
+    color: $color-text;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    padding: 7px 7px;
+    text-transform: uppercase;
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: $color-btn-hover;
+      box-shadow: $shadow-md;
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+
+  &__wave {
+    bottom: -1px;
+    height: 30px;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+
+    > svg {
+      display: block;
+      fill: $color-bg-main;
+      height: 100%;
+      width: 100%;
+    }
+  }
 }

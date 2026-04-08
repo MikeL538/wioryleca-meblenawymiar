@@ -1,33 +1,4 @@
-@use './vars' as *;
-
-//
-// 📱 MEDIA QUERIES
-//
-
-@mixin respond($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: $bp-sm) { @content; }
-  }
-  @else if $breakpoint == md {
-    @media (min-width: $bp-md) { @content; }
-  }
-  @else if $breakpoint == lg {
-    @media (min-width: $bp-lg) { @content; }
-  }
-  @else if $breakpoint == xl {
-    @media (min-width: $bp-xl) { @content; }
-  }
-}
-
-//
-// 📦 CONTAINER
-//
-
-@mixin container {
-  max-width: $container-width;
-  margin: 0 auto;
-  padding: 0 $container-padding;
-}
+@use "./vars" as *;
 
 //
 // 🧱 FLEX UTILS
@@ -120,11 +91,11 @@
 // użycie: position: relative + ::before
 //
 
-@mixin overlay($color: rgba(0,0,0,0.5)) {
+@mixin overlay($color: rgba(0, 0, 0, 0.5)) {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: $color;
