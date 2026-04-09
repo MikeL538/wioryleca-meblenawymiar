@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/images/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wioryleca-meblenawymiar</title>
   </head>
@@ -10,18 +10,20 @@
     <header class="header">
       <div class="header__container">
         <div class="header__logo">
-          <!-- <svg width="50" height="50">
+          <a class="header__link" href="/">
+            <!-- <svg width="50" height="50">
             <use href=""></use>
           </svg> -->
-          <img
-            class="header__image"
-            src="/public/images/logo.png"
-            alt="logo image"
-          />
-          <div class="header__logo--wrapper">
-            <h2 class="header__title">Wióry Lecą</h2>
-            <p class="header__title-under">Meble na wymiar</p>
-          </div>
+            <img
+              class="header__image"
+              src="/images/logo.png"
+              alt="logo image"
+            />
+            <div class="header__logo--wrapper">
+              <h2 class="header__title">Wióry Lecą</h2>
+              <p class="header__title-under">Meble na wymiar</p>
+            </div>
+          </a>
         </div>
 
         <div class="header__menu--mobile">
@@ -38,8 +40,8 @@
       <section class="hero">
         <div class="hero__wrapper">
           <h1 class="hero__title">Wióry lecą</h1>
-          <p>Funkcjonalne i stylowe</p>
-          <p>meble na wymiar</p>
+          <p class="hero__title--under">Funkcjonalne i stylowe</p>
+          <p class="hero__title--under">meble na wymiar</p>
           <button class="hero__button">Zamów teraz</button>
         </div>
 
@@ -49,37 +51,54 @@
           </svg>
         </div>
       </section>
-      <section class="offer">
+
+      <section id="offer" class="offer">
         <h2 class="offer__title">Nasza Oferta</h2>
         <ul class="offer__list">
           <li class="offer__list-item">
-            <svg class="offer__list-svg">
-              <use href="./icons.svg#kitchen"></use>
-            </svg>
-            <p>Kuchnie</p>
+            <a class="offer__list-link" href="/projects.html">
+              <div class="offer__list-wrapper">
+                <svg class="offer__list-svg">
+                  <use href="./icons.svg#kitchen"></use>
+                </svg>
+                <p>Kuchnie</p>
+              </div>
+              <div>></div>
+            </a>
           </li>
           <li class="offer__list-item">
-            <svg class="offer__list-svg">
-              <use href="./icons.svg#wardrobe2"></use>
-            </svg>
-            <p>Szafy i garderoby</p>
+            <a class="offer__list-link" href="/projects.html">
+              <div class="offer__list-wrapper">
+                <svg class="offer__list-svg offer__list-svg--wardrobe">
+                  <use href="./icons.svg#wardrobe"></use>
+                </svg>
+                <p>Kuchnie</p>
+              </div>
+              <div>></div>
+            </a>
           </li>
           <li class="offer__list-item">
-            <svg class="offer__list-svg">
-              <use href="./icons.svg#desk"></use>
-            </svg>
-            <p>Biura i gabinety</p>
+            <a class="offer__list-link" href="/projects.html">
+              <div class="offer__list-wrapper">
+                <svg class="offer__list-svg">
+                  <use href="./icons.svg#desk"></use>
+                </svg>
+                <p>Kuchnie</p>
+              </div>
+              <div>></div>
+            </a>
           </li>
         </ul>
       </section>
+
       <section class="why-we">
         <h2 class="why-we__title">Dlaczego my?</h2>
         <ul class="why-we__list">
           <li class="why-we__list-item">
             <svg class="why-we__list-svg">
-              <use href=""></use>
+              <use href="./icons.svg#exp"></use>
             </svg>
-            <p class="why-we__list-para">Doświadczenie</p>
+            <p class="why-we__list-para">Doświadczenie<br />zawodowe</p>
             <p class="why-we__list-para2">
               X lat<br />
               na rynku
@@ -87,7 +106,7 @@
           </li>
           <li class="why-we__list-item">
             <svg class="why-we__list-svg">
-              <use href=""></use>
+              <use href="./icons.svg#handshake"></use>
             </svg>
             <p class="why-we__list-para">Indywidualne podejście</p>
             <p class="why-we__list-para2">
@@ -97,7 +116,7 @@
           </li>
           <li class="why-we__list-item">
             <svg class="why-we__list-svg">
-              <use href=""></use>
+              <use href="./icons.svg#guarantee"></use>
             </svg>
             <p class="why-we__list-para">Gwarancja jakości</p>
             <p class="why-we__list-para2">
@@ -107,14 +126,51 @@
           </li>
         </ul>
       </section>
+
       <section class="contact">
+        <div class="contact__wave">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,20 C360,50 1080,50 1440,20 L1440,120 L0,120 Z" />
+          </svg>
+        </div>
+
         <h2 class="contact__title">Skontaktuj się z nami!</h2>
 
         <button class="contact__button">Zamów teraz</button>
       </section>
     </main>
 
-    <!-- <footer>FOOTER</footer> -->
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="/" class="footer__brand">
+          <span class="footer__logo">WIÓRY LECĄ</span>
+        </a>
+
+        <ul class="footer__contact">
+          <li><a href="tel:+48123456789">+48 123 456 789</a></li>
+          <li>
+            <a href="mailto:kontakt@wioryleca.pl">kontakt@wioryleca.pl</a>
+          </li>
+          <li>Zielona Góra i okolice</li>
+        </ul>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="/">Start</a>
+          <a href="#offer">Oferta</a>
+          <a href="/projects/">Realizacje</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+
+        <ul class="footer__socials">
+          <li><a href="/" aria-label="Facebook">FB</a></li>
+          <li><a href="/" aria-label="Instagram">IG</a></li>
+        </ul>
+
+        <p class="footer__copy">
+          © 2026 Wióry Lecą. Wszelkie prawa zastrzeżone.
+        </p>
+      </div>
+    </footer>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

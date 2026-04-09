@@ -48,12 +48,19 @@ $font-size-xxl: 1.75rem; // 28px
 // =================
 
 // SPACING, GAPS
-$spacing-xs: 4px;
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 32px;
-$spacing-xl: 64px;
-$spacing-xxl: 96px;
+$spacing-xs: 0.01rem; // 0.16
+$spacing-sm: 0.02rem; // 0.32
+$spacing-md: 0.04rem; // 0.64
+$spacing-lg: 0.08rem; // 1.28
+$spacing-xl: 0.16rem; // 2.56
+$spacing-xxl: 0.32rem; // 5.12
+
+// MARGINS
+$margin-xs: 8px;
+$margin-s: 12px;
+$margin-m: 18px;
+$margin-l: 24px;
+$margin-xl: 30px;
 
 // BORDERS, SHADOWS
 $border-radius: 8px;

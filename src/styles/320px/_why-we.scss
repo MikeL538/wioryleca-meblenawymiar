@@ -5,19 +5,18 @@
   color: $color-headers;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
-  letter-spacing: 0.1em;
   margin-bottom: 30px;
 
   &__title {
     font-size: $font-size-lg;
-    margin-bottom: $spacing-md;
+    letter-spacing: $spacing-xs;
+    margin-bottom: $margin-m;
   }
 
   &__list {
     display: flex;
-    gap: $spacing-sm;
+    gap: $spacing-xxl;
     margin: 0 auto;
     padding: 0 4px;
 
@@ -26,13 +25,14 @@
       background-color: $color-bg-card;
       border-radius: $border-radius;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
       flex-direction: column;
-      gap: $spacing-xs;
+      flex-wrap: wrap;
+      gap: $spacing-xl;
+      justify-content: space-between;
+      padding: 3px 3px;
       text-align: center;
-      padding: 3px 2px;
       transition: $transition-fast;
+      width: 100px;
 
       &:hover {
         box-shadow: $shadow-md;
@@ -41,16 +41,17 @@
     }
 
     &-svg {
-      background-color: brown;
-      height: 25px;
-      width: 25px;
+      background-color: none;
+      height: 35px;
+      width: 35px;
     }
 
     &-para {
       border-bottom: 1px solid $color-underline;
-      padding-bottom: 3px;
-      font-weight: 700;
       font-size: $font-size-s;
+      font-weight: 700;
+      padding-bottom: 3px;
+      width: 90px;
     }
 
     &-para2 {

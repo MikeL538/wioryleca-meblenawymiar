@@ -1,0 +1,119 @@
+@use "../vars" as *;
+
+.footer {
+  padding: 24px 10px 12px;
+
+  background-color: $color-darkwood;
+  color: $color-bg-main;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-l;
+  }
+
+  &__brand {
+    text-decoration: none;
+  }
+
+  &__logo {
+    border-bottom: 1px solid $color-text;
+    color: $color-text;
+    display: inline-block;
+    font-size: $font-size-xl;
+    font-weight: 700;
+    letter-spacing: $spacing-lg;
+    padding: 0 5px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li,
+    a {
+      color: $color-bg-main;
+      font-size: 15px;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    a {
+      transition: color $transition-fast;
+
+      &:hover,
+      &:focus {
+        color: $color-interactive;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-s;
+    padding-top: 20px;
+    border-top: 1px solid rgba($color-text, 0.08);
+
+    a {
+      color: $color-text;
+      font-size: 15px;
+      text-decoration: none;
+      transition: color $transition-fast;
+
+      &:hover,
+      &:focus {
+        color: $color-interactive;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: $margin-s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba($color-text, 0.12);
+      border-radius: 50%;
+      color: $color-text;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        color $transition-fast,
+        border-color $transition-fast,
+        transform $transition-fast;
+
+      &:hover,
+      &:focus {
+        border-color: $color-interactive;
+        color: $color-interactive;
+      }
+    }
+  }
+
+  &__copy {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba($color-text, 0.08);
+    color: $color-bg-section;
+    font-size: $font-size-s;
+    line-height: 1.5;
+  }
+}

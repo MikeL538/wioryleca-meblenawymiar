@@ -7,13 +7,12 @@
   flex-direction: column;
   font-weight: 600;
   justify-content: center;
-  letter-spacing: 0.1em;
-
   margin-bottom: 30px;
 
   &__title {
     font-size: $font-size-xl;
-    margin-bottom: $spacing-md;
+    margin-bottom: $margin-m;
+    letter-spacing: $spacing-xs;
 
     &::before,
     &::after {
@@ -28,7 +27,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: $margin-xs;
     margin: 0 auto;
 
     &-item {
@@ -36,10 +35,11 @@
       background-color: $color-bg-card;
       border-radius: $border-radius;
       display: flex;
-      gap: $spacing-xs;
-      justify-content: flex-start;
+
+      justify-content: space-between;
       padding: 4px 12px;
       transition: $transition-fast;
+      width: 290px;
 
       &:hover {
         box-shadow: $shadow-md;
@@ -47,13 +47,30 @@
       }
     }
 
+    &-link {
+      display: flex;
+      justify-content: space-between;
+      color: $color-headers;
+      text-decoration: none;
+      align-items: center;
+      width: 100%;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xl;
+    }
+
     &-svg {
-      // background-color: brown;
       height: 25px;
       width: 25px;
 
       stroke: $color-darkwood;
-      fill: $color-darkwood;
+
+      &--wardrobe {
+        fill: none;
+      }
     }
   }
 }

@@ -4,6 +4,7 @@
 @use "./320px/offer";
 @use "./320px/why-we";
 @use "./320px/contact";
+@use "./320px/footer";
 
 *,
 *::before,
@@ -11,6 +12,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  background-color: $color-bg-main;
+  color: $color-text;
+  font-family: $font-main;
+  font-size: $font-size-base;
 }
 
 // PLACEHOLDERS

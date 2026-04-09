@@ -6,7 +6,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  // border-top: 1px solid $color-darkwood;
   border-top: 1px solid $color-darkwood;
   color: $color-text;
   display: flex;
@@ -29,7 +28,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: $spacing-xxl;
     height: max-content;
     padding: 15px;
     position: relative;
@@ -40,6 +39,10 @@
   &__title {
     border-bottom: 1px solid $color-text;
     padding: 0 15px;
+
+    &--under {
+      letter-spacing: $spacing-sm;
+    }
   }
 
   &__button {
@@ -51,7 +54,7 @@
     cursor: pointer;
     font-size: $font-size-sm;
     font-weight: 600;
-    letter-spacing: 0.06rem;
+    letter-spacing: $spacing-md;
     padding: 7px 7px;
     text-transform: uppercase;
     transition: $transition-fast;
