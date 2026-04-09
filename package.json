@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@emnapi/core": "1.9.2",
+    "@emnapi/runtime": "1.9.2",
     "sass": "^1.99.0",
     "typescript": "~6.0.2",
     "vite": "^8.0.4"
