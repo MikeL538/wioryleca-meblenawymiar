@@ -1,0 +1,19 @@
+@use "../vars" as *;
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $color-darkwood;
+  padding: $margin-l 0;
+
+  &__select {
+    border: 1px solid $color-darkwood;
+    border-radius: $border-radius;
+    padding: $spacing-xl;
+    background-color: $color-interactive;
+    color: $color-text;
+    font-weight: 600;
+    text-align: center;
+  }
+}

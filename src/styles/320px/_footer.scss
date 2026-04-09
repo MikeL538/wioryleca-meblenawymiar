@@ -1,15 +1,14 @@
 @use "../vars" as *;
 
 .footer {
-  padding: 24px 10px 12px;
-
+  padding: $margin-m $margin-xs $margin-s;
   background-color: $color-darkwood;
   color: $color-bg-main;
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: $margin-l;
+    gap: $margin-s;
   }
 
   &__brand {
@@ -17,7 +16,7 @@
   }
 
   &__logo {
-    border-bottom: 1px solid $color-text;
+    border-bottom: 1px solid rgba($color-text, 0.2);
     color: $color-text;
     display: inline-block;
     font-size: $font-size-xl;
@@ -33,14 +32,13 @@
     display: flex;
     flex-direction: column;
     gap: $margin-s;
-    margin: 0;
-    padding: 0;
     list-style: none;
+    text-align: center;
 
     li,
     a {
       color: $color-bg-main;
-      font-size: 15px;
+      font-size: $font-size-sm;
       line-height: 1.5;
       text-decoration: none;
     }
@@ -56,15 +54,15 @@
   }
 
   &__nav {
-    display: flex;
-    flex-direction: column;
-    gap: $margin-s;
-    padding-top: 20px;
     border-top: 1px solid rgba($color-text, 0.08);
+    display: flex;
+    gap: $margin-s;
+    justify-content: center;
+    padding-top: $margin-xs;
 
     a {
       color: $color-text;
-      font-size: 15px;
+      font-size: $font-size-sm;
       text-decoration: none;
       transition: color $transition-fast;
 
@@ -76,11 +74,10 @@
   }
 
   &__socials {
-    display: flex;
     align-items: center;
-    gap: $margin-s;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    gap: $margin-m;
+    justify-content: center;
     list-style: none;
 
     a {
@@ -92,7 +89,7 @@
       border: 1px solid rgba($color-text, 0.12);
       border-radius: 50%;
       color: $color-text;
-      font-size: 13px;
+      font-size: $font-size-sm;
       font-weight: 600;
       text-decoration: none;
       transition:
@@ -109,11 +106,10 @@
   }
 
   &__copy {
-    margin: 0;
-    padding-top: 20px;
+    text-align: center;
+    padding-top: $margin-xs;
     border-top: 1px solid rgba($color-text, 0.08);
     color: $color-bg-section;
     font-size: $font-size-s;
-    line-height: 1.5;
   }
 }
