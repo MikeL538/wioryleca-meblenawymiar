@@ -32,18 +32,23 @@
   }
 
   &__title {
+    align-items: center;
+    display: flex;
     font-size: $font-size-lg;
-    margin-bottom: $margin-m;
     letter-spacing: $spacing-xs;
+    margin-bottom: $margin-m;
     margin-top: $margin-s;
+    width: 100%;
+    white-space: nowrap;
 
     &::before,
     &::after {
-      background-color: #cbbba0;
+      background-color: rgba(#cbbba0, 0.35);
       content: "";
+      display: block;
+      width: 100%;
       height: 1px;
-      margin: 0 12px;
-      width: 40px;
+      margin: 0 6px;
     }
   }
 

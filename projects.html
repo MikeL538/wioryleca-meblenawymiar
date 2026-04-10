@@ -35,6 +35,22 @@
             </svg>
           </button>
         </div>
+
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+              <a href="/" class="header__nav-list-link"> Strona główna </a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="/projects.html" class="header__nav-list-link">
+                Projekty
+              </a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="header__nav-list-link"> Kontakt </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -50,16 +66,16 @@
       <section class="projects">
         <ul class="projects__list">
           <li class="projects__list-item">
-            <img class="projects__list-img" src="/" />
+            <img class="projects__list-img" src="/images/hero.png" alt="Projekt mebli na wymiar" />
           </li>
           <li class="projects__list-item">
-            <img class="projects__list-img" src="/" />
+            <img class="projects__list-img" src="/images/hero.png" alt="Projekt mebli na wymiar" />
           </li>
           <li class="projects__list-item">
-            <img class="projects__list-img" src="/" />
+            <img class="projects__list-img" src="/images/hero.png" alt="Projekt mebli na wymiar" />
           </li>
           <li class="projects__list-item">
-            <img class="projects__list-img" src="/" />
+            <img class="projects__list-img" src="/images/hero.png" alt="Projekt mebli na wymiar" />
           </li>
         </ul>
       </section>
@@ -71,26 +87,31 @@
           <span class="footer__logo">WIÓRY LECĄ</span>
         </a>
 
-        <ul class="footer__contact">
-          <li><a href="tel:+48123456789">+48 123 456 789</a></li>
-          <li>
-            <a href="mailto:kontakt@wioryleca.pl">kontakt@wioryleca.pl</a>
-          </li>
-          <li>Zielona Góra i okolice</li>
-        </ul>
+        <div class="footer__wrapper">
+          <ul class="footer__contact">
+            <li>
+              <a href="tel:+48123456789" class="footer__contact-wrapper"
+                >+48 123 456 789</a
+              >
+              <a href="mailto:kontakt@wioryleca.pl">kontakt@wioryleca.pl</a>
+            </li>
 
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="/">Start</a>
-          <a href="#offer">Oferta</a>
-          <a href="/projects/">Realizacje</a>
-          <a href="#contact">Kontakt</a>
-        </nav>
+            <li>Zielona Góra i okolice</li>
+          </ul>
+          <div>
+            <nav class="footer__nav" aria-label="Footer navigation">
+              <a href="/">Start</a>
+              <a href="#offer">Oferta</a>
+              <a href="/projects/">Realizacje</a>
+              <a href="#contact">Kontakt</a>
+            </nav>
 
-        <ul class="footer__socials">
-          <li><a href="/" aria-label="Facebook">FB</a></li>
-          <li><a href="/" aria-label="Instagram">IG</a></li>
-        </ul>
-
+            <ul class="footer__socials">
+              <li><a href="/" aria-label="Facebook">FB</a></li>
+              <li><a href="/" aria-label="Instagram">IG</a></li>
+            </ul>
+          </div>
+        </div>
         <p class="footer__copy">
           © 2026 Wióry Lecą. Wszelkie prawa zastrzeżone.
         </p>

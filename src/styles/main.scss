@@ -1,4 +1,5 @@
 @use "./vars" as *;
+// 320px
 @use "./320px/header";
 @use "./320px/hero";
 @use "./320px/offer";
@@ -8,6 +9,14 @@
 // Projects
 @use "./320px-projects/filter";
 @use "./320px-projects/projects";
+
+// 768px
+@use "./768px/header768";
+@use "./768px/hero768";
+@use "./768px/offer768";
+@use "./768px/why-we768";
+@use "./768px/contact768";
+@use "./768px/footer768";
 
 *,
 *::before,

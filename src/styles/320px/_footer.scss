@@ -8,6 +8,7 @@
   &__container {
     display: flex;
     flex-direction: column;
+
     gap: $margin-s;
   }
 
@@ -16,16 +17,16 @@
   }
 
   &__logo {
-    border-bottom: 1px solid rgba($color-text, 0.2);
+    border-bottom: 1px solid rgba($color-text, 0.1);
     color: $color-text;
     display: inline-block;
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
     font-weight: 700;
     letter-spacing: $spacing-lg;
-    padding: 0 5px;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
+    margin-bottom: $margin-s;
   }
 
   &__contact {
@@ -41,6 +42,10 @@
       font-size: $font-size-sm;
       line-height: 1.5;
       text-decoration: none;
+    }
+
+    &-wrapper {
+      margin-right: $margin-xs;
     }
 
     a {

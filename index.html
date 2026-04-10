@@ -33,6 +33,22 @@
             </svg>
           </button>
         </div>
+
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+              <a href="/" class="header__nav-list-link">Strona główna </a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="/projects.html" class="header__nav-list-link">
+                Projekty
+              </a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="header__nav-list-link">Kontakt </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -88,6 +104,17 @@
               <div>></div>
             </a>
           </li>
+          <li class="offer__list-item">
+            <a class="offer__list-link" href="/projects.html">
+              <div class="offer__list-wrapper">
+                <svg class="offer__list-svg">
+                  <use href="./icons.svg#desk"></use>
+                </svg>
+                <p>Coś czwartego lepszy design</p>
+              </div>
+              <div>></div>
+            </a>
+          </li>
         </ul>
       </section>
 
@@ -99,30 +126,21 @@
               <use href="./icons.svg#exp"></use>
             </svg>
             <p class="why-we__list-para">Doświadczenie<br />zawodowe</p>
-            <p class="why-we__list-para2">
-              X lat<br />
-              na rynku
-            </p>
+            <p class="why-we__list-para2">X lat na rynku</p>
           </li>
           <li class="why-we__list-item">
             <svg class="why-we__list-svg">
               <use href="./icons.svg#handshake"></use>
             </svg>
             <p class="why-we__list-para">Indywidualne podejście</p>
-            <p class="why-we__list-para2">
-              Projekt<br />
-              na miarę
-            </p>
+            <p class="why-we__list-para2">Projekt na miarę</p>
           </li>
           <li class="why-we__list-item">
             <svg class="why-we__list-svg">
               <use href="./icons.svg#guarantee"></use>
             </svg>
             <p class="why-we__list-para">Gwarancja jakości</p>
-            <p class="why-we__list-para2">
-              Solidne<br />
-              wykonanie
-            </p>
+            <p class="why-we__list-para2">Solidne wykonanie</p>
           </li>
         </ul>
       </section>
@@ -146,26 +164,31 @@
           <span class="footer__logo">WIÓRY LECĄ</span>
         </a>
 
-        <ul class="footer__contact">
-          <li><a href="tel:+48123456789">+48 123 456 789</a></li>
-          <li>
-            <a href="mailto:kontakt@wioryleca.pl">kontakt@wioryleca.pl</a>
-          </li>
-          <li>Zielona Góra i okolice</li>
-        </ul>
+        <div class="footer__wrapper">
+          <ul class="footer__contact">
+            <li>
+              <a href="tel:+48123456789" class="footer__contact-wrapper"
+                >+48 123 456 789</a
+              >
+              <a href="mailto:kontakt@wioryleca.pl">kontakt@wioryleca.pl</a>
+            </li>
 
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="/">Start</a>
-          <a href="#offer">Oferta</a>
-          <a href="/projects/">Realizacje</a>
-          <a href="#contact">Kontakt</a>
-        </nav>
+            <li>Zielona Góra i okolice</li>
+          </ul>
+          <div>
+            <nav class="footer__nav" aria-label="Footer navigation">
+              <a href="/">Start</a>
+              <a href="#offer">Oferta</a>
+              <a href="/projects/">Realizacje</a>
+              <a href="#contact">Kontakt</a>
+            </nav>
 
-        <ul class="footer__socials">
-          <li><a href="/" aria-label="Facebook">FB</a></li>
-          <li><a href="/" aria-label="Instagram">IG</a></li>
-        </ul>
-
+            <ul class="footer__socials">
+              <li><a href="/" aria-label="Facebook">FB</a></li>
+              <li><a href="/" aria-label="Instagram">IG</a></li>
+            </ul>
+          </div>
+        </div>
         <p class="footer__copy">
           © 2026 Wióry Lecą. Wszelkie prawa zastrzeżone.
         </p>

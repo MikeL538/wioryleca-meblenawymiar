@@ -1,0 +1,28 @@
+@use "../vars" as *;
+
+@media screen and (min-width: 768px) {
+  .offer {
+    &__list {
+      font-size: $font-size-lg;
+      gap: $margin-s;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
+
+      &-item {
+        padding: 6px 12px;
+        width: 350px;
+      }
+
+      &-wrapper {
+        gap: $spacing-xxl;
+      }
+
+      &-svg {
+        height: 42px;
+        width: 42px;
+      }
+    }
+  }
+}

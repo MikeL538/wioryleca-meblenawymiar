@@ -1,0 +1,24 @@
+@use "../vars" as *;
+
+@media screen and (min-width: 768px) {
+  .hero {
+    &::before {
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    &__title {
+      font-size: $font-size-xxl;
+      letter-spacing: $spacing-sm;
+
+      &--under {
+        font-size: $font-size-lg;
+        letter-spacing: $spacing-md;
+      }
+    }
+
+    &__button {
+      font-size: $font-size-m;
+      padding: $margin-xs;
+    }
+  }
+}

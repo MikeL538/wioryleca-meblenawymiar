@@ -1,0 +1,32 @@
+@use "../vars" as *;
+
+@media screen and (min-width: 768px) {
+  .why-we {
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__list {
+      gap: $margin-m;
+
+      &-item {
+        width: 100%;
+      }
+
+      &-svg {
+        height: 55px;
+        width: 55px;
+      }
+
+      &-para {
+        font-size: $font-size-m;
+        padding-bottom: 3px;
+        width: 100%;
+      }
+
+      &-para2 {
+        font-size: $font-size-m;
+      }
+    }
+  }
+}

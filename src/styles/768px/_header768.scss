@@ -1,0 +1,44 @@
+@use "../vars" as *;
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__container {
+      padding: 15px 25px;
+    }
+
+    &__image {
+      width: 75px;
+    }
+
+    &__title {
+      font-size: $font-size-xxl;
+      &-under {
+        font-size: $font-size-lg;
+      }
+    }
+
+    &__menu--mobile {
+      display: none;
+    }
+
+    &__nav {
+      display: flex;
+
+      &-list {
+        display: flex;
+        gap: $margin-s;
+        list-style: none;
+        font-size: $font-size-lg;
+
+        &-link {
+          color: $color-text;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-hovers;
+          }
+        }
+      }
+    }
+  }
+}

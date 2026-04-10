@@ -45,7 +45,7 @@
 
   &__title {
     border-bottom: 1px solid $header-title-underline;
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
     padding: 0 5px 0 0;
 
     &-under {
@@ -72,5 +72,9 @@
         color: $color-text;
       }
     }
+  }
+
+  &__nav {
+    display: none;
   }
 }

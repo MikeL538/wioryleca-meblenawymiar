@@ -9,16 +9,28 @@
   margin-bottom: 30px;
 
   &__title {
+    align-items: center;
+    display: flex;
     font-size: $font-size-lg;
     letter-spacing: $spacing-xs;
     margin-bottom: $margin-m;
+    white-space: nowrap;
+    width: 100%;
+
+    &::before,
+    &::after {
+      background-color: rgba($color-darkwood, 0.35);
+      content: "";
+      height: 1px;
+      margin: 0 6px;
+      width: 100%;
+    }
   }
 
   &__list {
     display: flex;
     gap: $spacing-xxl;
     margin: 0 auto;
-    padding: 0 4px;
 
     &-item {
       align-items: center;
@@ -29,7 +41,7 @@
       flex-wrap: wrap;
       gap: $spacing-xl;
       justify-content: space-between;
-      padding: 3px 3px;
+      padding: 3px;
       text-align: center;
       transition: $transition-fast;
       width: 100px;
@@ -56,6 +68,7 @@
 
     &-para2 {
       font-size: $font-size-s;
+      padding: 3px 0;
     }
   }
 }
