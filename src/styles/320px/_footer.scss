@@ -1,14 +1,13 @@
 @use "../vars" as *;
 
 .footer {
-  padding: $margin-m $margin-xs $margin-s;
   background-color: $color-darkwood;
   color: $color-bg-main;
+  padding: $margin-s 0 $margin-s 0;
 
   &__container {
     display: flex;
     flex-direction: column;
-
     gap: $margin-s;
   }
 
@@ -17,16 +16,24 @@
   }
 
   &__logo {
-    border-bottom: 1px solid rgba($color-text, 0.1);
+    align-items: center;
     color: $color-text;
-    display: inline-block;
+    display: flex;
     font-size: $font-size-lg;
     font-weight: 700;
-    letter-spacing: $spacing-lg;
+    letter-spacing: $spacing-sm;
     text-transform: uppercase;
-    text-align: center;
+    white-space: nowrap;
     width: 100%;
-    margin-bottom: $margin-s;
+
+    &::before,
+    &::after {
+      background-color: rgba($color-text, 0.35);
+      content: "";
+      height: 1px;
+      margin: 0 6px;
+      width: 100%;
+    }
   }
 
   &__contact {
@@ -35,6 +42,7 @@
     gap: $margin-s;
     list-style: none;
     text-align: center;
+    margin-bottom: $margin-s;
 
     li,
     a {
@@ -64,6 +72,7 @@
     gap: $margin-s;
     justify-content: center;
     padding-top: $margin-xs;
+    margin-bottom: $margin-s;
 
     a {
       color: $color-text;

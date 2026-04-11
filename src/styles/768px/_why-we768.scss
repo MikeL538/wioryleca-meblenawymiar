@@ -2,6 +2,7 @@
 
 @media screen and (min-width: 768px) {
   .why-we {
+    margin: $margin-768px 0;
     &__title {
       font-size: $font-size-xl;
     }
@@ -11,6 +12,7 @@
 
       &-item {
         width: 100%;
+        padding: $margin-s;
       }
 
       &-svg {
@@ -19,13 +21,13 @@
       }
 
       &-para {
-        font-size: $font-size-m;
+        font-size: $font-size-sm;
         padding-bottom: 3px;
         width: 100%;
       }
 
       &-para2 {
-        font-size: $font-size-m;
+        font-size: $font-size-sm;
       }
     }
   }

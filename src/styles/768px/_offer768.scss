@@ -2,6 +2,7 @@
 
 @media screen and (min-width: 768px) {
   .offer {
+    margin: $margin-xxl 0 $margin-768px 0;
     &__list {
       font-size: $font-size-lg;
       gap: $margin-s;

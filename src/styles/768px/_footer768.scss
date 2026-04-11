@@ -2,6 +2,8 @@
 
 @media screen and (min-width: 768px) {
   .footer {
+    padding: $margin-m 0 $margin-s 0;
+
     &__container {
       flex-direction: row;
       flex-wrap: wrap;
@@ -15,7 +17,7 @@
     &__wrapper {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
       width: 100%;
       border-bottom: 1px solid rgba($color-text, 0.12);
       padding: 0 45px;
@@ -26,6 +28,10 @@
       gap: $margin-m;
       padding-top: 0;
       line-height: 1.5;
+    }
+
+    &__socials {
+      padding-bottom: $margin-xs;
     }
 
     &__copy {

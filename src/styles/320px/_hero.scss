@@ -16,6 +16,7 @@
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: $margin-l;
 
   &::before {
     background: rgba(0, 0, 0, 0.35);
