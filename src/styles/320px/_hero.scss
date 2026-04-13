@@ -5,18 +5,21 @@
   background-image: url("/images/hero.png");
   background-position: center;
   background-repeat: no-repeat;
+  // background-size: max(700px, 100%) auto;
   background-size: cover;
+
   border-top: 1px solid $color-darkwood;
   color: $color-text;
   display: flex;
   font-weight: 700;
   justify-content: center;
-  min-height: 60vh;
+  margin-bottom: $margin-l;
+  height: 60vh;
+  max-height: 500px;
   overflow: hidden;
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: $margin-l;
 
   &::before {
     background: rgba(0, 0, 0, 0.35);
@@ -35,6 +38,7 @@
     position: relative;
     width: 100%;
     z-index: 1;
+    max-width: 460px;
   }
 
   &__title {

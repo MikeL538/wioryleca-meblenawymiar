@@ -2,12 +2,14 @@
 
 .header {
   font-family: $font-heading;
+  background-color: $header-bg;
 
   &__container {
     align-items: center;
-    background-color: $header-bg;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: 460px;
     padding: 15px 10px;
   }
 

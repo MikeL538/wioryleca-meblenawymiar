@@ -18,6 +18,10 @@
 @use "./768px/contact768";
 @use "./768px/footer768";
 
+// 1080px
+@use "./1080px/header1080";
+@use "./1080px/hero1080";
+
 *,
 *::before,
 *::after {
@@ -40,4 +44,5 @@ body {
   color: $color-text;
   font-family: $font-main;
   font-size: $font-size-base;
+  // max-width: 1080px;
 }
