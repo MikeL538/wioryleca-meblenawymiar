@@ -1,20 +1,46 @@
 @use "../vars" as *;
 
-.filter {
+// .filter {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-top: 1px solid $color-darkwood;
+//   padding-top: $margin-l;
+
+//   &__select {
+//     border: 1px solid $color-darkwood;
+//     border-radius: $border-radius;
+//     padding: $spacing-xl;
+//     background-color: $color-interactive;
+//     color: $color-text;
+//     font-weight: 600;
+//     text-align: center;
+//     width: 160px;
+//   }
+// }
+
+.categories {
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid $color-darkwood;
-  padding-top: $margin-l;
 
-  &__select {
-    border: 1px solid $color-darkwood;
-    border-radius: $border-radius;
-    padding: $spacing-xl;
-    background-color: $color-interactive;
-    color: $color-text;
-    font-weight: 600;
-    text-align: center;
-    width: 160px;
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: $margin-xxl;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    fill: red;
+    stroke: 50px;
   }
 }

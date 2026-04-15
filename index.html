@@ -8,56 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
-        <div class="header__logo">
-          <a class="header__link" href="/">
-            <!-- <svg width="50" height="50">
-            <use href=""></use>
-          </svg> -->
-            <img
-              class="header__image"
-              src="/images/logo.png"
-              alt="logo image"
-            />
-            <div class="header__logo--wrapper">
-              <h2 class="header__title">Wióry Lecą</h2>
-              <p class="header__title-under">Meble na wymiar</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="header__menu--mobile">
-          <button class="header__menu--mobile-button">
-            <svg>
-              <use href="./icons.svg#mobileMenu"></use>
-            </svg>
-          </button>
-        </div>
-
-        <div class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-list-item">
-              <a href="/" class="header__nav-list-link">Strona główna </a>
-            </li>
-            <li class="header__nav-list-item">
-              <a
-                href="/src/partials/projects.html"
-                class="header__nav-list-link"
-              >
-                Projekty
-              </a>
-            </li>
-            <li class="header__nav-list-item">
-              <a href="/" class="header__nav-list-link">Realizacja </a>
-            </li>
-            <li class="header__nav-list-item">
-              <a class="header__nav-list-link" data-modal-open="contact">
-                Kontakt
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <include src="./src/partials/header.html"></include>
     </header>
 
     <main class="main">
@@ -171,40 +122,8 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__container">
-        <a href="/" class="footer__brand">
-          <span class="footer__logo">WIÓRY LECĄ</span>
-        </a>
-
-        <div class="footer__wrapper">
-          <ul class="footer__contact">
-            <li>
-              <a href="tel:+48123456789" class="footer__contact-wrapper"
-                >+48 123 456 789</a
-              >
-              <a href="mailto:kontakt@wioryleca.pl">kontakt@wioryleca.pl</a>
-            </li>
-
-            <li>Zielona Góra i okolice</li>
-          </ul>
-          <div>
-            <nav class="footer__nav" aria-label="Footer navigation">
-              <a href="/">Start</a>
-              <a href="#offer">Oferta</a>
-              <a href="/src/partials/projects.html">Projekty</a>
-              <a href="#contact" data-modal-open="contact">Kontakt</a>
-            </nav>
-
-            <ul class="footer__socials">
-              <li><a href="/" aria-label="Facebook">FB</a></li>
-              <li><a href="/" aria-label="Instagram">IG</a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="footer__copy">
-          © 2026 Wióry Lecą. Wszelkie prawa zastrzeżone.
-        </p>
-      </div>
+    <footer class="footer">
+      <include src="./src/partials/footer.html"></include>
     </footer>
 
     <include src="./src/partials/modalContact.html"></include>
