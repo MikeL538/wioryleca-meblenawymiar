@@ -1,7 +1,13 @@
+@use "../vars" as *;
+
 @media screen and (min-width: 1080px) {
   .header {
     &__container {
       max-width: 1200px;
+    }
+
+    &__nav-list {
+      font-size: $font-size-xl;
     }
   }
 }

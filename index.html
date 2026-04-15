@@ -40,12 +40,20 @@
               <a href="/" class="header__nav-list-link">Strona główna </a>
             </li>
             <li class="header__nav-list-item">
-              <a href="/projects.html" class="header__nav-list-link">
+              <a
+                href="/src/partials/projects.html"
+                class="header__nav-list-link"
+              >
                 Projekty
               </a>
             </li>
             <li class="header__nav-list-item">
-              <a class="header__nav-list-link">Kontakt </a>
+              <a href="/" class="header__nav-list-link">Realizacja </a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="header__nav-list-link" data-modal-open="contact">
+                Kontakt
+              </a>
             </li>
           </ul>
         </div>
@@ -58,7 +66,9 @@
           <h1 class="hero__title">Wióry lecą</h1>
           <p class="hero__title--under">Funkcjonalne i stylowe</p>
           <p class="hero__title--under">meble na wymiar</p>
-          <button class="hero__button">Zamów teraz</button>
+          <button class="hero__button" type="button" data-modal-open="contact">
+            Zamów teraz
+          </button>
         </div>
 
         <div class="hero__wave">
@@ -72,7 +82,7 @@
         <h2 class="offer__title">Nasza Oferta</h2>
         <ul class="offer__list">
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/projects.html">
+            <a class="offer__list-link" href="/src/partials/projects.html">
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg">
                   <use href="./icons.svg#kitchen"></use>
@@ -83,7 +93,7 @@
             </a>
           </li>
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/projects.html">
+            <a class="offer__list-link" href="/src/partials/projects.html">
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg offer__list-svg--wardrobe">
                   <use href="./icons.svg#wardrobe"></use>
@@ -94,7 +104,7 @@
             </a>
           </li>
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/projects.html">
+            <a class="offer__list-link" href="/src/partials/projects.html">
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg">
                   <use href="./icons.svg#desk"></use>
@@ -105,7 +115,7 @@
             </a>
           </li>
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/projects.html">
+            <a class="offer__list-link" href="/src/partials/projects.html">
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg">
                   <use href="./icons.svg#desk"></use>
@@ -154,7 +164,9 @@
 
         <h2 class="contact__title">Skontaktuj się z nami!</h2>
 
-        <button class="contact__button">Zamów teraz</button>
+        <button class="contact__button" type="button" data-modal-open="contact">
+          Zamów teraz
+        </button>
       </section>
     </main>
 
@@ -179,8 +191,8 @@
             <nav class="footer__nav" aria-label="Footer navigation">
               <a href="/">Start</a>
               <a href="#offer">Oferta</a>
-              <a href="/projects/">Realizacje</a>
-              <a href="#contact">Kontakt</a>
+              <a href="/src/partials/projects.html">Projekty</a>
+              <a href="#contact" data-modal-open="contact">Kontakt</a>
             </nav>
 
             <ul class="footer__socials">
@@ -195,6 +207,7 @@
       </div>
     </footer>
 
+    <include src="./src/partials/modalContact.html"></include>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

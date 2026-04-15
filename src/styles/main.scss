@@ -6,6 +6,7 @@
 @use "./320px/why-we";
 @use "./320px/contact";
 @use "./320px/footer";
+@use "./320px/modal-contact";
 // Projects
 @use "./320px-projects/filter";
 @use "./320px-projects/projects";
@@ -17,6 +18,7 @@
 @use "./768px/why-we768";
 @use "./768px/contact768";
 @use "./768px/footer768";
+@use "./768px/modal-contact768";
 
 // 1080px
 @use "./1080px/header1080";
@@ -45,4 +47,5 @@ body {
   font-family: $font-main;
   font-size: $font-size-base;
   // max-width: 1080px;
+  position: relative;
 }

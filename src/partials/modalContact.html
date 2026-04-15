@@ -1,0 +1,85 @@
+<div class="modal__backdrop" id="modalContact" aria-hidden="true">
+  <div
+    class="modal__contact"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalContactTitle"
+  >
+    <button
+      class="modal__close"
+      type="button"
+      aria-label="Zamknij okno kontaktowe"
+    >
+      &times;
+    </button>
+
+    <div class="modal__header">
+      <p class="modal__eyebrow">Kontakt</p>
+      <h2 class="modal__title" id="modalContactTitle">Zamów meble na wymiar</h2>
+      <p class="modal__text">
+        Opisz krótko, czego potrzebujesz. Odezwiemy się i ustalimy szczegóły
+        realizacji.
+      </p>
+    </div>
+
+    <ul class="modal__details" aria-label="Dane kontaktowe">
+      <li class="modal__details-item">
+        <span class="modal__details-label">Telefon</span>
+        <a class="modal__details-link" href="tel:+48123456789"
+          >+48 123 456 789</a
+        >
+      </li>
+      <li class="modal__details-item">
+        <span class="modal__details-label">E-mail</span>
+        <a class="modal__details-link" href="mailto:kontakt@wioryleca.pl"
+          >kontakt@wioryleca.pl</a
+        >
+      </li>
+      <li class="modal__details-item">
+        <span class="modal__details-label">Obszar</span>
+        <span>Zielona Góra i okolice</span>
+      </li>
+    </ul>
+
+    <form
+      class="modal__form"
+      action="mailto:kontakt@wioryleca.pl"
+      method="post"
+      enctype="text/plain"
+    >
+      <label class="modal__field">
+        <span>Imie i nazwisko</span>
+        <input
+          class="modal__input"
+          type="text"
+          name="name"
+          autocomplete="name"
+          required
+        />
+      </label>
+
+      <label class="modal__field">
+        <span>Telefon lub e-mail</span>
+        <input
+          class="modal__input"
+          type="text"
+          name="contact"
+          autocomplete="email"
+          required
+        />
+      </label>
+
+      <label class="modal__field">
+        <span>Wiadomość</span>
+        <textarea
+          class="modal__input modal__textarea"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+      </label>
+
+      <button class="modal__button" type="submit">Wyślij zapytanie</button>
+    </form>
+  </div>
+</div>

@@ -39,15 +39,23 @@
         <div class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-list-item">
-              <a href="/" class="header__nav-list-link"> Strona główna </a>
+              <a href="/" class="header__nav-list-link">Strona główna </a>
             </li>
             <li class="header__nav-list-item">
-              <a href="/projects.html" class="header__nav-list-link">
+              <a
+                href="/src/partials/projects.html"
+                class="header__nav-list-link"
+              >
                 Projekty
               </a>
             </li>
             <li class="header__nav-list-item">
-              <a class="header__nav-list-link"> Kontakt </a>
+              <a href="/" class="header__nav-list-link">Realizacja </a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="header__nav-list-link" data-modal-open="contact">
+                Kontakt
+              </a>
             </li>
           </ul>
         </div>
@@ -140,7 +148,7 @@
               <a href="/">Start</a>
               <a href="#offer">Oferta</a>
               <a href="/projects/">Realizacje</a>
-              <a href="#contact">Kontakt</a>
+              <a href="#contact" data-modal-open="contact">Kontakt</a>
             </nav>
 
             <ul class="footer__socials">
@@ -155,6 +163,7 @@
       </div>
     </footer>
 
+    <include src="./src/partials/modalContact.html"></include>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -34,9 +34,10 @@
         &-link {
           color: $color-text;
           text-decoration: none;
+             cursor: pointer;
 
           &:hover {
-            color: $color-hovers;
+            color: $color-interactive;
           }
         }
       }

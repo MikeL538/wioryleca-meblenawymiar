@@ -1,0 +1,27 @@
+@use "../vars" as *;
+
+@media screen and (min-width: 768px) {
+  .modal {
+    &__backdrop {
+      padding: $margin-l;
+    }
+
+    &__contact {
+      padding: $margin-xl;
+    }
+
+    &__title {
+      font-size: $font-size-xxl;
+    }
+
+    &__details {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__button {
+      align-self: flex-start;
+      font-size: $font-size-m;
+      padding: $margin-xs $margin-m;
+    }
+  }
+}
