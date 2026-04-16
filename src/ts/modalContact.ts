@@ -2,9 +2,8 @@ const modalContact = document.querySelector<HTMLElement>("#modalContact");
 const modalOpenButtons = document.querySelectorAll<HTMLButtonElement>(
   '[data-modal-open="contact"]',
 );
-const modalCloseButton = modalContact?.querySelector<HTMLButtonElement>(
-  ".modal__close",
-);
+const modalCloseButton =
+  modalContact?.querySelector<HTMLButtonElement>(".modal__close");
 
 const openModal = () => {
   if (!modalContact) return;

@@ -24,6 +24,8 @@ function imageGenerate(amount: number, name: string) {
   }
 }
 
-wardrobeButton.addEventListener("click", () => {
-  imageGenerate(amountWardrobe, name);
-});
+if (wardrobeButton) {
+  wardrobeButton.addEventListener("click", () => {
+    imageGenerate(amountWardrobe, name);
+  });
+}
