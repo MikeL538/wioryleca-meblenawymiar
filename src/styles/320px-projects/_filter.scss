@@ -28,19 +28,26 @@
   &__list {
     list-style: none;
     display: flex;
-    gap: $margin-xxl;
+    gap:8%;
+    width: 100%;
+   justify-content: center;
+
   }
 
   &__button {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+        font-weight: 700;
+        padding: 2px;
+        background-color: transparent;
+        border: none;
   }
 
   &__icon {
     width: 50px;
     height: 50px;
-    fill: red;
+    fill: $color-wood-dark;
     stroke: 50px;
   }
 }
