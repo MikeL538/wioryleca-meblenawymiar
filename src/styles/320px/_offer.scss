@@ -67,11 +67,12 @@
 
     &-svg {
       height: 25px;
-      stroke: $color-darkwood;
+
+      fill: $color-darkwood;
       width: 25px;
 
       &--wardrobe {
-        fill: none;
+        stroke: $color-darkwood;
       }
     }
   }

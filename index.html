@@ -33,7 +33,10 @@
         <h2 class="offer__title">Nasza Oferta</h2>
         <ul class="offer__list">
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/src/partials/projects.html">
+            <a
+              class="offer__list-link"
+              href="/src/partials/projects.html?category=kitchen"
+            >
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg">
                   <use href="./icons.svg#kitchen"></use>
@@ -44,7 +47,11 @@
             </a>
           </li>
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/src/partials/projects.html">
+            <a
+              id="offerWardrobeAnchor"
+              class="offer__list-link"
+              href="/src/partials/projects.html?category=wardrobe"
+            >
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg offer__list-svg--wardrobe">
                   <use href="./icons.svg#wardrobe"></use>
@@ -55,10 +62,13 @@
             </a>
           </li>
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/src/partials/projects.html">
+            <a
+              class="offer__list-link"
+              href="/src/partials/projects.html?category=bathroom"
+            >
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg">
-                  <use href="./icons.svg#desk"></use>
+                  <use href="./icons.svg#bathroom"></use>
                 </svg>
                 <p>Łazienki</p>
               </div>
@@ -66,10 +76,13 @@
             </a>
           </li>
           <li class="offer__list-item">
-            <a class="offer__list-link" href="/src/partials/projects.html">
+            <a
+              class="offer__list-link"
+              href="/src/partials/projects.html?category=built-in"
+            >
               <div class="offer__list-wrapper">
                 <svg class="offer__list-svg">
-                  <use href="./icons.svg#desk"></use>
+                  <use href="./icons.svg#drawer"></use>
                 </svg>
                 <p>Zabudowy</p>
               </div>
@@ -121,7 +134,6 @@
       </section>
     </main>
 
-    <footer class="footer">
     <footer class="footer">
       <include src="./src/partials/footer.html"></include>
     </footer>

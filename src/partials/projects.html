@@ -12,46 +12,55 @@
     </header>
 
     <main>
-      <!-- <section class="filter"> -->
-      <!-- <select class="filter__select">
-          <option value="kuchnie">Kuchnia</option>
-          <option value="kuchnie">Garderoba</option>
-          <option value="kuchnie">Biuro</option>
-        </select> -->
-      <!-- </section> -->
-
       <section class="categories">
         <ul class="categories__list">
           <li class="categories__item">
-            <button id="wardrobeButton" class="categories__button">
-              <svg class="categories__icon">
+            <button
+              id="wardrobeButton"
+              class="categories__button"
+              type="button"
+              data-category="wardrobe"
+            >
+              <svg class="categories__icon categories__icon--wardrobe">
                 <use href="../../public/icons.svg#wardrobe"></use>
               </svg>
               Szafy
             </button>
           </li>
           <li class="categories__item">
-            <button class="categories__button">
+            <button
+              class="categories__button"
+              type="button"
+              data-category="kitchen"
+            >
               <svg class="categories__icon">
-                <use href="../../public/icons.svg#wardrobe"></use>
+                <use href="../../public/icons.svg#kitchen"></use>
               </svg>
-              Szafy
+              Kuchnie
             </button>
           </li>
           <li class="categories__item">
-            <button class="categories__button">
+            <button
+              class="categories__button"
+              type="button"
+              data-category="bathroom"
+            >
               <svg class="categories__icon">
-                <use href="../../public/icons.svg#wardrobe"></use>
+                <use href="../../public/icons.svg#bathroom"></use>
               </svg>
-              Szafy
+              Lazienki
             </button>
           </li>
           <li class="categories__item">
-            <button class="categories__button">
+            <button
+              class="categories__button"
+              type="button"
+              data-category="built-in"
+            >
               <svg class="categories__icon">
-                <use href="../../public/icons.svg#wardrobe"></use>
+                <use href="../../public/icons.svg#drawer"></use>
               </svg>
-              Szafy
+              Zabudowy
             </button>
           </li>
         </ul>
@@ -59,16 +68,15 @@
 
       <section class="projects">
         <ul id="projectList" class="projects__list">
-          <li class="projects__list-item">
-            <button class="projects__list-button" type="button" >
+          <!-- <li class="projects__list-item">
+            <button class="projects__list-button" type="button">
               <img
                 class="projects__list-img"
                 src="/images/hero.png"
                 alt="Projekt mebli na wymiar"
               />
             </button>
-          </li>
-
+          </li> -->
         </ul>
       </section>
     </main>
