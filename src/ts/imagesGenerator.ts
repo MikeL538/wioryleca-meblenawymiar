@@ -19,14 +19,14 @@ const projectConfig: Record<ProjectCategory, ProjectConfig> = {
     imageFolder: "wardrobes",
   },
   kitchen: {
-    amount: 0,
-    imageName: "",
-    imageFolder: "",
+    amount: 14,
+    imageName: "kuchnia",
+    imageFolder: "kitchen",
   },
   bathroom: {
-    amount: 0,
-    imageName: "",
-    imageFolder: "",
+    amount: 8,
+    imageName: "Lazienka",
+    imageFolder: "bathroom",
   },
   "built-in": {
     amount: 0,
