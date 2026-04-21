@@ -7,6 +7,8 @@
     }
 
     &__contact {
+      max-height: calc(100vh - (2 * #{$margin-l}));
+      max-height: calc(100dvh - (2 * #{$margin-l}));
       padding: $margin-xl;
     }
 

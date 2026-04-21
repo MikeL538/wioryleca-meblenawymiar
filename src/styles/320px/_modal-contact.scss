@@ -1,13 +1,8 @@
 @use "../vars" as *;
 
-body.modal-open {
-  overflow: hidden;
-}
-
 .modal {
   &__backdrop {
-
-    align-items: center;
+    align-items: flex-start;
     background-color: $color-overlay-dark;
     display: flex;
     inset: 0;
@@ -36,7 +31,9 @@ body.modal-open {
     border-radius: $border-radius;
     box-shadow: $shadow-md;
     color: $color-text-body;
-    max-height: calc(100vh - #{$margin-l});
+    margin: auto 0;
+    max-height: calc(100vh - (2 * #{$margin-s}));
+    max-height: calc(100dvh - (2 * #{$margin-s}));
     max-width: 560px;
     overflow-y: auto;
     padding: $margin-l $margin-m $margin-m;
@@ -45,7 +42,6 @@ body.modal-open {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 
   &__close {

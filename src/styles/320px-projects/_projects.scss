@@ -21,7 +21,6 @@
 
       &:hover {
         transform: scale(1.05);
-
       }
     }
 
@@ -30,7 +29,7 @@
       border: 2px solid $color-darkwood;
       display: flex;
       height: 250px;
-      object-fit: fill;
+      object-fit: cover;
       width: 275px;
     }
 
@@ -40,8 +39,6 @@
       cursor: pointer;
       overflow: hidden;
       transition: $transition-fast;
-
-  
     }
   }
 }

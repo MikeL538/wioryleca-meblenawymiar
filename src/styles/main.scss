@@ -7,6 +7,7 @@
 @use "./320px/contact";
 @use "./320px/footer";
 @use "./320px/modal-contact";
+@use "./320px/modal-menu";
 // Projects
 @use "./320px-projects/filter";
 @use "./320px-projects/projects";
@@ -48,4 +49,8 @@ body {
   font-size: $font-size-base;
   // max-width: 1080px;
   position: relative;
+}
+
+body.modal-open {
+  overflow: hidden;
 }

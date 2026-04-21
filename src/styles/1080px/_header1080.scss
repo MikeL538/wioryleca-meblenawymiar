@@ -2,8 +2,11 @@
 
 @media screen and (min-width: 1080px) {
   .header {
+    &__title {
+      font-size: $font-size-xxl;
+    }
     &__container {
-      max-width: 1200px;
+      max-width: 1600px;
     }
 
     &__nav-list {

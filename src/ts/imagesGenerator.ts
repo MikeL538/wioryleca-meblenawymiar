@@ -14,7 +14,7 @@ type ProjectConfig = {
 
 const projectConfig: Record<ProjectCategory, ProjectConfig> = {
   wardrobe: {
-    amount: 31,
+    amount: 35,
     imageName: "szafa",
     imageFolder: "wardrobes",
   },
@@ -29,9 +29,9 @@ const projectConfig: Record<ProjectCategory, ProjectConfig> = {
     imageFolder: "bathroom",
   },
   "built-in": {
-    amount: 0,
-    imageName: "",
-    imageFolder: "",
+    amount: 12,
+    imageName: "zab",
+    imageFolder: "other",
   },
 };
 

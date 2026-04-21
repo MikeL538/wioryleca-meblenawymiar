@@ -13,29 +13,39 @@
   </div>
 
   <div class="header__menu--mobile">
-    <button class="header__menu--mobile-button">
+    <button
+      type="button"
+      aria-label="Otwórz menu"
+      class="header__menu--mobile-button"
+      data-modal-open="menu"
+    >
       <svg>
-        <use href="../../public/icons.svg#mobileMenu" ></use>
+        <use href="../../public/icons.svg#mobileMenu"></use>
       </svg>
     </button>
   </div>
-<!-- href="../icons.svg#mobileMenu" -->
-  <div class="header__nav">
+  <!-- href="../icons.svg#mobileMenu" -->
+  <nav class="header__nav">
     <ul class="header__nav-list">
       <li class="header__nav-list-item">
         <a href="/" class="header__nav-list-link">Strona główna</a>
       </li>
       <li class="header__nav-list-item">
         <a href="/src/partials/projects.html" class="header__nav-list-link">
-          Projekty
+          Realizacje
         </a>
       </li>
       <li class="header__nav-list-item">
-        <a href="/" class="header__nav-list-link">Proces</a>
+        <a href="/" class="header__nav-list-link">Współpraca</a>
       </li>
       <li class="header__nav-list-item">
-        <a class="header__nav-list-link" data-modal-open="contact">Kontakt</a>
+        <a href="/" class="header__nav-list-link">O nas</a>
+      </li>
+      <li class="header__nav-list-item">
+        <button class="header__nav-list-link" data-modal-open="contact">
+          Kontakt
+        </button>
       </li>
     </ul>
-  </div>
+  </nav>
 </div>

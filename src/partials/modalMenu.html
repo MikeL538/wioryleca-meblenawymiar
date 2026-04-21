@@ -1,0 +1,48 @@
+<div class="modal__backdrop" id="modalMenu" aria-hidden="true">
+  <div
+    class="modal__menu"
+    aria-modal="true"
+    role="dialog"
+    aria-labelledby="modalMenuTitle"
+  >
+    <button
+      class="modal__close"
+      type="button"
+      aria-label="Zamknij okno kontaktowe"
+    >
+      &times;
+    </button>
+
+    <a class="header__link" href="/">
+      <img class="modal__menu-image" src="/images/logo.png" alt="logo image" />
+    </a>
+
+    <nav class="mobile__nav">
+      <ul class="mobile__nav-list">
+        <li class="mobile__nav-list-item">
+          <a href="/" class="mobile__nav-list-link">Strona główna</a>
+        </li>
+        <li class="mobile__nav-list-item">
+          <a href="/src/partials/projects.html" class="mobile__nav-list-link">
+            Realizacje
+          </a>
+        </li>
+        <li class="mobile__nav-list-item">
+          <a href="/" class="mobile__nav-list-link">Współpraca</a>
+        </li>
+        <li class="mobile__nav-list-item">
+          <a href="/" class="mobile__nav-list-link">O nas</a>
+        </li>
+        <li class="mobile__nav-list-item">
+          <button
+            class="mobile__nav-list-link"
+            data-modal-open="contact"
+            type="button"
+          >
+            Kontakt
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

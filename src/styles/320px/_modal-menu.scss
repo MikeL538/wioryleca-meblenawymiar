@@ -1,0 +1,67 @@
+@use "../vars" as *;
+
+.modal {
+  &__menu {
+    align-items: center;
+    background-color: $color-bg-card;
+    border-radius: $border-radius;
+    border: 1px solid rgba($color-darkwood, 0.15);
+    box-shadow: $shadow-md;
+    color: $color-text-body;
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 0;
+    max-height: min(500px, calc(100vh - (2 * #{$margin-s})));
+    max-height: min(500px, calc(100dvh - (2 * #{$margin-s})));
+    max-width: 560px;
+    min-height: min(250px, calc(100dvh - (2 * #{$margin-s})));
+    overflow-y: auto;
+    padding: $margin-xxl $margin-m $margin-xxl;
+    position: relative;
+    width: 100%;
+
+    &-image {
+      border-bottom-right-radius: $border-radius;
+      left: 0;
+      max-width: 100px;
+      width: 17%;
+      position: absolute;
+      top: 0;
+
+      &-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.mobile__nav {
+  width: 100%;
+
+  &-list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    gap: $margin-l;
+    justify-content: center;
+    list-style: none;
+
+    &-link {
+      background: none;
+      border: none;
+      color: $color-darkwood;
+      cursor: pointer;
+      font-family: "Inter", sans-serif;
+      font-size: $font-size-xl;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover,
+      &focus {
+        color: $color-hovers;
+      }
+    }
+  }
+}

@@ -12,9 +12,9 @@
     }
 
     &__title {
-      font-size: $font-size-xxl;
+      font-size: $font-size-xl;
       &-under {
-        font-size: $font-size-lg;
+        font-size: $font-size-m;
       }
     }
 
@@ -29,12 +29,16 @@
         display: flex;
         gap: $margin-s;
         list-style: none;
-        font-size: $font-size-lg;
+        font-size: $font-size-m;
 
         &-link {
           color: $color-text;
           text-decoration: none;
-             cursor: pointer;
+          cursor: pointer;
+          font-size: $font-size-m;
+          background: none;
+          border: none;
+          font-family: sans-serif;
 
           &:hover {
             color: $color-interactive;
