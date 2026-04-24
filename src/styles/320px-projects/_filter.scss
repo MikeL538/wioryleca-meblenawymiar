@@ -3,7 +3,7 @@
 .categories {
   align-items: center;
   display: flex;
-  height: 100px;
+  // height: 100px;
   justify-content: center;
 
   &__list {
@@ -12,16 +12,20 @@
     justify-content: center;
     list-style: none;
     width: 100%;
+    padding: $margin-s 0;
+    background: $color-bg-section;
+    // background: $color-;
+    border-bottom: 2px solid $color-darkwood;
   }
 
   &__button {
-    background-color: transparent;
     border: none;
+    background: transparent;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     font-weight: 700;
-    padding: 2px;
+    padding: 3px;
     transition: $transition-fast;
     font-size: $font-size-sm;
     align-items: center;
@@ -34,6 +38,8 @@
 
   &__icon {
     fill: $color-wood-dark;
+    // fill: red;
+
     height: 50px;
     stroke: 50px;
     width: 50px;

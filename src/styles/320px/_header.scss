@@ -3,6 +3,8 @@
 .header {
   font-family: $font-heading;
   background-color: $header-bg;
+  position: relative;
+  padding: $spacing-xxl 0;
 
   &__container {
     align-items: center;
@@ -11,6 +13,7 @@
     margin: 0 auto;
     max-width: 460px;
     padding: 15px 10px;
+    z-index: 1000;
   }
 
   &__logo {
@@ -37,7 +40,7 @@
 
   &__image {
     width: 50px;
-
+    z-index: 1000;
     border-radius: 50%;
     border: none;
 
@@ -78,5 +81,23 @@
 
   &__nav {
     display: none;
+  }
+
+  &__wave {
+    bottom: -15px;
+    height: 30px;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+    transform: rotate(180deg);
+    z-index: 100;
+
+    > svg {
+      display: block;
+      fill: $header-bg;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
