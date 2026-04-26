@@ -2,22 +2,6 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    &__container {
-      padding: 15px 35px;
-      max-width: 1000px;
-    }
-
-    &__image {
-      width: 75px;
-    }
-
-    &__title {
-      font-size: $font-size-xl;
-      &-under {
-        font-size: $font-size-m;
-      }
-    }
-
     &__menu--mobile {
       display: none;
     }
@@ -27,9 +11,8 @@
 
       &-list {
         display: flex;
-        gap: $margin-s;
+        gap: $margin-m;
         list-style: none;
-        font-size: $font-size-m;
 
         &-link {
           color: $color-text;
@@ -38,10 +21,10 @@
           font-size: $font-size-m;
           background: none;
           border: none;
-          font-family: sans-serif;
+          font-family: $font-main;
 
           &:hover {
-            color: $color-interactive;
+            color: $color-accent;
           }
         }
       }

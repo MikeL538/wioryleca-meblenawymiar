@@ -26,11 +26,11 @@
   }
 
   &__contact {
-    background-color: $color-bg-card;
+    background-color: $color-bg-section;
     border: 1px solid rgba($color-darkwood, 0.15);
     border-radius: $border-radius;
     box-shadow: $shadow-md;
-    color: $color-text-body;
+    color: $color-text;
     margin: auto 0;
     max-height: calc(100vh - (2 * #{$margin-s}));
     max-height: calc(100dvh - (2 * #{$margin-s}));
@@ -68,9 +68,9 @@
 
     &:hover,
     &:focus {
-      background-color: $color-interactive;
-      border-color: $color-interactive;
-      color: $color-text;
+      background-color: $color-accent;
+      border-color: $color-accent;
+      color: $color-text-light;
       transform: translateY(-1px);
     }
   }
@@ -81,7 +81,7 @@
   }
 
   &__eyebrow {
-    color: $color-interactive;
+    color: $color-accent;
     font-size: $font-size-sm;
     font-weight: 700;
     letter-spacing: $spacing-md;
@@ -90,7 +90,7 @@
   }
 
   &__title {
-    color: $color-headers;
+    color: $color-primary;
     font-family: $font-heading;
     font-size: $font-size-xl;
     line-height: 1.15;
@@ -98,13 +98,13 @@
   }
 
   &__text {
-    color: $color-text-body;
+    color: $color-text-muted;
     font-size: $font-size-sm;
     line-height: 1.55;
   }
 
   &__details {
-    background-color: rgba($color-bg-section, 0.35);
+    background-color: $color-bg-main;
     border: 1px solid rgba($color-darkwood, 0.1);
     border-radius: $border-radius;
     display: grid;
@@ -115,7 +115,7 @@
   }
 
   &__details-item {
-    color: $color-text-body;
+    color: $color-text;
     display: flex;
     flex-direction: column;
     font-size: $font-size-sm;
@@ -132,14 +132,14 @@
   }
 
   &__details-link {
-    color: $color-interactive;
+    color: $color-accent;
     font-weight: 700;
     text-decoration: none;
     transition: color $transition-fast;
 
     &:hover,
     &:focus {
-      color: $color-btn-hover;
+      color: $color-accent-hover;
     }
   }
 
@@ -159,10 +159,10 @@
   }
 
   &__input {
-    background-color: $color-text;
+    background-color: $color-bg-section;
     border: 1px solid $color-border;
     border-radius: $border-radius;
-    color: $color-text-body;
+    color: $color-text;
     font: inherit;
     min-height: 44px;
     padding: $margin-xs $margin-s;
@@ -172,8 +172,8 @@
     width: 100%;
 
     &:focus {
-      border-color: $color-interactive;
-      box-shadow: 0 0 0 3px rgba($color-interactive, 0.18);
+      border-color: $color-accent;
+      box-shadow: 0 0 0 3px rgba($color-accent, 0.18);
       outline: none;
     }
   }
@@ -184,11 +184,11 @@
   }
 
   &__button {
-    background-color: $color-interactive;
+    background-color: $color-accent;
     border: none;
     border-radius: 6px;
     box-shadow: $shadow-md;
-    color: $color-text;
+    color: $color-text-light;
     cursor: pointer;
     font-size: $font-size-sm;
     font-weight: 700;
@@ -204,12 +204,12 @@
 
     &:hover,
     &:focus {
-      background-color: $color-btn-hover;
+      background-color: $color-accent-hover;
       transform: translateY(-2px);
     }
 
     &:active {
-      background-color: $color-btn-active;
+      background-color: $color-accent-active;
       transform: translateY(0);
     }
   }

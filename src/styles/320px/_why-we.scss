@@ -2,7 +2,7 @@
 
 .why-we {
   align-items: center;
-  color: $color-headers;
+  color: $color-primary;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +34,8 @@
 
     &-item {
       align-items: center;
-      background-color: $color-bg-card;
+      background-color: $color-bg-section;
+      border: 1px solid rgba($color-darkwood, 0.12);
       border-radius: $border-radius;
       display: flex;
       flex-direction: column;
@@ -59,7 +60,7 @@
     }
 
     &-para {
-      border-bottom: 1px solid $color-underline;
+      border-bottom: 1px solid $color-darkwood;
       font-size: $font-size-s;
       font-weight: 700;
       padding-bottom: 3px;

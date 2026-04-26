@@ -2,7 +2,7 @@
 
 .offer {
   align-items: center;
-  color: $color-headers;
+  color: $color-primary;
   display: flex;
   flex-direction: column;
   font-weight: 600;
@@ -36,7 +36,8 @@
 
     &-item {
       align-items: center;
-      background-color: $color-bg-card;
+      background-color: $color-bg-section;
+      border: 1px solid rgba($color-darkwood, 0.12);
       border-radius: $border-radius;
       display: flex;
       justify-content: space-between;
@@ -52,7 +53,7 @@
 
     &-link {
       align-items: center;
-      color: $color-headers;
+      color: $color-primary;
       display: flex;
       justify-content: space-between;
       text-decoration: none;

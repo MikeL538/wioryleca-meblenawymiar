@@ -1,8 +1,8 @@
 @use "../vars" as *;
 
 .footer {
-  background-color: $color-darkwood;
-  color: $color-bg-main;
+  background-color: $color-bg-dark;
+  color: $color-text-light;
   padding: $margin-s 0 $margin-s 0;
 
   &__container {
@@ -17,7 +17,7 @@
 
   &__logo {
     align-items: center;
-    color: $color-text;
+    color: $color-text-light;
     display: flex;
     font-size: $font-size-lg;
     font-weight: 700;
@@ -28,7 +28,7 @@
 
     &::before,
     &::after {
-      background-color: rgba($color-text, 0.35);
+      background-color: rgba($color-text-light, 0.35);
       content: "";
       height: 1px;
       margin: 0 6px;
@@ -61,13 +61,13 @@
 
       &:hover,
       &:focus {
-        color: $color-interactive;
+        color: $color-accent;
       }
     }
   }
 
   &__nav {
-    border-top: 1px solid rgba($color-text, 0.08);
+    border-top: 1px solid rgba($color-text-light, 0.08);
     display: flex;
     gap: $margin-s;
     justify-content: center;
@@ -75,14 +75,14 @@
     margin-bottom: $margin-s;
 
     a {
-      color: $color-text;
+      color: $color-text-light;
       font-size: $font-size-sm;
       text-decoration: none;
       transition: color $transition-fast;
 
       &:hover,
       &:focus {
-        color: $color-interactive;
+        color: $color-accent;
       }
     }
   }
@@ -100,9 +100,9 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      border: 1px solid rgba($color-text, 0.12);
+      border: 1px solid rgba($color-text-light, 0.12);
       border-radius: 50%;
-      color: $color-text;
+      color: $color-text-light;
       font-size: $font-size-sm;
       font-weight: 600;
       text-decoration: none;
@@ -113,8 +113,8 @@
 
       &:hover,
       &:focus {
-        border-color: $color-interactive;
-        color: $color-interactive;
+        border-color: $color-accent;
+        color: $color-accent;
       }
     }
   }
@@ -122,8 +122,8 @@
   &__copy {
     text-align: center;
     padding-top: $margin-xs;
-    border-top: 1px solid rgba($color-text, 0.08);
-    color: $color-bg-section;
+    border-top: 1px solid rgba($color-text-light, 0.08);
+    color: rgba($color-text-light, 0.7);
     font-size: $font-size-s;
   }
 }

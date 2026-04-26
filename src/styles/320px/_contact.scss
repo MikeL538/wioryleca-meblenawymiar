@@ -43,7 +43,7 @@
 
     &::before,
     &::after {
-      background-color: rgba(#cbbba0, 0.35);
+      background-color: rgba($color-divider, 0.6);
       content: "";
       display: block;
       width: 100%;
@@ -53,11 +53,11 @@
   }
 
   &__button {
-    background-color: $color-interactive;
+    background-color: $color-accent;
     border-radius: 6px;
     border: none;
     box-shadow: $shadow-md;
-    color: $color-text;
+    color: $color-text-light;
     cursor: pointer;
     font-size: $font-size-sm;
     font-weight: 600;
@@ -67,7 +67,7 @@
     transition: $transition-fast;
 
     &:hover {
-      background-color: $color-btn-hover;
+      background-color: $color-accent-hover;
       box-shadow: $shadow-md;
       transform: translateY(-2px) scale(1.05);
     }

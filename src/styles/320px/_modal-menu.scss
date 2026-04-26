@@ -3,11 +3,11 @@
 .modal {
   &__menu {
     align-items: center;
-    background-color: $color-bg-card;
+    background-color: $color-bg-section;
     border-radius: $border-radius;
     border: 1px solid rgba($color-darkwood, 0.15);
     box-shadow: $shadow-md;
-    color: $color-text-body;
+    color: $color-text;
     display: flex;
     flex-direction: column;
 
@@ -60,7 +60,7 @@
 
       &:hover,
       &focus {
-        color: $color-hovers;
+        color: $color-accent;
       }
     }
   }
