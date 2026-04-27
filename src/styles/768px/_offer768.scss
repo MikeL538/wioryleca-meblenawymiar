@@ -2,18 +2,19 @@
 
 @media screen and (min-width: 768px) {
   .offer {
-    margin: $margin-xxl 0 $margin-768px 0;
+    &__title {
+      font-size: $font-size-xl;
+    }
+
     &__list {
-      font-size: $font-size-lg;
-      gap: $margin-s;
       flex-direction: row;
       flex-wrap: wrap;
+      font-size: $font-size-lg;
       justify-content: center;
-      max-width: 900px;
 
       &-item {
+        flex: 0 1 480px;
         padding: 6px 12px;
-        width: 350px;
       }
 
       &-wrapper {
@@ -21,8 +22,8 @@
       }
 
       &-svg {
-        height: 42px;
-        width: 42px;
+        height: 60px;
+        width: 75px;
       }
     }
   }
