@@ -1,18 +1,20 @@
 @use "../vars" as *;
 
 .contact {
-  align-items: center;
   color: $color-text;
-  display: flex;
-  flex-direction: column;
   font-weight: 600;
-  justify-content: center;
-  padding: $margin-xxl 0 $margin-xxl 0;
-
-  background-color: $header-bg;
 
   overflow: hidden;
   position: relative;
+
+  &__container {
+    padding: $margin-xxl 0 $margin-xxl 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
 
   &__wave {
     top: -1px;

@@ -6,7 +6,7 @@
     &__container {
       max-width: 1600px;
       margin: 0 auto;
-      background-position: center;
+
       background-image:
         linear-gradient(
           to right,
@@ -15,7 +15,7 @@
           rgba(0, 0, 0, 0.55) 35%,
           rgba(0, 0, 0, 0) 100%
         ),
-        url("/images/hero.webp");
+        url("/images/other/zab8.webp");
     }
 
     &__wrapper {

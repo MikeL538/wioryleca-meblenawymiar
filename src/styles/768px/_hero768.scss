@@ -4,6 +4,7 @@
   .hero {
     &__container {
       min-height: 70vh;
+
       background-image:
         linear-gradient(
           to right,
@@ -12,7 +13,7 @@
           rgba(0, 0, 0, 0.55) 45%,
           rgba(0, 0, 0, 0) 100%
         ),
-        url("/images/hero.webp");
+        url("/images/other/zab8.webp");
     }
 
     &__wrapper {

@@ -1,12 +1,15 @@
 @use "../vars" as *;
 
 .why-we {
-  align-items: center;
   color: $color-primary;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: $margin-xxl;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
 
   &__title {
     align-items: center;

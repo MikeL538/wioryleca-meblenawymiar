@@ -2,6 +2,10 @@
 
 @media screen and (min-width: 768px) {
   .offer {
+    &__container {
+      border-bottom: 1px solid rgba($color-darkwood, 0.35);
+    }
+
     &__title {
       font-size: $font-size-xl;
     }
@@ -15,6 +19,7 @@
       &-item {
         flex: 0 1 480px;
         padding: 6px 12px;
+        border: 1px solid rgba($color-darkwood, 0.35);
       }
 
       &-wrapper {

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/logos.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wioryleca-meblenawymiar</title>
   </head>
@@ -124,45 +124,70 @@
         </div>
       </section>
 
+      <section id="realization" class="realization">
+        <div class="realization__container">
+          <h2 class="realization__title">Zobacz nasze realizacje</h2>
+          <ul class="realization__list">
+            <li class="realization__list-item">
+              <img class="realization__list-img" />
+            </li>
+            <li class="realization__list-item">
+              <img class="realization__list-img" />
+            </li>
+            <li class="realization__list-item">
+              <img class="realization__list-img" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="why-we">
-        <h2 class="why-we__title">Dlaczego my?</h2>
-        <ul class="why-we__list">
-          <li class="why-we__list-item">
-            <svg class="why-we__list-svg">
-              <use href="./icons.svg#exp"></use>
-            </svg>
-            <p class="why-we__list-para">Doświadczenie<br />zawodowe</p>
-            <p class="why-we__list-para2">X lat na rynku</p>
-          </li>
-          <li class="why-we__list-item">
-            <svg class="why-we__list-svg">
-              <use href="./icons.svg#handshake"></use>
-            </svg>
-            <p class="why-we__list-para">Indywidualne podejście</p>
-            <p class="why-we__list-para2">Projekt na miarę</p>
-          </li>
-          <li class="why-we__list-item">
-            <svg class="why-we__list-svg">
-              <use href="./icons.svg#guarantee"></use>
-            </svg>
-            <p class="why-we__list-para">Gwarancja jakości</p>
-            <p class="why-we__list-para2">Solidne wykonanie</p>
-          </li>
-        </ul>
+        <div class="why-we__container">
+          <h2 class="why-we__title">Dlaczego my?</h2>
+          <ul class="why-we__list">
+            <li class="why-we__list-item">
+              <svg class="why-we__list-svg">
+                <use href="./icons.svg#exp"></use>
+              </svg>
+              <p class="why-we__list-para">Doświadczenie<br />zawodowe</p>
+              <p class="why-we__list-para2">X lat na rynku</p>
+            </li>
+            <li class="why-we__list-item">
+              <svg class="why-we__list-svg">
+                <use href="./icons.svg#handshake"></use>
+              </svg>
+              <p class="why-we__list-para">Indywidualne podejście</p>
+              <p class="why-we__list-para2">Projekt na miarę</p>
+            </li>
+            <li class="why-we__list-item">
+              <svg class="why-we__list-svg">
+                <use href="./icons.svg#guarantee"></use>
+              </svg>
+              <p class="why-we__list-para">Gwarancja jakości</p>
+              <p class="why-we__list-para2">Solidne wykonanie</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="contact">
-        <div class="contact__wave">
+        <div class="contact__container">
+          <!-- <div class="contact__wave">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
             <path d="M0,20 C360,50 1080,50 1440,20 L1440,120 L0,120 Z" />
           </svg>
+        </div> -->
+
+          <h2 class="contact__title">Skontaktuj się z nami!</h2>
+
+          <button
+            class="contact__button"
+            type="button"
+            data-modal-open="contact"
+          >
+            Zamów teraz
+          </button>
         </div>
-
-        <h2 class="contact__title">Skontaktuj się z nami!</h2>
-
-        <button class="contact__button" type="button" data-modal-open="contact">
-          Zamów teraz
-        </button>
       </section>
     </main>
 

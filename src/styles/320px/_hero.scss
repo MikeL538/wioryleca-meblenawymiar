@@ -3,16 +3,9 @@
 .hero {
   align-items: center;
   display: flex;
-  // margin-bottom: $margin-l;
   overflow: hidden;
   position: relative;
   text-align: left;
-
-  // &::before {
-  //   content: "";
-  //   inset: 0;
-  //   position: absolute;
-  // }
 
   &__container {
     background-image:
@@ -23,8 +16,9 @@
         rgba(0, 0, 0, 0.5) 65%,
         rgba(0, 0, 0, 0) 100%
       ),
-      url("/images/hero.webp");
-    background-position: top;
+      url("/images/other/zab8.webp");
+
+    background-position: center 80%;
     background-repeat: no-repeat;
     background-size: cover;
     color: $color-text-light;

@@ -1,0 +1,49 @@
+@use "../vars" as *;
+
+.realization {
+  color: $color-primary;
+  font-weight: 600;
+
+  &__container {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 90px 0;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    font-size: $font-size-lg;
+    letter-spacing: $spacing-xs;
+    margin-bottom: $margin-m;
+    white-space: nowrap;
+    width: 100%;
+
+    &::before,
+    &::after {
+      background-color: rgba($color-darkwood, 0.35);
+      content: "";
+      height: 1px;
+      margin: 0 6px;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin-top: $margin-l;
+
+    &-img {
+      background-color: $color-accent;
+      height: 120px;
+      width: 120px;
+    }
+  }
+}

@@ -7,10 +7,9 @@
   flex-direction: column;
   font-weight: 600;
   justify-content: center;
-  margin-bottom: $margin-xxl;
 
   &__container {
-    padding: $margin-xxl 0 $margin-768px 0;
+    padding: $margin-xxl 0 0 0;
     width: 100%;
   }
 
@@ -58,13 +57,12 @@
       color: $color-primary;
       display: flex;
       justify-content: space-between;
+      letter-spacing: $spacing-md;
       margin: 0 auto;
       max-width: 500px;
       padding: $margin-m;
       text-decoration: none;
       width: 100%;
-
-      letter-spacing: $spacing-md;
     }
 
     &-wrapper {
@@ -78,9 +76,9 @@
       fill: $color-darkwood;
       gap: $spacing-xl;
       height: 44px;
+      overflow: visible;
       padding: 7px;
       width: 54px;
-      overflow: visible;
 
       &--wardrobe {
         stroke: $color-darkwood;

@@ -1,7 +1,7 @@
 @use "../vars" as *;
 
 .header {
-  background-color: $color-bg-main;
+  background-color: $header-bg;
   font-family: $font-heading;
   position: relative;
 
@@ -36,13 +36,17 @@
     width: 100%;
   }
 
+  &__image {
+    height: 44px;
+  }
+
   &__title {
     border-bottom: 3px solid $color-text;
     font-size: $font-size-xl;
     padding: 0 2px;
 
     &-under {
-      font-size: $font-size-sm;
+      font-size: $font-size-s;
       text-indent: 5px;
     }
   }
@@ -61,8 +65,8 @@
       > svg {
         border: none;
         color: $color-text;
-        height: 44px;
-        width: 44px;
+        height: 36px;
+        width: 36px;
       }
     }
   }

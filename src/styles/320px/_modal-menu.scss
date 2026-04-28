@@ -12,10 +12,10 @@
     flex-direction: column;
 
     margin: auto 0;
-    max-height: min(500px, calc(100vh - (2 * #{$margin-s})));
-    max-height: min(500px, calc(100dvh - (2 * #{$margin-s})));
+    // max-height: min(500px, calc(100vh - (2 * #{$margin-s})));
+    // max-height: min(500px, calc(100dvh - (2 * #{$margin-s})));
     max-width: 560px;
-    min-height: min(250px, calc(100dvh - (2 * #{$margin-s})));
+    // min-height: min(250px, calc(100dvh - (2 * #{$margin-s})));
     overflow-y: auto;
     padding: $margin-xxl $margin-m $margin-xxl;
     position: relative;
@@ -23,11 +23,11 @@
 
     &-image {
       border-bottom-right-radius: $border-radius;
-      left: 0;
+      left: 3px;
       max-width: 100px;
-      width: 17%;
       position: absolute;
-      top: 0;
+      top: 3px;
+      width: 13%;
 
       &-wrapper {
         width: 100%;
