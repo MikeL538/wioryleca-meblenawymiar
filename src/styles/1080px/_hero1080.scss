@@ -4,7 +4,7 @@
   .hero {
     background-color: $color-overlay-warm;
     &__container {
-      max-width: 1600px;
+      max-width: $layout-width;
       margin: 0 auto;
 
       background-image:

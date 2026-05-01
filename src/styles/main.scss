@@ -21,11 +21,18 @@
 @use "./768px/contact768";
 @use "./768px/footer768";
 @use "./768px/modal-contact768";
+@use "./768px/realization768";
 
 // 1080px
 @use "./1080px/header1080";
 @use "./1080px/hero1080";
 @use "./1080px/offer1080";
+@use "./1080px/footer1080";
+@use "./1080px/contact1080";
+@use "./1080px/why-we1080";
+@use "./1080px/realization1080";
+@use "./1080px-projects/projects1080";
+@use "./1080px-projects/filter1080";
 
 *,
 *::before,

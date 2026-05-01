@@ -1,34 +1,30 @@
 @use "../vars" as *;
 
 .categories {
-  align-items: center;
-  display: flex;
-  // height: 100px;
-  justify-content: center;
+  &__container {
+    border-bottom: 2px solid $color-darkwood;
+  }
 
   &__list {
+    background: $color-bg-main;
     display: flex;
     gap: 7%;
     justify-content: center;
     list-style: none;
+    padding: $margin-l 0;
     width: 100%;
-    padding: $margin-s 0;
-    background: $color-bg-section;
-    // background: $color-;
-    border-bottom: 2px solid $color-darkwood;
   }
 
   &__button {
-    border: none;
+    align-items: center;
     background: transparent;
+    border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    font-weight: 700;
-    padding: 3px;
-    transition: $transition-fast;
     font-size: $font-size-sm;
-    align-items: center;
+    font-weight: 700;
+    transition: $transition-fast;
 
     &:hover,
     &:focus {
@@ -37,12 +33,14 @@
   }
 
   &__icon {
+    background-color: rgba($color-accent, 0.1);
+    border-radius: 44%;
     fill: $color-darkwood;
-    // fill: red;
-
-    height: 50px;
+    height: 55px;
+    overflow: visible;
+    padding: 6px;
     stroke: 50px;
-    width: 50px;
+    width: 60px;
 
     &--wardrobe {
       stroke: $color-darkwood;

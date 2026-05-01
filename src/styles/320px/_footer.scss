@@ -3,12 +3,13 @@
 .footer {
   background-color: $color-bg-dark;
   color: $color-text-light;
-  padding: $margin-s 0 $margin-s 0;
+
 
   &__container {
     display: flex;
     flex-direction: column;
     gap: $margin-s;
+      padding: $margin-s 0 $margin-s 0;
   }
 
   &__brand {

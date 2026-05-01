@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logos.png" />
@@ -13,66 +13,70 @@
 
     <main>
       <section class="categories">
-        <ul class="categories__list">
-          <li class="categories__item">
-            <button
-              id="wardrobeButton"
-              class="categories__button"
-              type="button"
-              data-category="wardrobe"
-            >
-              <svg class="categories__icon categories__icon--wardrobe">
-                <use href="../../public/icons.svg#wardrobe"></use>
-              </svg>
-              Szafy
-            </button>
-          </li>
-          <li class="categories__item">
-            <button
-              class="categories__button"
-              type="button"
-              data-category="kitchen"
-            >
-              <svg class="categories__icon">
-                <use href="../../public/icons.svg#kitchen"></use>
-              </svg>
-              Kuchnie
-            </button>
-          </li>
-          <li class="categories__item">
-            <button
-              class="categories__button"
-              type="button"
-              data-category="bathroom"
-            >
-              <svg class="categories__icon">
-                <use href="../../public/icons.svg#bathroom"></use>
-              </svg>
-              Lazienki
-            </button>
-          </li>
-          <li class="categories__item">
-            <button
-              class="categories__button"
-              type="button"
-              data-category="built-in"
-            >
-              <svg class="categories__icon">
-                <use href="../../public/icons.svg#drawer"></use>
-              </svg>
-              Inne
-            </button>
-          </li>
-        </ul>
+        <div class="categories__container">
+          <ul class="categories__list">
+            <li class="categories__item">
+              <button
+                id="wardrobeButton"
+                class="categories__button"
+                type="button"
+                data-category="wardrobe"
+              >
+                <svg class="categories__icon categories__icon--wardrobe">
+                  <use href="/icons.svg#wardrobe"></use>
+                </svg>
+                Szafy
+              </button>
+            </li>
+            <li class="categories__item">
+              <button
+                class="categories__button"
+                type="button"
+                data-category="kitchen"
+              >
+                <svg class="categories__icon">
+                  <use href="/icons.svg#kitchen"></use>
+                </svg>
+                Kuchnie
+              </button>
+            </li>
+            <li class="categories__item">
+              <button
+                class="categories__button"
+                type="button"
+                data-category="bathroom"
+              >
+                <svg class="categories__icon">
+                  <use href="/icons.svg#bathroom"></use>
+                </svg>
+                Lazienki
+              </button>
+            </li>
+            <li class="categories__item">
+              <button
+                class="categories__button"
+                type="button"
+                data-category="built-in"
+              >
+                <svg class="categories__icon">
+                  <use href="/icons.svg#drawer"></use>
+                </svg>
+                Inne
+              </button>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="projects">
-        <ul id="projectList" class="projects__list"></ul>
-        <nav
-          id="projectPagination"
-          class="projects__pagination"
-          aria-label="Paginacja projektow"
-        ></nav>
+        <div class="projects__container">
+          <ul id="projectList" class="projects__list"></ul>
+          <nav
+            id="projectPagination"
+            class="projects__pagination"
+            aria-label="Paginacja projektow"
+          ></nav>
+        </div>
       </section>
     </main>
 

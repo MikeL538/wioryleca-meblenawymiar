@@ -1,8 +1,13 @@
 @use "../vars" as *;
 
 .projects {
-  min-height: 70vh;
-  padding: $margin-l 0;
+  background-color: $color-overlay-warm;
+
+  &__container {
+    background-color: $color-bg-section;
+    // min-height: 70vh;
+    padding: $margin-l 0;
+  }
 
   &__list {
     align-items: center;
@@ -12,16 +17,13 @@
     justify-content: center;
     list-style: none;
     margin: 0 auto;
+    max-width: 1300px;
     width: 100%;
 
     &-item {
       display: flex;
       justify-content: center;
       margin: 5px;
-
-      &:hover {
-        transform: scale(1.05);
-      }
     }
 
     &-img {
@@ -39,6 +41,10 @@
       cursor: pointer;
       overflow: hidden;
       transition: $transition-fast;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -53,8 +59,8 @@
   &__pagination-button {
     align-items: center;
     background-color: transparent;
-    border: 1px solid $color-darkwood;
     border-radius: $border-radius;
+    border: 1px solid $color-darkwood;
     color: $color-darkwood;
     cursor: pointer;
     display: inline-flex;
@@ -68,7 +74,7 @@
 
     &:hover,
     &:focus {
-      background-color: $color-darkwood;
+      background-color: $color-accent;
       color: $color-text;
     }
 
@@ -80,11 +86,11 @@
     &:disabled:hover,
     &:disabled:focus {
       background-color: transparent;
-      color: $color-darkwood;
+      color: $color-accent;
     }
 
     &--active {
-      background-color: $color-darkwood;
+      background-color: $color-accent;
       color: $color-text;
     }
   }

@@ -1,12 +1,14 @@
 @use "../vars" as *;
 
 @media screen and (min-width: 1080px) {
-  .header {
+  .footer {
     background-color: $color-overlay-warm;
     &__container {
-      padding: $spacing-xxl $margin-m;
+        background-color: $color-bg-dark;
       max-width: $layout-width;
-      background-color: $header-bg;
+      margin: 0 auto;
     }
+
+
   }
 }
