@@ -13,11 +13,9 @@
       margin-bottom: $margin-xxl;
     }
 
-
-
     &__list {
       max-width: 1079px;
-      gap: $margin-xxl;
+      gap: $margin-m;
       &-item {
         border: 1px solid rgba($color-darkwood, 0.35);
       }

@@ -39,11 +39,20 @@
     display: flex;
     list-style: none;
     margin-top: $margin-l;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
 
     &-img {
       background-color: $color-accent;
-      height: 120px;
-      width: 120px;
+      max-width: 600px;
+      max-height: 455px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      &--width {
+        max-width: 570px;
+      }
     }
   }
 }

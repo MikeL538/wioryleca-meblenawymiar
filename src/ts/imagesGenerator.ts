@@ -16,22 +16,22 @@ type ProjectConfig = {
 
 const projectConfig: Record<ProjectCategory, ProjectConfig> = {
   wardrobe: {
-    amount: 35,
+    amount: 41,
     imageName: "szafa",
     imageFolder: "wardrobes",
   },
   kitchen: {
-    amount: 14,
+    amount: 29,
     imageName: "kuchnia",
     imageFolder: "kitchen",
   },
   bathroom: {
-    amount: 8,
+    amount: 17,
     imageName: "Lazienka",
     imageFolder: "bathroom",
   },
   "built-in": {
-    amount: 12,
+    amount: 17,
     imageName: "zab",
     imageFolder: "other",
   },
@@ -40,7 +40,7 @@ const projectConfig: Record<ProjectCategory, ProjectConfig> = {
 export const amountWardrobe: number = projectConfig.wardrobe.amount;
 export const name: string = projectConfig.wardrobe.imageName;
 
-const PROJECTS_PER_PAGE = 20;
+const PROJECTS_PER_PAGE = 12;
 let currentPage = 1;
 
 export function imageGenerate(
