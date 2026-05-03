@@ -1,9 +1,11 @@
 @use "../vars" as *;
 
-.realization {
+@media screen and (min-width: 1080px) {
+  .realization {
     background-color: $color-overlay-warm;
     &__container {
-        max-width: $layout-width;
-        margin: 0 auto;
+      max-width: $layout-width;
+      margin: 0 auto;
     }
+  }
 }

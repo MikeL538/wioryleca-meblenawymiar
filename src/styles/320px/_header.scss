@@ -54,17 +54,20 @@
   &__menu--mobile {
     &-button {
       background: none;
-      border-radius: $border-radius-lg;
+      border-radius: $border-radius;
+      border-color: $color-text;
       cursor: pointer;
       transition: $transition-fast;
 
       &:hover {
-        transform: translateY(-2px) scale(1.05);
+        transform: translateY(-1px);
       }
 
       > svg {
         border: none;
-        color: $color-text;
+
+        stroke: $color-text;
+
         height: 36px;
         width: 36px;
       }
@@ -74,22 +77,4 @@
   &__nav {
     display: none;
   }
-
-  // &__wave {
-  //   bottom: -15px;
-  //   height: 30px;
-  //   left: 0;
-  //   line-height: 0;
-  //   position: absolute;
-  //   transform: rotate(180deg);
-  //   width: 100%;
-  //   z-index: 100;
-
-  //   > svg {
-  //     display: block;
-  //     fill: $header-bg;
-  //     height: 100%;
-  //     width: 100%;
-  //   }
-  // }
 }

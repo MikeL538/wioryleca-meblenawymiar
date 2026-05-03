@@ -1,8 +1,22 @@
-const experienceYears = document.querySelector("#why-weExperienceYears");
+function updateYears() {
+  const currentYear = new Date().getFullYear();
+  const experienceYears = document.querySelector<HTMLElement>(
+    "#why-weExperienceYears",
+  );
+  const footerCopyYear =
+    document.querySelector<HTMLElement>("#footerCopyYear");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const date = new Date();
-  const exp = date.getFullYear() - 2010;
+  if (experienceYears) {
+    experienceYears.textContent = (currentYear - 2018).toString();
+  }
 
-  if (experienceYears) experienceYears.textContent = exp.toString();
-});
+  if (footerCopyYear) {
+    footerCopyYear.textContent = currentYear.toString();
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", updateYears);
+} else {
+  updateYears();
+}

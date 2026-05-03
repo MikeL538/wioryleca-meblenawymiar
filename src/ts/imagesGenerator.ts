@@ -40,7 +40,13 @@ const projectConfig: Record<ProjectCategory, ProjectConfig> = {
 export const amountWardrobe: number = projectConfig.wardrobe.amount;
 export const name: string = projectConfig.wardrobe.imageName;
 
-const PROJECTS_PER_PAGE = 12;
+let PROJECTS_PER_PAGE = 12;
+
+const bodyWidth = document.body.clientWidth;
+
+if (bodyWidth >= 768) PROJECTS_PER_PAGE = 16;
+if (bodyWidth >= 1080) PROJECTS_PER_PAGE = 20;
+
 let currentPage = 1;
 
 export function imageGenerate(
