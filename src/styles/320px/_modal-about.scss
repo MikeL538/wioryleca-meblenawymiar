@@ -31,6 +31,9 @@
     border-radius: $border-radius;
     box-shadow: $shadow-md;
     color: $color-text;
+    display: flex;
+    flex-direction: column;
+    gap: $margin-m;
     margin: auto 0;
     max-height: calc(100vh - (2 * #{$margin-s}));
     max-height: calc(100dvh - (2 * #{$margin-s}));
@@ -39,9 +42,6 @@
     padding: $margin-l $margin-m $margin-m;
     position: relative;
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
   }
 
   &__close {
@@ -73,5 +73,80 @@
       color: $color-text-light;
       transform: translateY(-1px);
     }
+  }
+
+  &__header {
+    margin-bottom: 0;
+    padding-right: $margin-xl;
+
+    &--about {
+      border-bottom: 1px solid rgba($color-darkwood, 0.12);
+      padding-bottom: $margin-m;
+    }
+  }
+
+  &__title {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: $font-size-xl;
+    line-height: 1.15;
+    margin-bottom: $margin-xs;
+  }
+
+  &__text {
+    color: $color-text-muted;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+
+  &__about-content {
+    display: grid;
+    gap: $margin-m;
+  }
+
+  &__about-lead {
+    color: $color-primary;
+    font-family: $font-heading;
+    font-size: $font-size-m;
+    line-height: 1.45;
+  }
+
+  &__about-copy {
+    display: grid;
+    gap: $margin-s;
+
+    p {
+      color: $color-text;
+      font-size: $font-size-sm;
+      line-height: 1.7;
+    }
+  }
+
+  &__about-note {
+    align-items: flex-start;
+    background: linear-gradient(
+      135deg,
+      rgba($color-accent, 0.12),
+      rgba($color-darkwood, 0.08)
+    );
+    border: 1px solid rgba($color-darkwood, 0.1);
+    border-radius: $border-radius;
+    display: grid;
+    gap: $margin-xs;
+    grid-template-columns: auto 1fr;
+    padding: $margin-s;
+
+    p {
+      color: $color-text;
+      font-size: $font-size-sm;
+      line-height: 1.6;
+    }
+  }
+
+  &__about-note-icon {
+    color: $color-accent;
+    font-size: $font-size-m;
+    line-height: 1;
+    padding-top: 2px;
   }
 }
