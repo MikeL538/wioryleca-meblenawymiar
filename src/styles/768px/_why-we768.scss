@@ -7,11 +7,14 @@
     }
 
     &__list {
+      display: flex;
       gap: $margin-m;
+      justify-content: center;
+      max-width: none;
 
       &-item {
-        width: 100%;
         padding: $margin-s;
+        width: 160px;
       }
 
       &-svg {

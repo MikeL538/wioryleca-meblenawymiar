@@ -32,9 +32,12 @@
   }
 
   &__list {
-    display: flex;
-    gap: $spacing-xxl;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $margin-s;
     margin: 0 auto;
+    width: 100%;
+    max-width: 220px;
 
     &-item {
       align-items: center;
@@ -74,6 +77,15 @@
     &-para2 {
       font-size: $font-size-s;
       padding: 3px 0;
+    }
+
+    &-link {
+      color: $color-darkwood;
+      font-weight: 700;
+
+      &:hover {
+        color: $color-accent-hover;
+      }
     }
   }
 }

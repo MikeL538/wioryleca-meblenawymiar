@@ -2,5 +2,6 @@ import "./styles/main.scss";
 import "./ts/modalContact";
 import "./ts/modalMenu";
 import "./ts/modalAbout";
+import "./ts/modalCoop";
 import "./ts/imagesGenerator";
 import "./ts/small";
