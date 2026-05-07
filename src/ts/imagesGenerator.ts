@@ -37,6 +37,8 @@ const projectConfig: Record<ProjectCategory, ProjectConfig> = {
   },
 };
 
+const DEFAULT_CATEGORY: ProjectCategory = "kitchen";
+
 export const amountWardrobe: number = projectConfig.wardrobe.amount;
 export const name: string = projectConfig.wardrobe.imageName;
 
@@ -162,23 +164,34 @@ function renderPagination(amount: number, name: string, imageFolder: string) {
     });
 }
 
+function isProjectCategory(
+  category: string | null,
+): category is ProjectCategory {
+  return Boolean(category && category in projectConfig);
+}
+
+function setActiveCategoryButton(category: ProjectCategory) {
+  categoryButtons.forEach((button) => {
+    const isActive = button.dataset.category === category;
+
+    button.classList.toggle("categories__button--active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
+}
+
+function updateCategoryInUrl(category: ProjectCategory) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("category", category);
+  window.history.replaceState({}, "", url);
+}
+
 function renderCategory(category: string | null, page = 1) {
-  if (!category) {
-    imageGenerate(
-      projectConfig.wardrobe.amount,
-      projectConfig.wardrobe.imageName,
-      projectConfig.wardrobe.imageFolder,
-      page,
-    );
-    return;
-  }
+  const selectedCategory = isProjectCategory(category)
+    ? category
+    : DEFAULT_CATEGORY;
+  const config = projectConfig[selectedCategory];
 
-  const config = projectConfig[category as ProjectCategory];
-
-  if (!config) {
-    return;
-  }
-
+  setActiveCategoryButton(selectedCategory);
   imageGenerate(config.amount, config.imageName, config.imageFolder, page);
 }
 
@@ -187,13 +200,10 @@ if (categoryButtons.length) {
     button.addEventListener("click", () => {
       const category = button.dataset.category ?? null;
 
-      if (category) {
-        const url = new URL(window.location.href);
-        url.searchParams.set("category", category);
-        window.history.replaceState({}, "", url);
+      if (isProjectCategory(category)) {
+        updateCategoryInUrl(category);
+        renderCategory(category);
       }
-
-      renderCategory(category);
     });
   });
 }
@@ -201,4 +211,9 @@ if (categoryButtons.length) {
 const selectedCategory = new URLSearchParams(window.location.search).get(
   "category",
 );
+
+if (!isProjectCategory(selectedCategory)) {
+  updateCategoryInUrl(DEFAULT_CATEGORY);
+}
+
 renderCategory(selectedCategory);
