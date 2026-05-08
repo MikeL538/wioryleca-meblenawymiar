@@ -37,7 +37,7 @@
       </li>
       <li class="modal__details-item">
         <span class="modal__details-label">Obszar</span>
-        <span>Zielona Góra i okolice</span>
+        <span>Bolesławiec, Wrocław, Żary i okolice</span>
       </li>
     </ul>
 
@@ -48,7 +48,7 @@
       enctype="text/plain"
     >
       <label class="modal__field">
-        <span>Imie i nazwisko</span>
+        <span>*Imie i nazwisko</span>
         <input
           class="modal__input"
           type="text"
@@ -59,7 +59,7 @@
       </label>
 
       <label class="modal__field">
-        <span>Telefon lub e-mail</span>
+        <span>*Telefon lub e-mail</span>
         <input
           class="modal__input"
           type="text"
@@ -70,12 +70,22 @@
       </label>
 
       <label class="modal__field">
-        <span>Wiadomość</span>
+        <span>*Wiadomość</span>
         <textarea
           class="modal__input modal__textarea"
           name="message"
           rows="4"
           required
+        ></textarea>
+      </label>
+
+      <label class="modal__field">
+        <span>Preferowany sposób kontaktu oraz godziny</span>
+        <textarea
+          class="modal__input"
+          name="message"
+          rows="1"
+          placeholder="Opcjonalne, np. telefon, środy między 17 a 19."
         ></textarea>
       </label>
 
