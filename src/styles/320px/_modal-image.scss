@@ -1,8 +1,25 @@
-.modal__image {
-  &--image {
+@use "../vars" as *;
+
+.modal {
+  &__image {
+    align-items: center;
+    background-color: $color-bg-section;
+    border-radius: $border-radius;
+    border: 1px solid rgba($color-darkwood, 0.15);
+    box-shadow: $shadow-md;
+    color: $color-text;
     display: flex;
-    // height: ;
-    width: 75dvw;
-    margin: 0 auto;
+    flex-direction: column;
+    margin: auto 0;
+    overflow-y: auto;
+
+    position: relative;
+
+    &--image {
+      height: 90dvh;
+      width: 90dvw;
+      margin: 0 auto;
+      object-fit: cover;
+    }
   }
 }

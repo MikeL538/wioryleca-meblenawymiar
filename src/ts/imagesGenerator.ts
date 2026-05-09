@@ -83,7 +83,7 @@ export function imageGenerate(
         "beforeend",
         `
         <li class="projects__list-item">
-            <button class="projects__list-button" type="button" >
+            <button data-modal-open="image" class="projects__list-button" type="button" >
               <img
                 class="projects__list-img"
                 src="/images/${imageFolder}/${name}${i}.webp"
