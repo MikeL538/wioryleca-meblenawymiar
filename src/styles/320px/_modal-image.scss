@@ -22,4 +22,10 @@
       object-fit: cover;
     }
   }
+
+  &__close--colour {
+    color: $color-text-light;
+    border-color: $color-text;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }

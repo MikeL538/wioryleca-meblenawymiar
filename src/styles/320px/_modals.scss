@@ -1,0 +1,62 @@
+@use "../vars" as *;
+
+.modal {
+  &__backdrop {
+    align-items: flex-start;
+    background-color: $color-overlay-dark;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    overflow: auto;
+    padding: $margin-s;
+    pointer-events: none;
+    position: fixed;
+    transition:
+      opacity $transition-normal,
+      visibility $transition-normal;
+    visibility: hidden;
+    z-index: $z-modal;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+
+  &__close {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgba($color-darkwood, 0.2);
+    border-radius: 50%;
+    color: $color-darkwood;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: $font-size-xl;
+    height: 36px;
+    justify-content: center;
+    line-height: 1;
+    position: absolute;
+    right: $margin-s;
+    top: $margin-s;
+    transition:
+      background-color $transition-fast,
+      border-color $transition-fast,
+      color $transition-fast,
+      transform $transition-fast;
+    width: 36px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      border-color: $color-accent;
+      color: $color-text-light;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}

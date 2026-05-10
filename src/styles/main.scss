@@ -6,6 +6,7 @@
 @use "./320px/why-we";
 @use "./320px/contact";
 @use "./320px/footer";
+@use "./320px/modals";
 @use "./320px/modal-contact";
 @use "./320px/modal-menu";
 @use "./320px/modal-about";
@@ -61,8 +62,4 @@ body {
   font-size: $font-size-base;
   // max-width: 1080px;
   position: relative;
-}
-
-body.modal-open {
-  overflow: hidden;
 }
