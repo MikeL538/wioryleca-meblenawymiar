@@ -5,5 +5,15 @@
     &__title {
       font-size: $font-size-xl;
     }
+
+    &__arrow {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__link {
+      font-size: $font-size-m;
+      padding: $margin-xs;
+    }
   }
 }

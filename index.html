@@ -127,27 +127,99 @@
       <section id="realization" class="realization">
         <div class="realization__container">
           <h2 class="realization__title">Zobacz nasze realizacje</h2>
-          <a class="realization__link" href="/src/partials/projects.html">
-            <ul class="realization__list">
+          <div class="realization__list--wrapper">
+            <ul id="realizationList" class="realization__list">
               <li class="realization__list-item">
                 <img
                   src="./images/wardrobes/szafa12.webp"
                   class="realization__list-img"
+                  alt="Szafa na wymiar"
                 />
               </li>
               <li class="realization__list-item">
                 <img
                   src="./images/kitchen/kuchnia20.webp"
                   class="realization__list-img realization__list-img--width"
+                  alt="Kuchnia na wymiar"
                 />
               </li>
               <li class="realization__list-item">
                 <img
                   src="./images/bathroom/Lazienka17.webp"
                   class="realization__list-img"
+                  alt="Meble lazienkowe na wymiar"
                 />
-              </li></ul
-          ></a>
+              </li>
+              <li class="realization__list-item">
+                <img
+                  src="./images/wardrobes/szafa18.webp"
+                  class="realization__list-img"
+                  alt="Zabudowa szafy na wymiar"
+                />
+              </li>
+              <li class="realization__list-item">
+                <img
+                  src="./images/kitchen/kuchnia12.webp"
+                  class="realization__list-img"
+                  alt="Nowoczesna kuchnia na wymiar"
+                />
+              </li>
+              <li class="realization__list-item">
+                <img
+                  src="./images/bathroom/Lazienka9.webp"
+                  class="realization__list-img"
+                  alt="Realizacja mebli lazienkowych"
+                />
+              </li>
+              <li class="realization__list-item">
+                <img
+                  src="./images/other/zab1.webp"
+                  class="realization__list-img"
+                  alt="Wnetrze szafy na wymiar"
+                />
+              </li>
+              <li class="realization__list-item">
+                <img
+                  src="./images/kitchen/kuchnia6.webp"
+                  class="realization__list-img"
+                  alt="Kuchnia z zabudowa na wymiar"
+                />
+              </li>
+              <li class="realization__list-item">
+                <img
+                  src="./images/bathroom/Lazienka3.webp"
+                  class="realization__list-img"
+                  alt="Lazienka z meblami na wymiar"
+                />
+              </li>
+            </ul>
+
+            <button
+              type="button"
+              id="realizationArrowLeft"
+              class="realization__button realization__button--left"
+            >
+              <svg class="realization__arrow">
+                <use href="./icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              id="realizationArrowRight"
+              class="realization__button realization__button--right"
+            >
+              <svg class="realization__arrow">
+                <use href="./icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <a
+            class="realization__link"
+            href="/src/partials/projects.html?category=kitchen"
+          >
+            Zobacz więcej</a
+          >
         </div>
       </section>
 

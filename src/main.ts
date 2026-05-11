@@ -6,3 +6,4 @@ import "./ts/modalCoop";
 import "./ts/modalImage";
 import "./ts/imagesGenerator";
 import "./ts/small";
+import "./ts/realizationsSlider";

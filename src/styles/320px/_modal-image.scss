@@ -16,10 +16,10 @@
     position: relative;
 
     &--image {
-      height: 90dvh;
-      width: 90dvw;
+      max-height: 90dvh;
+      max-width: 90dvw;
       margin: 0 auto;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 

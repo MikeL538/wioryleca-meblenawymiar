@@ -1,4 +1,4 @@
-export const projectList =
+const projectList =
   document.querySelector<HTMLUListElement>("#projectList");
 const projectPagination =
   document.querySelector<HTMLElement>("#projectPagination");
@@ -39,9 +39,6 @@ const projectConfig: Record<ProjectCategory, ProjectConfig> = {
 
 const DEFAULT_CATEGORY: ProjectCategory = "kitchen";
 
-export const amountWardrobe: number = projectConfig.wardrobe.amount;
-export const name: string = projectConfig.wardrobe.imageName;
-
 let PROJECTS_PER_PAGE = 12;
 
 const bodyWidth = document.body.clientWidth;
@@ -51,7 +48,7 @@ if (bodyWidth >= 1080) PROJECTS_PER_PAGE = 20;
 
 let currentPage = 1;
 
-export function imageGenerate(
+function imageGenerate(
   amount: number,
   name: string,
   imageFolder = "wardrobes",

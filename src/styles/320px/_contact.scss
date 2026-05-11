@@ -3,27 +3,26 @@
 .contact {
   color: $color-text;
   font-weight: 600;
-
   overflow: hidden;
   position: relative;
 
   &__container {
-    padding: $margin-section 0;
     align-items: center;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
+    padding: $margin-section 0;
   }
 
   &__wave {
-    top: -1px;
     height: 30px;
     left: 0;
     line-height: 0;
     position: absolute;
-    width: 100%;
+    top: -1px;
     transform: scaleY(-1);
+    width: 100%;
 
     > svg {
       display: block;
@@ -40,17 +39,17 @@
     letter-spacing: $spacing-xs;
     margin-bottom: $margin-m;
     margin-top: $margin-s;
-    width: 100%;
     white-space: nowrap;
+    width: 100%;
 
     &::before,
     &::after {
       background-color: rgba($color-divider, 0.6);
       content: "";
       display: block;
-      width: 100%;
       height: 1px;
       margin: 0 6px;
+      width: 100%;
     }
   }
 
