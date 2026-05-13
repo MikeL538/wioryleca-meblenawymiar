@@ -1,5 +1,4 @@
-const projectList =
-  document.querySelector<HTMLUListElement>("#projectList");
+const projectList = document.querySelector<HTMLUListElement>("#projectList");
 const projectPagination =
   document.querySelector<HTMLElement>("#projectPagination");
 const categoryButtons = document.querySelectorAll<HTMLButtonElement>(
@@ -85,6 +84,7 @@ function imageGenerate(
                 class="projects__list-img"
                 src="/images/${imageFolder}/${name}${i}.webp"
                 alt="Projekt mebli na wymiar"
+                loading="lazy"
               />
             </button>
         </li>
@@ -205,12 +205,10 @@ if (categoryButtons.length) {
   });
 }
 
-const selectedCategory = new URLSearchParams(window.location.search).get(
-  "category",
-);
+if (projectList) {
+  const selectedCategory = new URLSearchParams(window.location.search).get(
+    "category",
+  );
 
-if (!isProjectCategory(selectedCategory)) {
-  updateCategoryInUrl(DEFAULT_CATEGORY);
+  renderCategory(selectedCategory);
 }
-
-renderCategory(selectedCategory);

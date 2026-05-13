@@ -1,9 +1,10 @@
 import "./styles/main.scss";
 import "./ts/modalContact";
-import "./ts/modalMenu";
+// import "./ts/modalMenu";
 import "./ts/modalAbout";
 import "./ts/modalCoop";
 import "./ts/modalImage";
 import "./ts/imagesGenerator";
 import "./ts/small";
 import "./ts/realizationsSlider";
+import "./ts/modals";
