@@ -3,8 +3,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const includePattern =
-  /<include\s+src=(["'])(?<src>.*?)\1\s*>\s*<\/include>/g;
+const includePattern = /<include\s+src=(["'])(?<src>.*?)\1\s*>\s*<\/include>/g;
 const rootPath = fileURLToPath(new URL(".", import.meta.url));
 
 function htmlPartials() {
@@ -27,9 +26,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL("./index.html", import.meta.url)),
-        projects: fileURLToPath(
-          new URL("./src/partials/projects.html", import.meta.url),
-        ),
+        projects: fileURLToPath(new URL("./projects.html", import.meta.url)),
       },
     },
   },

@@ -1,55 +1,41 @@
-const modal = {
-  modalMenu: document.querySelector<HTMLElement>("#modalMenu"),
-};
-
-const OpenButtons = {
-  modalOpenButtons: document.querySelectorAll<HTMLButtonElement>(
-    '[data-modal-open="menu"]',
-  ),
-};
-
-const CloseButton = {
-  modalMenu: document.querySelector<HTMLButtonElement>(".modal__close"),
-};
-
-function openModal(modal: HTMLElement) {
+function initModal(modalSelector: string, openSelector: string) {
+  const modal = document.querySelector<HTMLElement>(modalSelector);
   if (!modal) return;
 
-  modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-open");
-  modal?.focus();
-}
+  const openButtons =
+    document.querySelectorAll<HTMLButtonElement>(openSelector);
+  const closeButton = modal.querySelector<HTMLButtonElement>(".modal__close");
 
-function closeModal(modal: HTMLElement) {
-  if (!modal) return;
+  const openModal = () => {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  };
 
-  modal.classList.remove("is-open");
-  modal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
-}
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
 
-OpenButtons.modalOpenButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    if (modal.modalMenu) openModal(modal.modalMenu);
+  openButtons.forEach((button) => {
+    button.addEventListener("click", openModal);
   });
-});
 
-CloseButton.modalMenu?.addEventListener("click", () => {
-  if (modal.modalMenu) closeModal(modal.modalMenu);
-});
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
 
-document.addEventListener("keydown", (event) => {
-  if (
-    event.key === "Escape" &&
-    modal.modalMenu?.classList.contains("is-open")
-  ) {
-    closeModal(modal.modalMenu);
-  }
-});
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
 
-modal.modalMenu?.addEventListener("click", (event) => {
-  if (event.target === modal.modalMenu && modal.modalMenu) {
-    closeModal(modal.modalMenu);
-  }
-});
+  closeButton?.addEventListener("click", closeModal);
+}
+
+initModal("#modalMenu", '[data-modal-open="menu"]');
+initModal("#modalCoop", '[data-modal-open="coop"]');
+initModal("#modalContact", '[data-modal-open="contact"]');
+initModal("#modalAbout", '[data-modal-open="about"]');
