@@ -20,6 +20,25 @@
       max-width: 90dvw;
       margin: 0 auto;
       object-fit: contain;
+      position: relative;
+    }
+
+    &--button {
+      position: absolute;
+      bottom: 1px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 100%;
+      border: none;
+      cursor: pointer;
+
+      &-right {
+        right: 1px;
+      }
+
+      &-left {
+        left: 1px;
+        transform: rotateY(180deg);
+      }
     }
   }
 

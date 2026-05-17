@@ -1,5 +1,10 @@
 <div class="modal__backdrop" id="modalImage" aria-hidden="true">
-  <div class="modal__image" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <div
+    class="modal__image"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Podgląd zdjęcia"
+  >
     <button
       class="modal__close modal__close--colour"
       type="button"
@@ -14,5 +19,23 @@
       src="/images/kitchen/kuchnia17.webp"
       alt=""
     />
+    <button
+      id="modalImageRight"
+      class="modal__image--button modal__image--button-right"
+      type="button"
+    >
+      <svg class="realization__arrow">
+        <use href="./icons.svg#icon-arrow"></use>
+      </svg>
+    </button>
+    <button
+      id="modalImageLeft"
+      class="modal__image--button modal__image--button-left"
+      type="button"
+    >
+      <svg class="realization__arrow">
+        <use href="./icons.svg#icon-arrow"></use>
+      </svg>
+    </button>
   </div>
 </div>
