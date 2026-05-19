@@ -15,5 +15,9 @@
     "sass": "^1.99.0",
     "typescript": "~6.0.2",
     "vite": "^8.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "resend": "^6.12.3"
   }
 }
