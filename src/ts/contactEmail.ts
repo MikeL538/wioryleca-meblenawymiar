@@ -1,12 +1,11 @@
 import { Resend } from "resend";
 
 const sendButton = document.querySelector<HTMLButtonElement>("#contactButton");
-const name = document.querySelector<HTMLInputElement>("#contactName");
+// const name = document.querySelector<HTMLInputElement>("#contactName");
 const contact = document.querySelector<HTMLInputElement>("#contactContact");
 const message = document.querySelector<HTMLTextAreaElement>("#contactMessage");
-const preferable = document.querySelector<HTMLTextAreaElement>(
-  "#contactPreferable",
-);
+const preferable =
+  document.querySelector<HTMLTextAreaElement>("#contactPreferable");
 
 const resendApiKey = import.meta.env.VITE_RESEND_API_KEY;
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
@@ -23,7 +22,7 @@ async function sendEmail() {
   }
 
   const { error } = await resend.emails.send({
-    from: `${name?.value}`,
+    from: `Wiory Lecą <@mail.wioryleca-meblenawymiar.pl>`,
     to: "mikel538.work@gmail.com",
     subject: "Wiadomość Kontaktowa",
     html: `Kontakt: ${contact?.value}
