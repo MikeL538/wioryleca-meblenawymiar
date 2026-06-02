@@ -12,9 +12,7 @@ sendButton?.addEventListener("click", async (event) => {
     alert("Wiadomość została wysłana.");
   } catch (error) {
     console.error("Błąd wysyłania wiadomości:", error);
-    alert(
-      error instanceof Error ? error.message : "Wystąpił nieznany błąd.",
-    );
+    alert(error instanceof Error ? error.message : "Wystąpił nieznany błąd.");
   }
 });
 
@@ -46,7 +44,7 @@ async function sendEmail() {
     throw new Error("Dane kontaktowe są za długie.");
   }
 
-  if (trimmedMessage && trimmedMessage.length > 1000) {
+  if (trimmedMessage && trimmedMessage.length > 2500) {
     console.log("Wiadomość jest za długa.");
 
     throw new Error("Wiadomość jest za długa.");
@@ -58,21 +56,26 @@ async function sendEmail() {
     throw new Error("Preferowany sposób kontaktu jest za długi.");
   }
 
-  const response = await fetch("https://project-6j4p0.vercel.app/send-email", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  const response = await fetch(
+    "https://server.wioryleca-meblenawymiar.pl/send-email",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: trimmedName,
+        contact: trimmedContact,
+        message: trimmedMessage,
+        preferable: trimmedPreferable,
+      }),
     },
-    body: JSON.stringify({
-      name: trimmedName,
-      contact: trimmedContact,
-      message: trimmedMessage,
-      preferable: trimmedPreferable,
-    }),
-  });
+  );
 
   if (!response.ok) {
     console.log("BŁĄD WYSYŁANIA WIADOMOŚCI:", await response.text());
-    throw new Error("Nie udało się wysłać wiadomości. Spróbuj ponownie później.");
+    throw new Error(
+      "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+    );
   }
 }
