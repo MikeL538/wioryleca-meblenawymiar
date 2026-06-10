@@ -2,7 +2,7 @@
 
 Business website for a custom furniture workshop, presenting the offer, completed projects, and quick contact options for potential clients.
 
-Live: [wioryleca-meblenawymiar.pl](https://wioryleca-meblenawymiar.pl/)
+Live: [www.wioryleca-meblenawymiar.pl](https://www.wioryleca-meblenawymiar.pl/)
 
 ## About
 
