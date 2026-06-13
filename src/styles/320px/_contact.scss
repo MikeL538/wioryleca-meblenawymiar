@@ -41,6 +41,7 @@
     margin-top: $margin-s;
     white-space: nowrap;
     width: 100%;
+    text-align: center;
 
     &::before,
     &::after {
@@ -50,6 +51,18 @@
       height: 1px;
       margin: 0 6px;
       width: 100%;
+    }
+
+    &--sub {
+      white-space: wrap;
+      font-weight: 500;
+      padding: 0 $margin-xs;
+      max-width: 650px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
 
