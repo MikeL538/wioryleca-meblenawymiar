@@ -59,6 +59,8 @@
       padding: 0 $margin-xs;
       max-width: 650px;
 
+      justify-content: center;
+
       &::before,
       &::after {
         display: none;
