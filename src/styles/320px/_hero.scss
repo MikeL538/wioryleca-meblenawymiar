@@ -66,6 +66,8 @@
       letter-spacing: $spacing-md;
       line-height: 1.4;
       max-width: 160px;
+      font-weight: 400;
+      margin-top: $spacing-xl;
     }
 
     &--mark {
@@ -83,7 +85,7 @@
     font-size: $font-size-sm;
     font-weight: 600;
     letter-spacing: $spacing-md;
-    margin-top: $margin-s;
+
     max-width: 160px;
     padding: $margin-xs;
     text-transform: uppercase;
