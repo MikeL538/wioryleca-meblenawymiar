@@ -1,5 +1,8 @@
 const sendButton = document.querySelector<HTMLButtonElement>("#contactButton");
 const name = document.querySelector<HTMLInputElement>("#contactName");
+const localization = document.querySelector<HTMLInputElement>(
+  "#contactLocalization",
+);
 const contact = document.querySelector<HTMLInputElement>("#contactContact");
 const message = document.querySelector<HTMLTextAreaElement>("#contactMessage");
 const preferable =
@@ -18,12 +21,14 @@ sendButton?.addEventListener("click", async (event) => {
 
 async function sendEmail() {
   const trimmedName = name?.value.trim();
+  const trimmedLocalization = localization?.value.trim();
   const trimmedContact = contact?.value.trim();
   const trimmedMessage = message?.value.trim();
   const trimmedPreferable = preferable?.value.trim();
 
   if (
     trimmedName?.length === 0 ||
+    trimmedLocalization?.length === 0 ||
     trimmedContact?.length === 0 ||
     trimmedMessage?.length === 0
   ) {
@@ -36,6 +41,12 @@ async function sendEmail() {
     console.log("Imię i nazwisko jest za długie.");
 
     throw new Error("Imię i nazwisko jest za długie.");
+  }
+
+  if (trimmedLocalization && trimmedLocalization.length > 100) {
+    console.log("Lokalizacja jest za długa.");
+
+    throw new Error("Lokalizacja jest za długa.");
   }
 
   if (trimmedContact && trimmedContact.length > 100) {
@@ -65,6 +76,7 @@ async function sendEmail() {
       },
       body: JSON.stringify({
         name: trimmedName,
+        localization: trimmedLocalization,
         contact: trimmedContact,
         message: trimmedMessage,
         preferable: trimmedPreferable,
