@@ -1,3 +1,7 @@
+import { t } from "./i18n";
+
+class ContactError extends Error {}
+
 const sendButton = document.querySelector<HTMLButtonElement>("#contactButton");
 const name = document.querySelector<HTMLInputElement>("#contactName");
 const localization = document.querySelector<HTMLInputElement>(
@@ -12,10 +16,14 @@ sendButton?.addEventListener("click", async (event) => {
   event.preventDefault();
   try {
     await sendEmail();
-    alert("Wiadomość została wysłana.");
+    alert(t("runtime.contact.sent"));
   } catch (error) {
-    console.error("Błąd wysyłania wiadomości:", error);
-    alert(error instanceof Error ? error.message : "Wystąpił nieznany błąd.");
+    console.error(t("runtime.contact.error"), error);
+    alert(
+      error instanceof ContactError
+        ? error.message
+        : t("runtime.contact.sendFailed"),
+    );
   }
 });
 
@@ -27,44 +35,32 @@ async function sendEmail() {
   const trimmedPreferable = preferable?.value.trim();
 
   if (
-    trimmedName?.length === 0 ||
-    trimmedLocalization?.length === 0 ||
-    trimmedContact?.length === 0 ||
-    trimmedMessage?.length === 0
+    !trimmedName ||
+    !trimmedLocalization ||
+    !trimmedContact ||
+    !trimmedMessage
   ) {
-    console.log("Uzupełnij wszystkie wymagane pola.");
-
-    throw new Error("Uzupełnij wszystkie wymagane pola.");
+    throw new ContactError(t("runtime.contact.required"));
   }
 
   if (trimmedName && trimmedName.length > 100) {
-    console.log("Imię i nazwisko jest za długie.");
-
-    throw new Error("Imię i nazwisko jest za długie.");
+    throw new ContactError(t("runtime.contact.nameTooLong"));
   }
 
   if (trimmedLocalization && trimmedLocalization.length > 100) {
-    console.log("Lokalizacja jest za długa.");
-
-    throw new Error("Lokalizacja jest za długa.");
+    throw new ContactError(t("runtime.contact.locationTooLong"));
   }
 
   if (trimmedContact && trimmedContact.length > 100) {
-    console.log("Dane kontaktowe są za długie.");
-
-    throw new Error("Dane kontaktowe są za długie.");
+    throw new ContactError(t("runtime.contact.detailsTooLong"));
   }
 
   if (trimmedMessage && trimmedMessage.length > 2500) {
-    console.log("Wiadomość jest za długa.");
-
-    throw new Error("Wiadomość jest za długa.");
+    throw new ContactError(t("runtime.contact.messageTooLong"));
   }
 
   if (trimmedPreferable && trimmedPreferable.length > 250) {
-    console.log("Preferowany sposób kontaktu jest za długi.");
-
-    throw new Error("Preferowany sposób kontaktu jest za długi.");
+    throw new ContactError(t("runtime.contact.preferenceTooLong"));
   }
 
   const response = await fetch(
@@ -85,9 +81,7 @@ async function sendEmail() {
   );
 
   if (!response.ok) {
-    console.log("BŁĄD WYSYŁANIA WIADOMOŚCI:", await response.text());
-    throw new Error(
-      "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
-    );
+    console.error(t("runtime.contact.error"), await response.text());
+    throw new ContactError(t("runtime.contact.sendFailed"));
   }
 }

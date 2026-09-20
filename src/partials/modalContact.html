@@ -8,42 +8,41 @@
     <button
       class="modal__close"
       type="button"
-      aria-label="Zamknij okno kontaktowe"
+      aria-label="{{t:partial.contact.close}}"
     >
       &times;
     </button>
 
     <div class="modal__header">
-      <p class="modal__eyebrow">Kontakt</p>
-      <h2 class="modal__title" id="modalContactTitle">Zamów meble na wymiar</h2>
+      <p class="modal__eyebrow">{{t:partial.nav.contact}}</p>
+      <h2 class="modal__title" id="modalContactTitle">{{t:partial.contact.title}}</h2>
       <p class="modal__text">
-        Opisz krótko, czego potrzebujesz. Odezwiemy się i ustalimy szczegóły
-        realizacji.
+        {{t:partial.contact.description}}
       </p>
     </div>
 
-    <ul class="modal__details" aria-label="Dane kontaktowe">
+    <ul class="modal__details" aria-label="{{t:partial.contact.details}}">
       <li class="modal__details-item">
-        <span class="modal__details-label">Telefon</span>
+        <span class="modal__details-label">{{t:partial.contact.phone}}</span>
         <a class="modal__details-link" href="tel:+48727198709"
-          >+48 727 198 709</a
+          >{{t:partial.contact.phoneValue}}</a
         >
       </li>
       <li class="modal__details-item">
-        <span class="modal__details-label">E-mail</span>
+        <span class="modal__details-label">{{t:partial.contact.email}}</span>
         <a class="modal__details-link" href="mailto:wiory_leca@wp.pl"
-          >wiory_leca@wp.pl</a
+          >{{t:partial.contact.emailValue}}</a
         >
       </li>
       <li class="modal__details-item">
-        <span class="modal__details-label">Obszar</span>
-        <span>Wrocław, Bolesławiec, Żagań i okolice</span>
+        <span class="modal__details-label">{{t:partial.contact.area}}</span>
+        <span>{{t:partial.contact.areaValue}}</span>
       </li>
     </ul>
 
     <form class="modal__form" method="post" enctype="text/plain">
       <label class="modal__field">
-        <span>*Imie i nazwisko</span>
+        <span>{{t:partial.contact.nameLabel}}</span>
         <input
           id="contactName"
           class="modal__input"
@@ -56,7 +55,7 @@
       </label>
 
       <label class="modal__field">
-        <span>*Lokalizacja</span>
+        <span>{{t:partial.contact.locationLabel}}</span>
         <input
           id="contactLocalization"
           class="modal__input"
@@ -69,7 +68,7 @@
       </label>
 
       <label class="modal__field">
-        <span>*Telefon lub e-mail</span>
+        <span>{{t:partial.contact.contactLabel}}</span>
         <input
           id="contactContact"
           class="modal__input"
@@ -82,7 +81,7 @@
       </label>
 
       <label class="modal__field">
-        <span>*Wiadomość</span>
+        <span>{{t:partial.contact.messageLabel}}</span>
         <textarea
           id="contactMessage"
           class="modal__input modal__textarea"
@@ -94,19 +93,19 @@
       </label>
 
       <label class="modal__field">
-        <span>Preferowany sposób kontaktu oraz godziny</span>
+        <span>{{t:partial.contact.preferenceLabel}}</span>
         <textarea
           id="contactPreferable"
           class="modal__input"
           name="preferable"
           rows="3"
           maxlength="250"
-          placeholder="Opcjonalne, np. SMS / WhatsApp / Messenger+link do profilu lub telefon - środy między 17 a 19."
+          placeholder="{{t:partial.contact.preferencePlaceholder}}"
         ></textarea>
       </label>
 
       <button id="contactButton" class="modal__button" type="submit">
-        Wyślij zapytanie
+        {{t:partial.contact.submit}}
       </button>
     </form>
   </div>

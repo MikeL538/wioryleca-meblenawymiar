@@ -6,13 +6,13 @@
           </svg> -->
       <!-- <img class="header__image" src="/logo.png" alt="logo image" /> -->
       <div class="header__logo--wrapper">
-        <img class="header__image" src="/logo.png" alt="Wióry Lecą - logo" />
+        <img class="header__image" src="/logo.png" alt="{{t:partial.brand.logoAlt}}" />
 
         <h2 class="header__title">
           <!-- <img class="header__image" src="/logos.png" alt="logo image" />ióry
           Lecą -->
         </h2>
-        <p class="header__title-under">Meble na wymiar</p>
+        <p class="header__title-under">{{t:partial.brand.tagline}}</p>
       </div>
     </a>
   </div>
@@ -20,7 +20,7 @@
   <div class="header__menu--mobile">
     <button
       type="button"
-      aria-label="Otwórz menu"
+      aria-label="{{t:partial.menu.open}}"
       class="header__menu--mobile-button"
       data-modal-open="menu"
     >
@@ -33,11 +33,11 @@
   <nav class="header__nav">
     <ul class="header__nav-list">
       <li class="header__nav-list-item">
-        <a href="/" class="header__nav-list-link">Strona główna</a>
+        <a href="/" class="header__nav-list-link">{{t:partial.nav.home}}</a>
       </li>
       <li class="header__nav-list-item">
         <a href="/projects.html?category=kitchen" class="header__nav-list-link">
-          Realizacje
+          {{t:partial.nav.projects}}
         </a>
       </li>
       <li class="header__nav-list-item">
@@ -46,7 +46,7 @@
           class="header__nav-list-link"
           data-modal-open="coop"
         >
-          Współpraca
+          {{t:partial.nav.cooperation}}
         </button>
       </li>
       <li class="header__nav-list-item">
@@ -55,7 +55,7 @@
           class="header__nav-list-link"
           data-modal-open="about"
         >
-          O nas
+          {{t:partial.nav.about}}
         </button>
       </li>
       <li class="header__nav-list-item">
@@ -64,14 +64,12 @@
           data-modal-open="contact"
           type="button"
         >
-          Kontakt
+          {{t:partial.nav.contact}}
         </button>
+      </li>
+      <li class="header__nav-list-item header__language">
+        {{languageSwitcher}}
       </li>
     </ul>
   </nav>
-  <!-- <div class="header__wave">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path d="M0,20 C360,50 1080,50 1440,20 L1440,120 L0,120 Z" />
-    </svg>
-  </div> -->
 </div>

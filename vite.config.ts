@@ -1,33 +1,38 @@
 ﻿import { defineConfig } from "vite";
-import { readFileSync } from "node:fs";
+import type { Plugin } from "vite";
 import { resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { languages, pages, renderHtml, rootPath } from "./build/i18n.mjs";
 
-const includePattern = /<include\s+src=(["'])(?<src>.*?)\1\s*>\s*<\/include>/g;
-const rootPath = fileURLToPath(new URL(".", import.meta.url));
-
-function htmlPartials() {
+function localizedHtml(): Plugin {
   return {
-    name: "html-partials",
-    transformIndexHtml(html: string) {
-      return html.replace(includePattern, (_match, _quote, src: string) => {
-        const partialPath = resolve(rootPath, src);
-
-        return readFileSync(partialPath, "utf-8");
-      });
+    name: "localized-html",
+    transformIndexHtml: {
+      order: "pre",
+      handler(html, context) {
+        const path = context.path.split("?")[0];
+        const language = path.startsWith("/de/") ? "de" : path.startsWith("/en/") ? "en" : "pl";
+        const page = path.endsWith("projects.html") ? "projects.html" : "index.html";
+        return renderHtml(html, language, page);
+      },
+    },
+    handleHotUpdate({ file, server }) {
+      const path = file.replaceAll("\\", "/");
+      if (path.includes("/src/locales/") || path.includes("/src/partials/") || path.endsWith("/index.html") || path.endsWith("/projects.html")) {
+        server.ws.send({ type: "full-reload" });
+      }
     },
   };
 }
 
 export default defineConfig({
   base: "/",
-  plugins: [htmlPartials()],
+  plugins: [localizedHtml()],
   build: {
     rollupOptions: {
-      input: {
-        main: fileURLToPath(new URL("./index.html", import.meta.url)),
-        projects: fileURLToPath(new URL("./projects.html", import.meta.url)),
-      },
+      input: Object.fromEntries(languages.flatMap((language: string) => pages.map((page: string) => [
+        `${language}-${page}`,
+        resolve(rootPath, language === "pl" ? page : `${language}/${page}`),
+      ]))),
     },
   },
 });

@@ -4,23 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logos.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Meble na wymiar Żagań, Bolesławiec, Wrocław | Kuchnie, szafy, łazienki,
-      zabudowy
-    </title>
+    <title>{{t:page.home.title}}</title>
     <meta
       name="description"
-      content="Projektujemy i wykonujemy meble na wymiar: kuchnie, szafy, łazienki i zabudowy. Działamy w okolicach Bolesławca, Wrocławia i Żagania."
+      content="{{t:page.home.description}}"
     />
     <link rel="canonical" href="https://www.wioryleca-meblenawymiar.pl/" />
 
     <meta
       property="og:title"
-      content="Meble na wymiar Żagań, Bolesławiec, Wrocław | Kuchnie, szafy, łazienki, zabudowy"
+      content="{{t:page.home.title}}"
     />
     <meta
       property="og:description"
-      content="Projektujemy i wykonujemy meble na wymiar: kuchnie, szafy, łazienki i zabudowy. Działamy w okolicach Bolesławca, Wrocławia i Żagania."
+      content="{{t:page.home.description}}"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.wioryleca-meblenawymiar.pl/" />
@@ -35,7 +32,7 @@
         "name": "Wióry Lecą",
         "url": "https://www.wioryleca-meblenawymiar.pl/",
         "logo": "https://www.wioryleca-meblenawymiar.pl/logos.png",
-        "description": "Meble na wymiar: kuchnie, szafy, łazienki i zabudowy.",
+        "description": "{{t:page.home.businessDescription}}",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Żagań, Wrocław, Bolesławiec",
@@ -56,22 +53,22 @@
         <div class="hero__container">
           <div class="hero__wrapper">
             <h1 class="hero__title">
-              Meble na wymiar stworzone
-              <span class="hero__title--mark">dla Ciebie</span><br />
-
-              <p class="hero__title--under">
-                Tworzymy meble na wymiar dopasowane do
-                <span class="hero__title--mark">Twojej</span> przestrzeni i
-                stylu Żagań, Bolesławiec, Wrocław i okolice
-              </p>
+              {{t:page.hero.title}}
+              <span class="hero__title--mark">{{t:page.hero.titleHighlight}}</span>
             </h1>
+
+            <p class="hero__title--under">
+                {{t:page.hero.descriptionBefore}}
+                <span class="hero__title--mark">{{t:page.hero.descriptionHighlight}}</span>
+                {{t:page.hero.descriptionAfter}}
+            </p>
 
             <button
               class="hero__button"
               type="button"
               data-modal-open="contact"
             >
-              Zamów teraz
+              {{t:page.orderNow}}
             </button>
           </div>
         </div>
@@ -85,7 +82,7 @@
 
       <section id="offer" class="offer">
         <div class="offer__container">
-          <h2 class="offer__title">Nasza Oferta</h2>
+          <h2 class="offer__title">{{t:page.offer.title}}</h2>
           <ul class="offer__list">
             <li class="offer__list-item">
               <a
@@ -94,13 +91,13 @@
               >
                 <div class="offer__list-wrapper">
                   <svg class="offer__list-svg offer__list-svg--background">
-                    <use href="./icons.svg#kitchen"></use>
+                    <use href="/icons.svg#kitchen"></use>
                   </svg>
-                  <p>Kuchnie na wymiar</p>
+                  <p>{{t:page.offer.kitchen}}</p>
                 </div>
                 <div>
                   <svg class="offer__list-svg">
-                    <use href="./icons.svg#icon-arrow"></use>
+                    <use href="/icons.svg#icon-arrow"></use>
                   </svg>
                 </div>
               </a>
@@ -115,13 +112,13 @@
                   <svg
                     class="offer__list-svg offer__list-svg--background offer__list-svg--wardrobe"
                   >
-                    <use href="./icons.svg#wardrobe"></use>
+                    <use href="/icons.svg#wardrobe"></use>
                   </svg>
-                  <p>Szafy i garderoby</p>
+                  <p>{{t:page.offer.wardrobe}}</p>
                 </div>
                 <div>
                   <svg class="offer__list-svg">
-                    <use href="./icons.svg#icon-arrow"></use>
+                    <use href="/icons.svg#icon-arrow"></use>
                   </svg>
                 </div>
               </a>
@@ -133,13 +130,13 @@
               >
                 <div class="offer__list-wrapper">
                   <svg class="offer__list-svg offer__list-svg--background">
-                    <use href="./icons.svg#bathroom"></use>
+                    <use href="/icons.svg#bathroom"></use>
                   </svg>
-                  <p>Łazienki</p>
+                  <p>{{t:page.offer.bathroom}}</p>
                 </div>
                 <div>
                   <svg class="offer__list-svg">
-                    <use href="./icons.svg#icon-arrow"></use>
+                    <use href="/icons.svg#icon-arrow"></use>
                   </svg>
                 </div>
               </a>
@@ -151,13 +148,13 @@
               >
                 <div class="offer__list-wrapper">
                   <svg class="offer__list-svg offer__list-svg--background">
-                    <use href="./icons.svg#drawer"></use>
+                    <use href="/icons.svg#drawer"></use>
                   </svg>
-                  <p>Inne</p>
+                  <p>{{t:page.offer.other}}</p>
                 </div>
                 <div>
                   <svg class="offer__list-svg">
-                    <use href="./icons.svg#icon-arrow"></use>
+                    <use href="/icons.svg#icon-arrow"></use>
                   </svg>
                 </div>
               </a>
@@ -168,75 +165,75 @@
 
       <section id="realization" class="realization">
         <div class="realization__container">
-          <h2 class="realization__title">Zobacz nasze realizacje</h2>
+          <h2 class="realization__title">{{t:page.realizations.title}}</h2>
           <div class="realization__list--wrapper">
             <ul id="realizationList" class="realization__list">
               <li class="realization__list-item">
                 <img
-                  src="./images/wardrobes/szafa12.webp"
+                  src="/images/wardrobes/szafa12.webp"
                   class="realization__list-img"
-                  alt="Szafa na wymiar"
+                  alt="{{t:page.realizations.alt.wardrobe}}"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/kitchen/kuchnia20.webp"
+                  src="/images/kitchen/kuchnia20.webp"
                   class="realization__list-img realization__list-img--width"
-                  alt="Kuchnia na wymiar"
+                  alt="{{t:page.realizations.alt.kitchen}}"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/bathroom/Lazienka17.webp"
+                  src="/images/bathroom/Lazienka17.webp"
                   class="realization__list-img"
-                  alt="Meble lazienkowe na wymiar"
+                  alt="{{t:page.realizations.alt.bathroomFurniture}}"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/wardrobes/szafa18.webp"
+                  src="/images/wardrobes/szafa18.webp"
                   class="realization__list-img"
-                  alt="Zabudowa szafy na wymiar"
+                  alt="{{t:page.realizations.alt.fittedWardrobe}}"
                   loading="lazy"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/kitchen/kuchnia12.webp"
+                  src="/images/kitchen/kuchnia12.webp"
                   class="realization__list-img"
-                  alt="Nowoczesna kuchnia na wymiar"
+                  alt="{{t:page.realizations.alt.modernKitchen}}"
                   loading="lazy"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/bathroom/Lazienka9.webp"
+                  src="/images/bathroom/Lazienka9.webp"
                   class="realization__list-img"
-                  alt="Realizacja mebli lazienkowych"
+                  alt="{{t:page.realizations.alt.bathroomProject}}"
                   loading="lazy"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/other/zab1.webp"
+                  src="/images/other/zab1.webp"
                   class="realization__list-img"
-                  alt="Wnetrze szafy na wymiar"
+                  alt="{{t:page.realizations.alt.wardrobeInterior}}"
                   loading="lazy"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/kitchen/kuchnia6.webp"
+                  src="/images/kitchen/kuchnia6.webp"
                   class="realization__list-img"
-                  alt="Kuchnia z zabudowa na wymiar"
+                  alt="{{t:page.realizations.alt.fittedKitchen}}"
                   loading="lazy"
                 />
               </li>
               <li class="realization__list-item">
                 <img
-                  src="./images/bathroom/Lazienka3.webp"
+                  src="/images/bathroom/Lazienka3.webp"
                   class="realization__list-img"
-                  alt="Lazienka z meblami na wymiar"
+                  alt="{{t:page.realizations.alt.furnishedBathroom}}"
                   loading="lazy"
                 />
               </li>
@@ -245,47 +242,49 @@
             <button
               type="button"
               id="realizationArrowLeft"
+              aria-label="{{t:page.realizations.previous}}"
               class="realization__button realization__button--left"
             >
               <svg class="realization__arrow">
-                <use href="./icons.svg#icon-arrow"></use>
+                <use href="/icons.svg#icon-arrow"></use>
               </svg>
             </button>
 
             <button
               type="button"
               id="realizationArrowRight"
+              aria-label="{{t:page.realizations.next}}"
               class="realization__button realization__button--right"
             >
               <svg class="realization__arrow">
-                <use href="./icons.svg#icon-arrow"></use>
+                <use href="/icons.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
           <a class="realization__link" href="/projects.html?category=kitchen">
-            Zobacz więcej</a
+            {{t:page.realizations.more}}</a
           >
         </div>
       </section>
 
       <section class="why-we">
         <div class="why-we__container">
-          <h2 class="why-we__title">Dlaczego my?</h2>
+          <h2 class="why-we__title">{{t:page.whyUs.title}}</h2>
           <ul class="why-we__list">
             <li class="why-we__list-item">
               <svg class="why-we__list-svg">
-                <use href="./icons.svg#exp"></use>
+                <use href="/icons.svg#exp"></use>
               </svg>
-              <p class="why-we__list-para">Doświadczenie<br />zawodowe</p>
+              <p class="why-we__list-para">{{t:page.whyUs.experienceFirst}}<br />{{t:page.whyUs.experienceSecond}}</p>
               <p class="why-we__list-para2">
-                <span id="why-weExperienceYears">10</span> lat na rynku
+                <span id="why-weExperienceYears">10</span> {{t:page.whyUs.yearsInBusiness}}
               </p>
             </li>
             <li class="why-we__list-item">
               <svg class="why-we__list-svg">
-                <use href="./icons.svg#logo-architect"></use>
+                <use href="/icons.svg#logo-architect"></use>
               </svg>
-              <p class="why-we__list-para">Współpraca z architektem</p>
+              <p class="why-we__list-para">{{t:page.whyUs.architect}}</p>
               <p class="why-we__list-para2">
                 <a
                   class="why-we__list-link"
@@ -299,17 +298,17 @@
             </li>
             <li class="why-we__list-item">
               <svg class="why-we__list-svg">
-                <use href="./icons.svg#handshake"></use>
+                <use href="/icons.svg#handshake"></use>
               </svg>
-              <p class="why-we__list-para">Indywidualne podejście</p>
-              <p class="why-we__list-para2">Projekt na miarę</p>
+              <p class="why-we__list-para">{{t:page.whyUs.personalApproach}}</p>
+              <p class="why-we__list-para2">{{t:page.whyUs.tailoredDesign}}</p>
             </li>
             <li class="why-we__list-item">
               <svg class="why-we__list-svg">
-                <use href="./icons.svg#guarantee"></use>
+                <use href="/icons.svg#guarantee"></use>
               </svg>
-              <p class="why-we__list-para">Gwarancja jakości</p>
-              <p class="why-we__list-para2">Solidne wykonanie</p>
+              <p class="why-we__list-para">{{t:page.whyUs.quality}}</p>
+              <p class="why-we__list-para2">{{t:page.whyUs.craftsmanship}}</p>
             </li>
           </ul>
         </div>
@@ -317,17 +316,16 @@
 
       <section class="contact">
         <div class="contact__container">
-          <h2 class="contact__title">Skontaktuj się z nami!</h2>
+          <h2 class="contact__title">{{t:page.contact.title}}</h2>
           <h2 class="contact__title contact__title--sub">
-            Wykonujemy projekty meblowe <br />w Żaganiu, Bolesławcu, Wrocławiu i
-            okolicach.
+            {{t:page.contact.descriptionFirst}} <br />{{t:page.contact.descriptionSecond}}
           </h2>
           <button
             class="contact__button"
             type="button"
             data-modal-open="contact"
           >
-            Zamów teraz
+            {{t:page.orderNow}}
           </button>
         </div>
       </section>

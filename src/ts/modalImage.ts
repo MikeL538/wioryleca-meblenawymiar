@@ -1,3 +1,5 @@
+import { t } from "./i18n";
+
 const modalImage = document.querySelector<HTMLElement>("#modalImage");
 const modalCloseButton =
   modalImage?.querySelector<HTMLButtonElement>(".modal__close");
@@ -95,7 +97,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") {
     showImageByOffset(1);
     if (galleryImages.length === currentImageIndex + 1) {
-      alert("Koniec zdjęć na tej stronie.");
+      alert(t("runtime.gallery.end"));
     }
   }
 
@@ -113,7 +115,7 @@ modalImageRight?.addEventListener("click", () => {
   if (!isModalOpen()) return;
   showImageByOffset(1);
   if (galleryImages.length === currentImageIndex + 1) {
-    alert("Koniec zdjęć na tej stronie.");
+    alert(t("runtime.gallery.end"));
   }
 });
 

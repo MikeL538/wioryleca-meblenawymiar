@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:i18n": "npm run build && node --test tests/*.test.mjs"
   },
   "devDependencies": {
     "@emnapi/core": "1.9.2",

@@ -8,10 +8,15 @@
 
     &__nav {
       display: flex;
+      min-width: 0;
 
       &-list {
         display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
         gap: $margin-m;
+        row-gap: 6px;
         list-style: none;
 
         &-link {

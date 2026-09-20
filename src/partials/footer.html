@@ -1,26 +1,26 @@
 <div class="footer__container">
   <a href="/" class="footer__brand">
-    <span class="footer__logo">WIÓRY LECĄ</span>
+    <span class="footer__logo">{{t:partial.brand.nameUpper}}</span>
   </a>
 
   <div class="footer__wrapper">
     <ul class="footer__contact">
       <li>
         <a href="tel:+48727198709" class="footer__contact-wrapper"
-          >+48 727 198 709</a
+          >{{t:partial.contact.phoneValue}}</a
         >
-        <a href="mailto:kontakt@wioryleca.pl">wiory_leca@wp.pl</a>
+        <a href="mailto:kontakt@wioryleca.pl">{{t:partial.contact.emailValue}}</a>
       </li>
 
-      <li>Wrocław, Bolesławiec, Żagań i okolice</li>
+      <li>{{t:partial.contact.areaValue}}</li>
     </ul>
     <div>
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="/">Start</a>
-        <a href="/projects.html?category=kitchen">Realizacje</a>
-        <button type="button" data-modal-open="coop">Współpraca</button>
-        <button type="button" data-modal-open="about">O nas</button>
-        <button type="button" data-modal-open="contact">Kontakt</button>
+      <nav class="footer__nav" aria-label="{{t:partial.footer.navigation}}">
+        <a href="/">{{t:partial.footer.home}}</a>
+        <a href="/projects.html?category=kitchen">{{t:partial.nav.projects}}</a>
+        <button type="button" data-modal-open="coop">{{t:partial.nav.cooperation}}</button>
+        <button type="button" data-modal-open="about">{{t:partial.nav.about}}</button>
+        <button type="button" data-modal-open="contact">{{t:partial.nav.contact}}</button>
       </nav>
 
       <ul class="footer__socials">
@@ -28,23 +28,22 @@
           <a
             href="https://www.facebook.com/profile.php?id=100057508506559"
             target="_blank"
-            aria-label="Facebook"
-            >FB</a
+            aria-label="{{t:partial.social.facebook}}"
+            >{{t:partial.social.facebookShort}}</a
           >
         </li>
         <li>
           <a
             href="https://www.instagram.com/wiory_leca_meble_na_wymiar/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwMUtVMUpUY0lpYzc1cTA2YnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7W8KvpSJRy4Cq9GwT0aDdqtRHV_f7JOvp2G0SyIoU17ShfR3pqWRbHUpC13A_aem_QWcnrCMKSz2cTnNrz-ntbw"
             target="_blank"
-            aria-label="Instagram"
-            >IG</a
+            aria-label="{{t:partial.social.instagram}}"
+            >{{t:partial.social.instagramShort}}</a
           >
         </li>
       </ul>
     </div>
   </div>
   <p class="footer__copy">
-    © <span id="footerCopyYear">2026</span> Wióry Lecą. Wszelkie prawa
-    zastrzeżone.
+    © <span id="footerCopyYear">2026</span> {{t:partial.footer.copyright}}
   </p>
 </div>

@@ -3,12 +3,12 @@
     class="modal__image"
     role="dialog"
     aria-modal="true"
-    aria-label="Podgląd zdjęcia"
+    aria-label="{{t:partial.image.title}}"
   >
     <button
       class="modal__close modal__close--colour"
       type="button"
-      aria-label="Zamknij podgląd zdjęcia"
+      aria-label="{{t:partial.image.close}}"
     >
       &times;
     </button>
@@ -23,18 +23,20 @@
       id="modalImageRight"
       class="modal__image--button modal__image--button-right"
       type="button"
+      aria-label="{{t:partial.image.next}}"
     >
       <svg class="realization__arrow">
-        <use href="./icons.svg#icon-arrow"></use>
+        <use href="/icons.svg#icon-arrow"></use>
       </svg>
     </button>
     <button
       id="modalImageLeft"
       class="modal__image--button modal__image--button-left"
       type="button"
+      aria-label="{{t:partial.image.previous}}"
     >
       <svg class="realization__arrow">
-        <use href="./icons.svg#icon-arrow"></use>
+        <use href="/icons.svg#icon-arrow"></use>
       </svg>
     </button>
   </div>

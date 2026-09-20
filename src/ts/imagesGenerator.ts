@@ -1,3 +1,5 @@
+import { refreshLanguageLinks, t } from "./i18n";
+
 const projectList = document.querySelector<HTMLUListElement>("#projectList");
 const projectPagination =
   document.querySelector<HTMLElement>("#projectPagination");
@@ -59,7 +61,7 @@ function imageGenerate(
     if (!amount || !name || !imageFolder) {
       projectList.innerHTML = `
         <li class="projects__list-item">
-          <p>Zdjecia dla tej kategorii beda dodane wkrotce.</p>
+          <p>${t("runtime.projects.empty")}</p>
         </li>
       `;
       if (projectPagination) {
@@ -83,7 +85,7 @@ function imageGenerate(
               <img
                 class="projects__list-img"
                 src="/images/${imageFolder}/${name}${i}.webp"
-                alt="Projekt mebli na wymiar"
+                alt="${t("runtime.projects.imageAlt")}"
                 loading="lazy"
               />
             </button>
@@ -117,7 +119,7 @@ function renderPagination(amount: number, name: string, imageFolder: string) {
         class="projects__pagination-button${isActive ? " projects__pagination-button--active" : ""}"
         type="button"
         data-page="${page}"
-        aria-label="Strona ${page}"
+        aria-label="${t("runtime.projects.page", { page })}"
         ${isActive ? 'aria-current="page"' : ""}
       >
         ${page}
@@ -131,7 +133,7 @@ function renderPagination(amount: number, name: string, imageFolder: string) {
       type="button"
       data-page="${currentPage - 1}"
       ${currentPage === 1 ? "disabled" : ""}
-      aria-label="Poprzednia strona"
+      aria-label="${t("runtime.projects.previousPage")}"
     >
       &lt;
     </button>
@@ -141,7 +143,7 @@ function renderPagination(amount: number, name: string, imageFolder: string) {
       type="button"
       data-page="${currentPage + 1}"
       ${currentPage === totalPages ? "disabled" : ""}
-      aria-label="Nastepna strona"
+      aria-label="${t("runtime.projects.nextPage")}"
     >
       &gt;
     </button>
@@ -164,7 +166,7 @@ function renderPagination(amount: number, name: string, imageFolder: string) {
 function isProjectCategory(
   category: string | null,
 ): category is ProjectCategory {
-  return Boolean(category && category in projectConfig);
+  return Boolean(category && Object.hasOwn(projectConfig, category));
 }
 
 function setActiveCategoryButton(category: ProjectCategory) {
@@ -180,6 +182,7 @@ function updateCategoryInUrl(category: ProjectCategory) {
   const url = new URL(window.location.href);
   url.searchParams.set("category", category);
   window.history.replaceState({}, "", url);
+  refreshLanguageLinks();
 }
 
 function renderCategory(category: string | null, page = 1) {

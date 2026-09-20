@@ -1,0 +1,17 @@
+{
+  "runtime.contact.sent": "Your message has been sent.",
+  "runtime.contact.error": "Error sending message:",
+  "runtime.contact.required": "Please fill in all required fields.",
+  "runtime.contact.nameTooLong": "The full name is too long (maximum 100 characters).",
+  "runtime.contact.locationTooLong": "The location is too long (maximum 100 characters).",
+  "runtime.contact.detailsTooLong": "The contact details are too long (maximum 100 characters).",
+  "runtime.contact.messageTooLong": "The message is too long (maximum 2500 characters).",
+  "runtime.contact.preferenceTooLong": "The preferred contact method is too long (maximum 250 characters).",
+  "runtime.contact.sendFailed": "Your message could not be sent. Please try again later.",
+  "runtime.projects.empty": "Photos for this category will be added soon.",
+  "runtime.projects.imageAlt": "Custom furniture project",
+  "runtime.projects.page": "Page {page}",
+  "runtime.projects.previousPage": "Previous page",
+  "runtime.projects.nextPage": "Next page",
+  "runtime.gallery.end": "This is the last photo on this page."
+}

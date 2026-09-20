@@ -22,7 +22,8 @@
     font-size: $font-size-lg;
     letter-spacing: $spacing-xs;
     margin-bottom: $margin-m;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
     width: 100%;
 
     &::before,

@@ -1,0 +1,17 @@
+{
+  "runtime.contact.sent": "Ihre Nachricht wurde gesendet.",
+  "runtime.contact.error": "Fehler beim Senden der Nachricht:",
+  "runtime.contact.required": "Bitte füllen Sie alle Pflichtfelder aus.",
+  "runtime.contact.nameTooLong": "Der Vor- und Nachname ist zu lang (maximal 100 Zeichen).",
+  "runtime.contact.locationTooLong": "Die Ortsangabe ist zu lang (maximal 100 Zeichen).",
+  "runtime.contact.detailsTooLong": "Die Kontaktdaten sind zu lang (maximal 100 Zeichen).",
+  "runtime.contact.messageTooLong": "Die Nachricht ist zu lang (maximal 2500 Zeichen).",
+  "runtime.contact.preferenceTooLong": "Die bevorzugte Kontaktart ist zu lang (maximal 250 Zeichen).",
+  "runtime.contact.sendFailed": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+  "runtime.projects.empty": "Fotos für diese Kategorie werden in Kürze hinzugefügt.",
+  "runtime.projects.imageAlt": "Projekt mit Möbeln nach Maß",
+  "runtime.projects.page": "Seite {page}",
+  "runtime.projects.previousPage": "Vorherige Seite",
+  "runtime.projects.nextPage": "Nächste Seite",
+  "runtime.gallery.end": "Das ist das letzte Foto auf dieser Seite."
+}

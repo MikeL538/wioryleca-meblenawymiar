@@ -8,7 +8,9 @@
   &__list {
     background: $color-bg-main;
     display: flex;
+    flex-wrap: wrap;
     gap: 7%;
+    row-gap: 12px;
     justify-content: center;
     list-style: none;
     padding: $margin-l 0;

@@ -3,27 +3,27 @@
     class="modal__menu"
     aria-modal="true"
     role="dialog"
-    aria-label="Menu główne"
+    aria-label="{{t:partial.menu.title}}"
   >
-    <button class="modal__close" type="button" aria-label="Zamknij menu">
+    <button class="modal__close" type="button" aria-label="{{t:partial.menu.close}}">
       &times;
     </button>
 
     <a class="header__link" href="/">
-      <img class="modal__menu-image" src="/logos.png" alt="Wióry Lecą - logo" />
+      <img class="modal__menu-image" src="/logos.png" alt="{{t:partial.brand.logoAlt}}" />
     </a>
 
     <nav class="mobile__nav">
       <ul class="mobile__nav-list">
         <li class="mobile__nav-list-item">
-          <a href="/" class="mobile__nav-list-link">Strona główna</a>
+          <a href="/" class="mobile__nav-list-link">{{t:partial.nav.home}}</a>
         </li>
         <li class="mobile__nav-list-item">
           <a
             href="/projects.html?category=kitchen"
             class="mobile__nav-list-link"
           >
-            Realizacje
+            {{t:partial.nav.projects}}
           </a>
         </li>
         <li class="mobile__nav-list-item">
@@ -32,7 +32,7 @@
             class="mobile__nav-list-link"
             data-modal-open="coop"
           >
-            Współpraca
+            {{t:partial.nav.cooperation}}
           </button>
         </li>
         <li class="mobile__nav-list-item">
@@ -41,7 +41,7 @@
             class="mobile__nav-list-link"
             data-modal-open="about"
           >
-            O nas
+            {{t:partial.nav.about}}
           </button>
         </li>
         <li class="mobile__nav-list-item">
@@ -50,10 +50,11 @@
             data-modal-open="contact"
             type="button"
           >
-            Kontakt
+            {{t:partial.nav.contact}}
           </button>
         </li>
       </ul>
     </nav>
+    {{languageSwitcher}}
   </div>
 </div>

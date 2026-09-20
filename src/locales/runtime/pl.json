@@ -1,0 +1,17 @@
+{
+  "runtime.contact.sent": "Wiadomość została wysłana.",
+  "runtime.contact.error": "Błąd wysyłania wiadomości:",
+  "runtime.contact.required": "Uzupełnij wszystkie wymagane pola.",
+  "runtime.contact.nameTooLong": "Imię i nazwisko jest za długie (maksymalnie 100 znaków).",
+  "runtime.contact.locationTooLong": "Lokalizacja jest za długa (maksymalnie 100 znaków).",
+  "runtime.contact.detailsTooLong": "Dane kontaktowe są za długie (maksymalnie 100 znaków).",
+  "runtime.contact.messageTooLong": "Wiadomość jest za długa (maksymalnie 2500 znaków).",
+  "runtime.contact.preferenceTooLong": "Preferowany sposób kontaktu jest za długi (maksymalnie 250 znaków).",
+  "runtime.contact.sendFailed": "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+  "runtime.projects.empty": "Zdjęcia dla tej kategorii będą dodane wkrótce.",
+  "runtime.projects.imageAlt": "Projekt mebli na wymiar",
+  "runtime.projects.page": "Strona {page}",
+  "runtime.projects.previousPage": "Poprzednia strona",
+  "runtime.projects.nextPage": "Następna strona",
+  "runtime.gallery.end": "Koniec zdjęć na tej stronie."
+}

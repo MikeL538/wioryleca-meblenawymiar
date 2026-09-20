@@ -67,6 +67,8 @@
     }
 
     &-para {
+      hyphens: auto;
+      overflow-wrap: anywhere;
       border-bottom: 1px solid $color-darkwood;
       font-size: $font-size-s;
       font-weight: 700;
@@ -75,6 +77,9 @@
     }
 
     &-para2 {
+      max-width: 100%;
+      hyphens: auto;
+      overflow-wrap: anywhere;
       font-size: $font-size-s;
       padding: 3px 0;
     }
