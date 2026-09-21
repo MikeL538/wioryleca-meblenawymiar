@@ -1,5 +1,10 @@
 @use "../vars" as *;
 
+#modalMenu {
+  // Avoid animating opacity across the entire menu and its SVG flags.
+  transition: none;
+}
+
 .modal {
   &__menu {
     align-items: center;
