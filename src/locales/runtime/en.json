@@ -1,5 +1,7 @@
 {
   "runtime.contact.sent": "Your message has been sent.",
+  "runtime.contact.sending": "Sending…",
+  "runtime.contact.timeout": "The server did not respond in time. We cannot confirm whether your message was sent. Please contact us by phone or email.",
   "runtime.contact.error": "Error sending message:",
   "runtime.contact.required": "Please fill in all required fields.",
   "runtime.contact.nameTooLong": "The full name is too long (maximum 100 characters).",

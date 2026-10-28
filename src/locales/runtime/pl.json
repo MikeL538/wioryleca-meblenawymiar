@@ -1,5 +1,7 @@
 {
   "runtime.contact.sent": "Wiadomość została wysłana.",
+  "runtime.contact.sending": "Wysyłanie…",
+  "runtime.contact.timeout": "Serwer nie odpowiedział na czas. Nie możemy potwierdzić wysłania wiadomości. Skontaktuj się z nami telefonicznie lub e-mailem.",
   "runtime.contact.error": "Błąd wysyłania wiadomości:",
   "runtime.contact.required": "Uzupełnij wszystkie wymagane pola.",
   "runtime.contact.nameTooLong": "Imię i nazwisko jest za długie (maksymalnie 100 znaków).",

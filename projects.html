@@ -2,108 +2,18 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logos.png" />
+    <link rel="icon" type="image/png" href="/logos.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{t:page.projects.title}}</title>
-    <meta
-      name="description"
-      content="{{t:page.projects.description}}"
-    />
-    <link
-      rel="canonical"
-      href="https://www.wioryleca-meblenawymiar.pl/projects.html"
-    />
-
-    <meta
-      property="og:title"
-      content="{{t:page.projects.ogTitle}}"
-    />
-    <meta
-      property="og:description"
-      content="{{t:page.projects.ogDescription}}"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://www.wioryleca-meblenawymiar.pl/projects.html"
-    />
-    <meta
-      property="og:image"
-      content="https://www.wioryleca-meblenawymiar.pl/images/kitchen/kuchnia20.webp"
-    />
+    {{seoHead}}
   </head>
   <body>
+    <a class="skip-link" href="#mainContent">{{t:page.skipToContent}}</a>
     <header class="header">
       <include src="./src/partials/header.html"></include>
     </header>
 
-    <main>
-      <section class="categories">
-        <div class="categories__container">
-          <ul class="categories__list">
-            <li class="categories__item">
-              <button
-                id="wardrobeButton"
-                class="categories__button"
-                type="button"
-                data-category="wardrobe"
-              >
-                <svg class="categories__icon categories__icon--wardrobe">
-                  <use href="/icons.svg#wardrobe"></use>
-                </svg>
-                {{t:page.projects.wardrobes}}
-              </button>
-            </li>
-            <li class="categories__item">
-              <button
-                class="categories__button"
-                type="button"
-                data-category="kitchen"
-              >
-                <svg class="categories__icon">
-                  <use href="/icons.svg#kitchen"></use>
-                </svg>
-                {{t:page.projects.kitchens}}
-              </button>
-            </li>
-            <li class="categories__item">
-              <button
-                class="categories__button"
-                type="button"
-                data-category="bathroom"
-              >
-                <svg class="categories__icon">
-                  <use href="/icons.svg#bathroom"></use>
-                </svg>
-                {{t:page.projects.bathrooms}}
-              </button>
-            </li>
-            <li class="categories__item">
-              <button
-                class="categories__button"
-                type="button"
-                data-category="built-in"
-              >
-                <svg class="categories__icon">
-                  <use href="/icons.svg#drawer"></use>
-                </svg>
-                {{t:page.projects.other}}
-              </button>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="projects">
-        <div class="projects__container">
-          <ul id="projectList" class="projects__list"></ul>
-          <nav
-            id="projectPagination"
-            class="projects__pagination"
-            aria-label="{{t:page.projects.pagination}}"
-          ></nav>
-        </div>
-      </section>
+    <main id="mainContent" tabindex="-1">
+      {{gallery}}
     </main>
 
     <footer class="footer">

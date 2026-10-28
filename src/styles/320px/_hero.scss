@@ -12,29 +12,16 @@
       linear-gradient(
         to right,
         rgba(0, 0, 0, 0.85) 0%,
-        rgba(0, 0, 0, 0.75) 40%,
-        rgba(0, 0, 0, 0.5) 63%,
-        rgba(0, 0, 0, 0) 80%
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.35) 100%
       ),
       $hero;
-
-    @media screen and (min-width: 414px) {
-      background-image:
-        linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.8) 0%,
-          rgba(0, 0, 0, 0.7) 32%,
-          rgba(0, 0, 0, 0.6) 43%,
-          rgba(0, 0, 0, 0) 55%
-        ),
-        $hero;
-    }
 
     background-position: center 20%;
     background-repeat: no-repeat;
     background-size: cover;
     color: $color-text-light;
-    min-height: min(60vh, 500px);
+    min-height: clamp(420px, 65svh, 620px);
     width: 100%;
     align-items: center;
     display: flex;
@@ -44,33 +31,33 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: $margin-xs;
+    gap: 20px;
     height: max-content;
     justify-content: left;
-    max-width: 260px;
-    padding: $margin-xs;
+    max-width: 350px;
+    padding: 40px 20px;
     position: relative;
     width: 100%;
     z-index: 1;
   }
 
   &__title {
-    font-size: $font-size-m;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     letter-spacing: $spacing-sm;
     line-height: 1.15;
     width: 100%;
 
     &--under {
-      font-size: $font-size-s;
-      letter-spacing: $spacing-md;
-      line-height: 1.4;
-      max-width: 180px;
+      font-size: 1rem;
+      letter-spacing: normal;
+      line-height: 1.6;
+      max-width: 30ch;
       font-weight: 400;
       margin-top: $spacing-xl;
     }
 
     &--mark {
-      color: $color-text-mark;
+      color: #e6b978;
     }
   }
 
@@ -84,15 +71,16 @@
     font-size: $font-size-sm;
     font-weight: 600;
     letter-spacing: $spacing-md;
-    max-width: 160px;
-    padding: $margin-xs;
+    align-self: flex-start;
+    min-height: 48px;
+    padding: 12px 20px;
     text-transform: uppercase;
     transition: $transition-fast;
 
     &:hover {
       background-color: $color-accent-hover;
       box-shadow: $shadow-md;
-      transform: translateY(-2px) scale(1.05);
+      transform: translateY(-2px);
     }
   }
 

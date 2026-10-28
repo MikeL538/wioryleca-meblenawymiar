@@ -35,3 +35,10 @@ pnpm-lock.yaml
 *.tmp
 *.temp
 .cache
+playwright-report/
+test-results/
+
+# Derived HTML entry points; regenerated from the image catalogue by Vite.
+/projects/
+/en/projects/
+/de/projects/

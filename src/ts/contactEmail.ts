@@ -1,87 +1,90 @@
 import { t } from "./i18n";
 
-class ContactError extends Error {}
-
+const form = document.querySelector<HTMLFormElement>("#contactForm");
 const sendButton = document.querySelector<HTMLButtonElement>("#contactButton");
-const name = document.querySelector<HTMLInputElement>("#contactName");
-const localization = document.querySelector<HTMLInputElement>(
-  "#contactLocalization",
-);
-const contact = document.querySelector<HTMLInputElement>("#contactContact");
-const message = document.querySelector<HTMLTextAreaElement>("#contactMessage");
-const preferable =
-  document.querySelector<HTMLTextAreaElement>("#contactPreferable");
+const status = document.querySelector<HTMLElement>("#contactStatus");
+const fieldRules = [
+  ["Name", "name", 100, "nameTooLong", true],
+  ["Localization", "localization", 100, "locationTooLong", true],
+  ["Contact", "contact", 100, "detailsTooLong", true],
+  ["Message", "message", 2500, "messageTooLong", true],
+  ["Preferable", "preferable", 250, "preferenceTooLong", false],
+] as const;
 
-sendButton?.addEventListener("click", async (event) => {
-  event.preventDefault();
-  try {
-    await sendEmail();
-    alert(t("runtime.contact.sent"));
-  } catch (error) {
-    console.error(t("runtime.contact.error"), error);
-    alert(
-      error instanceof ContactError
-        ? error.message
-        : t("runtime.contact.sendFailed"),
-    );
-  }
-});
+if (form && sendButton && status) {
+  // Use translated, accessible inline validation after JavaScript initializes.
+  form.noValidate = true;
+  const fields = fieldRules.map(([suffix, key, limit, errorKey, required]) => {
+    const input = form.querySelector<HTMLInputElement | HTMLTextAreaElement>(`#contact${suffix}`)!;
+    const error = document.createElement("span");
+    error.id = `${input.id}Error`;
+    error.className = "modal__field-error";
+    input.setAttribute("aria-describedby", error.id);
+    input.after(error);
+    input.addEventListener("input", () => {
+      error.textContent = "";
+      input.removeAttribute("aria-invalid");
+      if (!pending) status.textContent = "";
+    });
+    return { input, error, key, limit, errorKey, required };
+  });
+  const buttonLabel = sendButton.textContent;
+  let pending = false;
 
-async function sendEmail() {
-  const trimmedName = name?.value.trim();
-  const trimmedLocalization = localization?.value.trim();
-  const trimmedContact = contact?.value.trim();
-  const trimmedMessage = message?.value.trim();
-  const trimmedPreferable = preferable?.value.trim();
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (pending) return;
 
-  if (
-    !trimmedName ||
-    !trimmedLocalization ||
-    !trimmedContact ||
-    !trimmedMessage
-  ) {
-    throw new ContactError(t("runtime.contact.required"));
-  }
+    status.textContent = "";
+    const payload: Record<string, string> = {};
+    let firstInvalid: HTMLInputElement | HTMLTextAreaElement | undefined;
+    for (const field of fields) {
+      const value = field.input.value.trim();
+      const error = field.required && !value
+        ? t("runtime.contact.required")
+        : value.length > field.limit ? t(`runtime.contact.${field.errorKey}`) : "";
+      field.error.textContent = error;
+      field.input.setAttribute("aria-invalid", error ? "true" : "false");
+      if (error) firstInvalid ??= field.input;
+      payload[field.key] = value;
+    }
+    if (firstInvalid) {
+      firstInvalid.focus();
+      return;
+    }
 
-  if (trimmedName && trimmedName.length > 100) {
-    throw new ContactError(t("runtime.contact.nameTooLong"));
-  }
-
-  if (trimmedLocalization && trimmedLocalization.length > 100) {
-    throw new ContactError(t("runtime.contact.locationTooLong"));
-  }
-
-  if (trimmedContact && trimmedContact.length > 100) {
-    throw new ContactError(t("runtime.contact.detailsTooLong"));
-  }
-
-  if (trimmedMessage && trimmedMessage.length > 2500) {
-    throw new ContactError(t("runtime.contact.messageTooLong"));
-  }
-
-  if (trimmedPreferable && trimmedPreferable.length > 250) {
-    throw new ContactError(t("runtime.contact.preferenceTooLong"));
-  }
-
-  const response = await fetch(
-    "https://server.wioryleca-meblenawymiar.pl/send-email",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: trimmedName,
-        localization: trimmedLocalization,
-        contact: trimmedContact,
-        message: trimmedMessage,
-        preferable: trimmedPreferable,
-      }),
-    },
-  );
-
-  if (!response.ok) {
-    console.error(t("runtime.contact.error"), await response.text());
-    throw new ContactError(t("runtime.contact.sendFailed"));
-  }
+    pending = true;
+    sendButton.disabled = true;
+    sendButton.textContent = t("runtime.contact.sending");
+    form.setAttribute("aria-busy", "true");
+    fields.forEach(({ input }) => { input.readOnly = true; });
+    status.textContent = t("runtime.contact.sending");
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15_000);
+    try {
+      const response = await fetch("https://server.wioryleca-meblenawymiar.pl/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+      if (!response.ok) throw new Error("Contact request failed");
+      form.reset();
+      status.textContent = t("runtime.contact.sent");
+    } catch {
+      // A timeout does not prove the server failed to deliver the message.
+      status.textContent = t(controller.signal.aborted
+        ? "runtime.contact.timeout" : "runtime.contact.sendFailed");
+    } finally {
+      window.clearTimeout(timeout);
+      pending = false;
+      sendButton.disabled = false;
+      sendButton.textContent = buttonLabel;
+      form.removeAttribute("aria-busy");
+      fields.forEach(({ input }) => { input.readOnly = false; });
+      if (form.closest(".modal__backdrop")?.classList.contains("is-open")) {
+        status.scrollIntoView({ block: "nearest" });
+      }
+    }
+  });
 }

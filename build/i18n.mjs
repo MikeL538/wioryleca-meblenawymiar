@@ -3,16 +3,11 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const rootPath = fileURLToPath(new URL("../", import.meta.url));
-export const siteUrl = "https://www.wioryleca-meblenawymiar.pl";
-export const languages = ["pl", "de", "en"];
-export const pages = ["index.html", "projects.html"];
+
+import { languages, pages, siteUrl, pagePath, seoHead, renderGallery, addImageDimensions } from "./seo.mjs";
+export { languages, pages, siteUrl, pagePath };
 const groups = ["pages", "partials", "runtime"];
 const tokenPattern = /\{\{t:([\w.]+)\}\}/g;
-
-export function pagePath(language, page) {
-  const prefix = language === "pl" ? "/" : `/${language}/`;
-  return prefix + (page === "index.html" ? "" : page);
-}
 
 export function readDictionaries() {
   const dictionaries = {};
@@ -110,6 +105,11 @@ export function renderHtml(
   };
   const url = siteUrl + pagePath(language, page);
   let html = expandPartials(source);
+  const activeSection = page === "index.html" ? "home" : "projects";
+  const current = page.startsWith("projects/") ? "location" : "page";
+  html = html.replaceAll(`data-nav-page="${activeSection}"`, `data-nav-page="${activeSection}" aria-current="${current}"`);
+  if (html.includes("{{seoHead}}")) html = html.replace("{{seoHead}}", () => seoHead(language, page, translate));
+  if (html.includes("{{gallery}}")) html = html.replace("{{gallery}}", () => renderGallery(language, page, translate));
   html = html.replace(
     /(<script\b[^>]*type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g,
     (_match, open, content, close) => {
@@ -117,7 +117,7 @@ export function renderHtml(
         JSON.stringify(translate(key)).slice(1, -1),
       );
       const data = JSON.parse(translated);
-      data.url = url;
+      if (!data["@graph"]) data.url = url;
       return open + safeJson(data) + close;
     },
   );
@@ -138,8 +138,8 @@ export function renderHtml(
     (match, open, path, suffix = "", close) => {
       if (path === "/" || path === "/index.html")
         return open + pagePath(language, "index.html") + suffix + close;
-      if (path === "/projects.html")
-        return open + pagePath(language, "projects.html") + suffix + close;
+      if (path === "/projects.html" || path.startsWith("/projects/"))
+        return open + pagePath(language, path.slice(1)) + suffix + close;
       return match;
     },
   );
@@ -175,5 +175,5 @@ export function renderHtml(
   );
   if (/\{\{(?:t:|languageSwitcher)/.test(html))
     throw new Error(`Unresolved translation in ${language}/${page}`);
-  return html;
+  return addImageDimensions(html);
 }

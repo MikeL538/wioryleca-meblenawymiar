@@ -1,4 +1,5 @@
 @use "./vars" as *;
+@use "./seo";
 // 320px
 @use "./320px/header";
 @use "./320px/hero";
@@ -62,4 +63,36 @@ body {
   font-size: $font-size-base;
   // max-width: 1080px;
   position: relative;
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid $color-darkwood;
+  outline-offset: 4px;
+}
+
+main:focus { outline: none; }
+
+.footer :focus-visible { outline-color: #e6b978; }
+
+.modal__header { padding-right: 44px; }
+
+.realization__title, .why-we__title, .contact__title:not(.contact__title--sub) {
+  &::before, &::after {
+    flex: 1;
+    min-width: 12px;
+    width: auto;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  z-index: $z-modal + 1;
+  padding: 12px 18px;
+  background: $color-bg-section;
+  color: $color-primary;
+  border-radius: $border-radius;
+  transform: translateY(-200%);
+  &:focus { transform: translateY(0); }
 }

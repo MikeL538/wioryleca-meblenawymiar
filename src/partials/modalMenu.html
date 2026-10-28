@@ -1,4 +1,4 @@
-<div class="modal__backdrop" id="modalMenu" aria-hidden="true">
+<div class="modal__backdrop" id="modalMenu" aria-hidden="true" hidden>
   <div
     class="modal__menu"
     aria-modal="true"
@@ -16,12 +16,13 @@
     <nav class="mobile__nav">
       <ul class="mobile__nav-list">
         <li class="mobile__nav-list-item">
-          <a href="/" class="mobile__nav-list-link">{{t:partial.nav.home}}</a>
+          <a href="/" class="mobile__nav-list-link" data-nav-page="home">{{t:partial.nav.home}}</a>
         </li>
         <li class="mobile__nav-list-item">
           <a
-            href="/projects.html?category=kitchen"
+            href="/projects.html"
             class="mobile__nav-list-link"
+            data-nav-page="projects"
           >
             {{t:partial.nav.projects}}
           </a>

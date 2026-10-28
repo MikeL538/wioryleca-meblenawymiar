@@ -19,6 +19,13 @@ for (const language of languages) {
         assert.ok(html.includes(`hreflang="${target}" href="${siteUrl}${pagePath(target === "x-default" ? "pl" : target, page)}"`));
       }
       const switchers = [...html.matchAll(/<a\b[^>]*data-language-link="(pl|de|en)"[^>]*>/g)];
+      const navigation = [...html.matchAll(/<a\b[^>]*data-nav-page="(home|projects)"[^>]*>/g)];
+      assert.equal(navigation.length, 4, "desktop and mobile navigation");
+      for (const [tag, section] of navigation) {
+        const active = section === (page === "index.html" ? "home" : "projects");
+        assert.equal(tag.includes("aria-current="), active, "only the current section is marked");
+        if (active) assert.ok(tag.includes(`aria-current="${page.startsWith("projects/") ? "location" : "page"}"`));
+      }
       assert.equal(switchers.length, 6, "desktop and mobile language links");
       for (const [tag, target] of switchers) {
         assert.ok(tag.includes(`href="${pagePath(target, page)}"`));
@@ -26,9 +33,9 @@ for (const language of languages) {
       }
       for (const [tag, href] of html.matchAll(/<a\b[^>]*href="([^"]*)"[^>]*>/g)) {
         if (tag.includes("data-language-link") || !href.startsWith("/")) continue;
-        assert.ok(href === pagePath(language, "index.html") || href.startsWith(pagePath(language, "projects.html")), `wrong locale link ${href}`);
+        assert.ok(href.startsWith("/images/") || pages.some((target) => href === pagePath(language, target)), `wrong locale link ${href}`);
       }
-      assert.ok(html.includes(`href="${pagePath(language, "projects.html")}?category=kitchen"`));
+      assert.ok(html.includes(`href="${pagePath(language, "projects/kitchen.html")}"`));
       assert.doesNotMatch(html, /(?:href|src)="\.\/(?:icons|images)/);
       for (const [, asset] of html.matchAll(/(?:src|href)="(\/(?:assets|images)\/[^"#?]+|\/[^"/]+\.(?:png|svg))(?:#[^"]*)?"/g)) {
         assert.ok(existsSync(resolve(rootPath, `dist${asset}`)), `missing asset ${asset}`);
@@ -37,8 +44,10 @@ for (const language of languages) {
       assert.deepEqual(messages, JSON.parse(read(`src/locales/runtime/${language}.json`)));
       if (page === "index.html") {
         const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
-        assert.equal(data.url, siteUrl + pagePath(language, page));
-        assert.equal(data.description, dictionaries[language]["page.home.businessDescription"]);
+        const business = data["@graph"].find((entity) => entity["@type"] === "Organization");
+        const webpage = data["@graph"].find((entity) => entity["@type"] === "WebPage");
+        assert.equal(webpage.url, siteUrl + pagePath(language, page));
+        assert.equal(business.description, dictionaries[language]["page.home.businessDescription"]);
       }
     });
   }
@@ -59,7 +68,7 @@ test("translations safely escape attributes, text, JSON-LD and embedded messages
   assert.equal(JSON.parse(scripts[1][1])["runtime.test"], value);
 });
 
-test("sitemap covers all six localized pages and language flags exist", () => {
+test("sitemap covers all localized pages and language flags exist", () => {
   const sitemap = read("dist/sitemap.xml");
   const icons = read("dist/icons.svg");
   for (const language of languages) {

@@ -18,10 +18,14 @@
     visibility: hidden;
     z-index: $z-modal;
 
+    &[hidden] { display: none; }
+
     &.is-open {
       opacity: 1;
       pointer-events: auto;
       visibility: visible;
+      // Visibility must change immediately so focus can enter the dialog.
+      transition: opacity $transition-normal;
     }
   }
 
@@ -34,7 +38,7 @@
     cursor: pointer;
     display: inline-flex;
     font-size: $font-size-xl;
-    height: 36px;
+    height: 44px;
     justify-content: center;
     line-height: 1;
     position: absolute;
@@ -45,7 +49,8 @@
       border-color $transition-fast,
       color $transition-fast,
       transform $transition-fast;
-    width: 36px;
+    width: 44px;
+    z-index: 2;
 
     &:hover,
     &:focus {

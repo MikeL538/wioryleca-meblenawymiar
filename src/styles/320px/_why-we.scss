@@ -4,7 +4,7 @@
   color: $color-primary;
 
   &__container {
-    padding: $margin-section 0 $margin-xs 0;
+    padding: $margin-section 0 48px;
     align-items: center;
     background-color: #fff;
     display: flex;
@@ -18,7 +18,7 @@
     font-size: $font-size-lg;
     letter-spacing: $spacing-xs;
     margin-bottom: $margin-m;
-    white-space: nowrap;
+    text-align: center;
     width: 100%;
 
     &::before,
@@ -36,8 +36,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: $margin-s;
     margin: 0 auto;
-    width: 100%;
-    max-width: 220px;
+    width: calc(100% - 40px);
+    max-width: 1160px;
+    list-style: none;
 
     &-item {
       align-items: center;
@@ -47,40 +48,42 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      gap: $spacing-xl;
-      justify-content: space-between;
-      padding: $spacing-xxl;
+      gap: 12px;
+      justify-content: flex-start;
+      padding: 20px 12px;
       text-align: center;
       transition: $transition-fast;
-      width: 100px;
+      min-width: 0;
 
       &:hover {
         box-shadow: $shadow-md;
-        transform: translateY(-2px) scale(1.05);
+        transform: translateY(-2px);
       }
     }
 
     &-svg {
       background-color: none;
-      height: 35px;
-      width: 35px;
+      height: 48px;
+      width: 48px;
     }
 
     &-para {
       hyphens: auto;
       overflow-wrap: anywhere;
       border-bottom: 1px solid $color-darkwood;
-      font-size: $font-size-s;
+      font-size: $font-size-sm;
+      line-height: 1.5;
       font-weight: 700;
       padding-bottom: 3px;
-      width: 90px;
+      width: 100%;
     }
 
     &-para2 {
       max-width: 100%;
       hyphens: auto;
       overflow-wrap: anywhere;
-      font-size: $font-size-s;
+      font-size: $font-size-sm;
+      line-height: 1.5;
       padding: 3px 0;
     }
 

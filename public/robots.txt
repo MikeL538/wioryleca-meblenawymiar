@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.wioryleca-meblenawymiar.pl/sitemap.xml
-Host: www.wioryleca-meblenawymiar.pl

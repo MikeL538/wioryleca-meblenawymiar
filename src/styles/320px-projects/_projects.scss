@@ -10,29 +10,31 @@
   }
 
   &__list {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $margin-s;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
     list-style: none;
     margin: 0 auto;
     max-width: 1300px;
-    width: 100%;
+    width: calc(100% - 40px);
+    @media (min-width: 560px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (min-width: 900px) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (min-width: 1200px) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     &-item {
       display: flex;
       justify-content: center;
-      margin: 5px;
+      min-width: 0;
     }
 
     &-img {
       border-radius: $border-radius;
       border: 2px solid $color-darkwood;
       display: flex;
-      height: 270px;
+      height: auto;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      width: 290px;
+      width: 100%;
     }
 
     &-button {
@@ -40,10 +42,12 @@
       border: none;
       cursor: pointer;
       overflow: hidden;
+      width: 100%;
+      border-radius: $border-radius;
       transition: $transition-fast;
 
       &:hover {
-        transform: scale(1.05);
+        transform: translateY(-3px);
       }
     }
   }
@@ -66,16 +70,16 @@
     display: inline-flex;
     font-size: $font-size-base;
     font-weight: 700;
-    height: 40px;
+    height: 44px;
     justify-content: center;
-    min-width: 40px;
+    min-width: 44px;
     padding: 0 $margin-xs;
     transition: $transition-fast;
 
     &:hover,
     &:focus {
       background-color: $color-accent;
-      color: $color-text;
+      color: $color-text-light;
     }
 
     &:disabled {
@@ -91,7 +95,7 @@
 
     &--active {
       background-color: $color-accent;
-      color: $color-text;
+      color: $color-text-light;
     }
   }
 }

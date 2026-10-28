@@ -1,6 +1,6 @@
 @use "../vars" as *;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .header {
     &__menu--mobile {
       display: none;
@@ -27,6 +27,9 @@
           background: none;
           border: none;
           font-family: $font-main;
+          display: inline-flex;
+          align-items: center;
+          min-height: 44px;
 
           &:hover {
             color: $color-accent;

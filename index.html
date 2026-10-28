@@ -2,53 +2,17 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logos.png" />
+    <link rel="icon" type="image/png" href="/logos.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{t:page.home.title}}</title>
-    <meta
-      name="description"
-      content="{{t:page.home.description}}"
-    />
-    <link rel="canonical" href="https://www.wioryleca-meblenawymiar.pl/" />
-
-    <meta
-      property="og:title"
-      content="{{t:page.home.title}}"
-    />
-    <meta
-      property="og:description"
-      content="{{t:page.home.description}}"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.wioryleca-meblenawymiar.pl/" />
-    <meta
-      property="og:image"
-      content="https://www.wioryleca-meblenawymiar.pl/images/kitchen/kuchnia20.webp"
-    />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Wióry Lecą",
-        "url": "https://www.wioryleca-meblenawymiar.pl/",
-        "logo": "https://www.wioryleca-meblenawymiar.pl/logos.png",
-        "description": "{{t:page.home.businessDescription}}",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Żagań, Wrocław, Bolesławiec",
-          "addressRegion": "Lubuskie, Dolnośląskie",
-          "addressCountry": "PL"
-        },
-        "areaServed": "Bolesławiec, Wrocław, Żagań"
-      }
-    </script>
+    {{seoHead}}
   </head>
   <body>
+    <a class="skip-link" href="#mainContent">{{t:page.skipToContent}}</a>
     <header class="header">
       <include src="./src/partials/header.html"></include>
     </header>
 
-    <main class="main">
+    <main id="mainContent" class="main" tabindex="-1">
       <section class="hero">
         <div class="hero__container">
           <div class="hero__wrapper">
@@ -87,7 +51,7 @@
             <li class="offer__list-item">
               <a
                 class="offer__list-link"
-                href="/projects.html?category=kitchen"
+                href="/projects/kitchen.html"
               >
                 <div class="offer__list-wrapper">
                   <svg class="offer__list-svg offer__list-svg--background">
@@ -106,7 +70,7 @@
               <a
                 id="offerWardrobeAnchor"
                 class="offer__list-link"
-                href="/projects.html?category=wardrobe"
+                href="/projects/wardrobe.html"
               >
                 <div class="offer__list-wrapper">
                   <svg
@@ -126,7 +90,7 @@
             <li class="offer__list-item">
               <a
                 class="offer__list-link"
-                href="/projects.html?category=bathroom"
+                href="/projects/bathroom.html"
               >
                 <div class="offer__list-wrapper">
                   <svg class="offer__list-svg offer__list-svg--background">
@@ -144,7 +108,7 @@
             <li class="offer__list-item">
               <a
                 class="offer__list-link"
-                href="/projects.html?category=built-in"
+                href="/projects/built-in.html"
               >
                 <div class="offer__list-wrapper">
                   <svg class="offer__list-svg offer__list-svg--background">
@@ -165,9 +129,9 @@
 
       <section id="realization" class="realization">
         <div class="realization__container">
-          <h2 class="realization__title">{{t:page.realizations.title}}</h2>
+          <h2 id="realizationsTitle" class="realization__title">{{t:page.realizations.title}}</h2>
           <div class="realization__list--wrapper">
-            <ul id="realizationList" class="realization__list">
+            <ul id="realizationList" class="realization__list" tabindex="0" aria-labelledby="realizationsTitle">
               <li class="realization__list-item">
                 <img
                   src="/images/wardrobes/szafa12.webp"
@@ -242,6 +206,7 @@
             <button
               type="button"
               id="realizationArrowLeft"
+              aria-controls="realizationList"
               aria-label="{{t:page.realizations.previous}}"
               class="realization__button realization__button--left"
             >
@@ -253,6 +218,7 @@
             <button
               type="button"
               id="realizationArrowRight"
+              aria-controls="realizationList"
               aria-label="{{t:page.realizations.next}}"
               class="realization__button realization__button--right"
             >
@@ -261,7 +227,7 @@
               </svg>
             </button>
           </div>
-          <a class="realization__link" href="/projects.html?category=kitchen">
+          <a class="realization__link" href="/projects.html">
             {{t:page.realizations.more}}</a
           >
         </div>
@@ -277,7 +243,7 @@
               </svg>
               <p class="why-we__list-para">{{t:page.whyUs.experienceFirst}}<br />{{t:page.whyUs.experienceSecond}}</p>
               <p class="why-we__list-para2">
-                <span id="why-weExperienceYears">10</span> {{t:page.whyUs.yearsInBusiness}}
+                <span id="why-weExperienceYears">8</span> {{t:page.whyUs.yearsInBusiness}}
               </p>
             </li>
             <li class="why-we__list-item">
@@ -314,12 +280,32 @@
         </div>
       </section>
 
+      <section class="workshop" aria-labelledby="aboutFurniture">
+        <div class="workshop__container">
+          <div class="workshop__layout">
+            <div class="workshop__story">
+              <h2 id="aboutFurniture">{{t:page.seo.aboutHeading}}</h2>
+              <p>{{t:partial.about.materials}}</p>
+              <p>{{t:partial.about.history}}</p>
+            </div>
+            <div class="workshop__process">
+              <h3>{{t:partial.coop.title}}</h3>
+              <p>{{t:partial.coop.description}}</p>
+              <p>{{t:partial.coop.contactDescription}}</p>
+              <button class="content-link" type="button" data-modal-open="coop">
+                {{t:partial.coop.steps}} <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="contact">
         <div class="contact__container">
           <h2 class="contact__title">{{t:page.contact.title}}</h2>
-          <h2 class="contact__title contact__title--sub">
+          <p class="contact__title contact__title--sub">
             {{t:page.contact.descriptionFirst}} <br />{{t:page.contact.descriptionSecond}}
-          </h2>
+          </p>
           <button
             class="contact__button"
             type="button"

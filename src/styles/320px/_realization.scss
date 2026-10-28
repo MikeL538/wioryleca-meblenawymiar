@@ -12,7 +12,6 @@
     justify-content: center;
     overflow: hidden;
     padding: $margin-section 0 0 0;
-    white-space: nowrap;
     width: 100%;
   }
 
@@ -37,51 +36,60 @@
   }
 
   &__list {
-    border-radius: $border-radius-lg;
     display: flex;
+    gap: 12px;
     list-style: none;
     margin: 0 auto;
-    max-width: 1200px;
-    overflow: hidden;
-    margin: 0 10px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar { display: none; }
     scroll-behavior: smooth;
 
     &--wrapper {
       position: relative;
+      width: calc(100% - 40px);
+      max-width: 1200px;
     }
 
     &-item {
-      flex: 0 0 33.333%;
+      flex: 0 0 88%;
+      min-width: 0;
+      scroll-snap-align: start;
+      @media (min-width: 600px) { flex-basis: calc((100% - 12px) / 2); }
+      @media (min-width: 1080px) { flex-basis: calc((100% - 24px) / 3); }
     }
 
     &-img {
       background-color: $color-accent;
-      max-width: 400px;
-      max-height: 455px;
-      height: 100%;
+      display: block;
+      border-radius: $border-radius;
+      aspect-ratio: 4 / 5;
+      height: auto;
       width: 100%;
       object-fit: cover;
 
-      &--width {
-        max-width: 570px;
-      }
     }
   }
 
   &__button {
     align-items: center;
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 50%;
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     position: absolute;
+    width: 44px;
+    height: 44px;
     top: 45%;
     transition: $transition-fast;
+    &:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
 
     &--right {
-      right: 24px;
+      right: 8px;
 
       &:hover {
         fill: $color-accent-hover;
@@ -91,7 +99,7 @@
     }
 
     &--left {
-      left: 18px;
+      left: 8px;
       transform: rotateZ(180deg);
 
       &:hover {
@@ -118,7 +126,10 @@
     font-size: $font-size-sm;
     font-weight: 600;
     letter-spacing: $spacing-md;
-    padding: $margin-xs;
+    padding: 12px 20px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
     text-transform: uppercase;
     transition: $transition-fast;
     text-decoration: none;

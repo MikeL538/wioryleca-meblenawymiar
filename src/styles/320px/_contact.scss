@@ -39,7 +39,7 @@
     letter-spacing: $spacing-xs;
     margin-bottom: $margin-m;
     margin-top: $margin-s;
-    white-space: nowrap;
+    white-space: normal;
     width: 100%;
     text-align: center;
 
@@ -78,7 +78,8 @@
     font-size: $font-size-sm;
     font-weight: 600;
     letter-spacing: $spacing-md;
-    padding: 7px 7px;
+    padding: 12px 20px;
+    min-height: 48px;
     text-transform: uppercase;
     transition: $transition-fast;
 

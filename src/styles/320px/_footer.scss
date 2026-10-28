@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: $margin-s;
-    padding: $margin-s 0 $margin-s 0;
+    padding: 28px 16px 20px;
   }
 
   &__brand {
@@ -46,6 +46,9 @@
 
     li,
     a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
       color: $color-bg-main;
       font-size: $font-size-sm;
       line-height: 1.5;
@@ -71,6 +74,7 @@
     display: flex;
     gap: $margin-s;
     justify-content: center;
+    flex-wrap: wrap;
     padding-top: $margin-xs;
     margin-bottom: $margin-s;
     align-items: center;
@@ -84,7 +88,10 @@
       background: none;
       border: none;
       cursor: pointer;
-      padding: 0;
+      padding: 8px 4px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
 
       font-family: $font-main;
 
@@ -106,8 +113,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border: 1px solid rgba($color-text-light, 0.12);
       border-radius: 50%;
       color: $color-text-light;
@@ -132,6 +139,7 @@
     padding-top: $margin-xs;
     border-top: 1px solid rgba($color-text-light, 0.08);
     color: rgba($color-text-light, 0.7);
-    font-size: $font-size-s;
+    font-size: 0.75rem;
+    line-height: 1.6;
   }
 }

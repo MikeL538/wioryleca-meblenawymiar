@@ -11,25 +11,24 @@
       background-image:
         linear-gradient(
           to right,
-          rgba(0, 0, 0, 0.8) 0%,
-          rgba(0, 0, 0, 0.7) 5%,
-          rgba(0, 0, 0, 0.6) 21%,
-          rgba(0, 0, 0, 0.45) 29%,
-          rgba(0, 0, 0, 0) 41%
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.7) 30%,
+          rgba(0, 0, 0, 0.25) 60%,
+          rgba(0, 0, 0, 0) 100%
         ),
         $hero;
     }
 
     &__wrapper {
-      padding: $margin-l;
-      gap: $margin-s;
+      padding: 64px clamp(32px, 5vw, 100px);
+      max-width: 680px;
     }
 
     &__title {
-      font-size: $font-size-xxl;
+      font-size: clamp(2.5rem, 3.5vw, 3.25rem);
 
       &--under {
-        font-size: $font-size-lg;
+        font-size: 1.125rem;
       }
     }
   }

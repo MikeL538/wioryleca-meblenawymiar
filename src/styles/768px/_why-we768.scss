@@ -7,14 +7,12 @@
     }
 
     &__list {
-      display: flex;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: $margin-m;
       justify-content: center;
-      max-width: none;
 
       &-item {
-        padding: $margin-s;
-        width: 160px;
+        padding: 24px 16px;
       }
 
       &-svg {
@@ -23,7 +21,7 @@
       }
 
       &-para {
-        font-size: $font-size-sm;
+        font-size: 1rem;
         padding-bottom: 3px;
         width: 100%;
       }

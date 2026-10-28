@@ -14,10 +14,16 @@
     overflow-y: auto;
 
     position: relative;
+    max-width: calc(100dvw - 24px);
+    max-height: calc(100dvh - 24px);
+    padding-bottom: 56px;
+    min-width: 180px;
 
     &--image {
-      max-height: 90dvh;
-      max-width: 90dvw;
+      width: auto;
+      height: auto;
+      max-height: calc(100dvh - 82px);
+      max-width: calc(100dvw - 26px);
       margin: 0 auto;
       object-fit: contain;
       position: relative;
@@ -25,20 +31,34 @@
 
     &--button {
       position: absolute;
-      bottom: 1px;
-      background-color: rgba(0, 0, 0, 0.4);
+      bottom: 6px;
+      background-color: $color-bg-main;
       border-radius: 100%;
       border: none;
       cursor: pointer;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
 
       &-right {
-        right: 1px;
+        right: 8px;
       }
 
       &-left {
-        left: 1px;
+        left: 8px;
         transform: rotateY(180deg);
       }
+    }
+
+    &-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 56px;
+      right: 56px;
+      text-align: center;
+      font-size: 0.875rem;
+      font-variant-numeric: tabular-nums;
     }
   }
 

@@ -109,6 +109,8 @@
     border-radius: $border-radius;
     color: $color-text;
     font: inherit;
+    font-size: 1rem;
+    font-weight: 400;
     min-height: 44px;
     padding: $margin-xs $margin-s;
     transition:
@@ -128,6 +130,23 @@
     resize: vertical;
   }
 
+  &__field-error {
+    color: #a12720;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    &:empty { display: none; }
+  }
+
+  &__input[aria-invalid="true"] {
+    border-color: #a12720;
+  }
+
+  &__form-status {
+    margin-top: $margin-s;
+    line-height: 1.5;
+    &:empty { display: none; }
+  }
+
   &__button {
     background-color: $color-accent;
     border: none;
@@ -140,6 +159,7 @@
     letter-spacing: $spacing-md;
     margin-top: $margin-xs;
     max-width: 220px;
+    min-height: 48px;
     margin: $margin-xs auto;
     padding: $margin-xs $margin-s;
     text-transform: uppercase;
@@ -156,6 +176,12 @@
     &:active {
       background-color: $color-accent-active;
       transform: translateY(0);
+    }
+
+    &:disabled {
+      cursor: wait;
+      opacity: 0.7;
+      transform: none;
     }
   }
 }

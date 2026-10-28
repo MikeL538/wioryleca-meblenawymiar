@@ -7,12 +7,9 @@
       <!-- <img class="header__image" src="/logo.png" alt="logo image" /> -->
       <div class="header__logo--wrapper">
         <img class="header__image" src="/logo.png" alt="{{t:partial.brand.logoAlt}}" />
+        <div class="header__title" aria-hidden="true"></div>
 
-        <h2 class="header__title">
-          <!-- <img class="header__image" src="/logos.png" alt="logo image" />ióry
-          Lecą -->
-        </h2>
-        <p class="header__title-under">{{t:partial.brand.tagline}}</p>
+<p class="header__title-under">{{t:partial.brand.tagline}}</p>
       </div>
     </a>
   </div>
@@ -33,10 +30,10 @@
   <nav class="header__nav">
     <ul class="header__nav-list">
       <li class="header__nav-list-item">
-        <a href="/" class="header__nav-list-link">{{t:partial.nav.home}}</a>
+        <a href="/" class="header__nav-list-link" data-nav-page="home">{{t:partial.nav.home}}</a>
       </li>
       <li class="header__nav-list-item">
-        <a href="/projects.html?category=kitchen" class="header__nav-list-link">
+        <a href="/projects.html" class="header__nav-list-link" data-nav-page="projects">
           {{t:partial.nav.projects}}
         </a>
       </li>

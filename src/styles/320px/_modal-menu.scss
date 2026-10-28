@@ -18,11 +18,15 @@
     margin: auto 0;
     max-width: 560px;
     overflow-y: auto;
+    max-height: calc(100dvh - 24px);
     padding: $margin-xxl $margin-m $margin-xxl;
     position: relative;
     width: 100%;
 
+    .language-switcher { margin-top: 28px; flex-shrink: 0; }
+
     &-image {
+      height: auto;
       border-bottom-right-radius: $border-radius;
       left: 3px;
       max-width: 100px;
@@ -58,9 +62,13 @@
       font-size: $font-size-xl;
       font-weight: 700;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      text-align: center;
 
       &:hover,
-      &focus {
+      &:focus-visible {
         color: $color-accent;
       }
     }
